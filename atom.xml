@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://xu.ci/"/>
   <updated>2020-05-16T05:08:20.026Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://xu.ci/</id>
   
   <author>
     <name>Shadow Saint</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Markdown-Tutorial</title>
-    <link href="http://yoursite.com/2020/05/Markdown-Tutorial/"/>
-    <id>http://yoursite.com/2020/05/Markdown-Tutorial/</id>
+    <link href="https://xu.ci/2020/05/Markdown-Tutorial/"/>
+    <id>https://xu.ci/2020/05/Markdown-Tutorial/</id>
     <published>2020-05-12T06:42:36.000Z</published>
     <updated>2020-05-16T05:08:20.026Z</updated>
     
@@ -41,21 +41,21 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/categories/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/categories/Tutorial/"/>
     
-      <category term="Blog" scheme="http://yoursite.com/categories/Tutorial/Blog/"/>
+      <category term="Blog" scheme="https://xu.ci/categories/Tutorial/Blog/"/>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/tags/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
-      <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
+      <category term="Blog" scheme="https://xu.ci/tags/Blog/"/>
     
   </entry>
   
   <entry>
     <title>常用Markdown语法</title>
-    <link href="http://yoursite.com/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</id>
+    <link href="https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</id>
     <published>2020-05-12T06:42:36.000Z</published>
     <updated>2020-05-16T05:08:30.715Z</updated>
     
@@ -77,21 +77,21 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/categories/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/categories/Tutorial/"/>
     
-      <category term="Blog" scheme="http://yoursite.com/categories/Tutorial/Blog/"/>
+      <category term="Blog" scheme="https://xu.ci/categories/Tutorial/Blog/"/>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/tags/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
-      <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
+      <category term="Blog" scheme="https://xu.ci/tags/Blog/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/05/hello-world/"/>
-    <id>http://yoursite.com/2020/05/hello-world/</id>
+    <link href="https://xu.ci/2020/05/hello-world/"/>
+    <id>https://xu.ci/2020/05/hello-world/</id>
     <published>2020-05-10T16:44:06.091Z</published>
     <updated>2020-05-12T15:12:59.000Z</updated>
     
@@ -110,8 +110,8 @@
   
   <entry>
     <title>Windows创建文件连接，同步任意文件夹</title>
-    <link href="http://yoursite.com/2020/04/windows.html/"/>
-    <id>http://yoursite.com/2020/04/windows.html/</id>
+    <link href="https://xu.ci/2020/04/windows.html/"/>
+    <id>https://xu.ci/2020/04/windows.html/</id>
     <published>2020-04-19T12:57:45.000Z</published>
     <updated>2020-05-16T05:55:04.028Z</updated>
     
@@ -123,14 +123,14 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>Win10网络提速</title>
-    <link href="http://yoursite.com/2020/02/win10.html/"/>
-    <id>http://yoursite.com/2020/02/win10.html/</id>
+    <link href="https://xu.ci/2020/02/win10.html/"/>
+    <id>https://xu.ci/2020/02/win10.html/</id>
     <published>2020-02-08T12:55:39.000Z</published>
     <updated>2020-05-16T05:54:41.740Z</updated>
     
@@ -148,14 +148,14 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>chrome解锁多线程下载</title>
-    <link href="http://yoursite.com/2020/02/chrome.html/"/>
-    <id>http://yoursite.com/2020/02/chrome.html/</id>
+    <link href="https://xu.ci/2020/02/chrome.html/"/>
+    <id>https://xu.ci/2020/02/chrome.html/</id>
     <published>2020-02-07T12:54:03.000Z</published>
     <updated>2020-05-16T05:51:00.135Z</updated>
     
@@ -167,14 +167,14 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>Google Voice 保号途径</title>
-    <link href="http://yoursite.com/2020/02/google-voice.html/"/>
-    <id>http://yoursite.com/2020/02/google-voice.html/</id>
+    <link href="https://xu.ci/2020/02/google-voice.html/"/>
+    <id>https://xu.ci/2020/02/google-voice.html/</id>
     <published>2020-02-02T12:38:45.000Z</published>
     <updated>2020-05-16T05:52:56.605Z</updated>
     
@@ -186,14 +186,14 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>WSL从一无所知到略知一二</title>
-    <link href="http://yoursite.com/2020/01/wsl.html/"/>
-    <id>http://yoursite.com/2020/01/wsl.html/</id>
+    <link href="https://xu.ci/2020/01/wsl.html/"/>
+    <id>https://xu.ci/2020/01/wsl.html/</id>
     <published>2020-01-07T12:00:11.000Z</published>
     <updated>2020-05-16T05:57:33.612Z</updated>
     
@@ -204,21 +204,21 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/categories/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/categories/Tutorial/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/categories/Tutorial/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/categories/Tutorial/WSL/"/>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/tags/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/tags/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
   </entry>
   
   <entry>
     <title>WSL2增强，内网穿透方案：FRP与ZeroTier</title>
-    <link href="http://yoursite.com/2020/01/wsl2frpzerotier.html/"/>
-    <id>http://yoursite.com/2020/01/wsl2frpzerotier.html/</id>
+    <link href="https://xu.ci/2020/01/wsl2frpzerotier.html/"/>
+    <id>https://xu.ci/2020/01/wsl2frpzerotier.html/</id>
     <published>2020-01-01T12:25:57.000Z</published>
     <updated>2020-05-16T05:55:52.820Z</updated>
     
@@ -236,16 +236,16 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/tags/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
   </entry>
   
   <entry>
     <title>Windows开机启动WSL2（Ubuntu）的启动项</title>
-    <link href="http://yoursite.com/2019/12/windowswsl2ubuntu.html/"/>
-    <id>http://yoursite.com/2019/12/windowswsl2ubuntu.html/</id>
+    <link href="https://xu.ci/2019/12/windowswsl2ubuntu.html/"/>
+    <id>https://xu.ci/2019/12/windowswsl2ubuntu.html/</id>
     <published>2019-12-25T11:55:24.000Z</published>
     <updated>2020-05-16T05:55:23.625Z</updated>
     
@@ -256,21 +256,21 @@
     </summary>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/categories/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/categories/Tutorial/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/categories/Tutorial/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/categories/Tutorial/WSL/"/>
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/tags/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/tags/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
   </entry>
   
   <entry>
     <title>WSL2（Ubuntu）安装Docker</title>
-    <link href="http://yoursite.com/2019/12/wsl2ubuntudocker.html/"/>
-    <id>http://yoursite.com/2019/12/wsl2ubuntudocker.html/</id>
+    <link href="https://xu.ci/2019/12/wsl2ubuntudocker.html/"/>
+    <id>https://xu.ci/2019/12/wsl2ubuntudocker.html/</id>
     <published>2019-12-25T11:47:12.000Z</published>
     <updated>2020-05-16T05:56:17.326Z</updated>
     
@@ -282,18 +282,18 @@
     
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/tags/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/tags/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="https://xu.ci/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>WSL2（Ubuntu）安装Postgres</title>
-    <link href="http://yoursite.com/2019/12/wsl2ubuntupostgres.html/"/>
-    <id>http://yoursite.com/2019/12/wsl2ubuntupostgres.html/</id>
+    <link href="https://xu.ci/2019/12/wsl2ubuntupostgres.html/"/>
+    <id>https://xu.ci/2019/12/wsl2ubuntupostgres.html/</id>
     <published>2019-12-19T05:24:24.000Z</published>
     <updated>2020-05-16T05:56:57.440Z</updated>
     
@@ -305,16 +305,16 @@
     
     
     
-      <category term="Tutorial" scheme="http://yoursite.com/tags/Tutorial/"/>
+      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
-      <category term="WSL" scheme="http://yoursite.com/tags/WSL/"/>
+      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
   </entry>
   
   <entry>
     <title>简易VPS测速文件生成下载</title>
-    <link href="http://yoursite.com/2019/12/vps.html/"/>
-    <id>http://yoursite.com/2019/12/vps.html/</id>
+    <link href="https://xu.ci/2019/12/vps.html/"/>
+    <id>https://xu.ci/2019/12/vps.html/</id>
     <published>2019-12-09T05:19:20.000Z</published>
     <updated>2020-05-16T05:54:20.320Z</updated>
     
@@ -328,14 +328,14 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>CF全球节点</title>
-    <link href="http://yoursite.com/2019/12/cf.html/"/>
-    <id>http://yoursite.com/2019/12/cf.html/</id>
+    <link href="https://xu.ci/2019/12/cf.html/"/>
+    <id>https://xu.ci/2019/12/cf.html/</id>
     <published>2019-12-04T14:31:01.000Z</published>
     <updated>2020-05-16T05:51:31.442Z</updated>
     
@@ -353,14 +353,14 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>Yandex的域名邮箱</title>
-    <link href="http://yoursite.com/2019/12/yandex.html/"/>
-    <id>http://yoursite.com/2019/12/yandex.html/</id>
+    <link href="https://xu.ci/2019/12/yandex.html/"/>
+    <id>https://xu.ci/2019/12/yandex.html/</id>
     <published>2019-12-04T14:24:43.000Z</published>
     <updated>2020-05-16T05:57:54.113Z</updated>
     
@@ -375,16 +375,16 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
-      <category term="Gossip" scheme="http://yoursite.com/tags/Gossip/"/>
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
   </entry>
   
   <entry>
     <title>Evil Code</title>
-    <link href="http://yoursite.com/2019/12/evil-code.html/"/>
-    <id>http://yoursite.com/2019/12/evil-code.html/</id>
+    <link href="https://xu.ci/2019/12/evil-code.html/"/>
+    <id>https://xu.ci/2019/12/evil-code.html/</id>
     <published>2019-12-04T14:18:51.000Z</published>
     <updated>2020-05-16T05:50:36.679Z</updated>
     
@@ -402,14 +402,14 @@
     
     
     
-      <category term="Gossip" scheme="http://yoursite.com/tags/Gossip/"/>
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
   </entry>
   
   <entry>
     <title>Java 注释中一个隐藏的坑</title>
-    <link href="http://yoursite.com/2019/12/java.html/"/>
-    <id>http://yoursite.com/2019/12/java.html/</id>
+    <link href="https://xu.ci/2019/12/java.html/"/>
+    <id>https://xu.ci/2019/12/java.html/</id>
     <published>2019-12-01T13:38:31.000Z</published>
     <updated>2020-05-16T05:53:21.617Z</updated>
     
@@ -421,16 +421,16 @@
     
     
     
-      <category term="Gossip" scheme="http://yoursite.com/tags/Gossip/"/>
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+      <category term="Java" scheme="https://xu.ci/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>用ssh key秘钥登录GCP</title>
-    <link href="http://yoursite.com/2019/11/ssh-keygcp.html/"/>
-    <id>http://yoursite.com/2019/11/ssh-keygcp.html/</id>
+    <link href="https://xu.ci/2019/11/ssh-keygcp.html/"/>
+    <id>https://xu.ci/2019/11/ssh-keygcp.html/</id>
     <published>2019-11-26T13:33:20.000Z</published>
     <updated>2020-05-16T05:53:40.544Z</updated>
     
@@ -444,14 +444,14 @@
     
     
     
-      <category term="Gossip" scheme="http://yoursite.com/tags/Gossip/"/>
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
   </entry>
   
   <entry>
     <title>谷歌blogger被墙解决办法</title>
-    <link href="http://yoursite.com/2019/11/blogger.html/"/>
-    <id>http://yoursite.com/2019/11/blogger.html/</id>
+    <link href="https://xu.ci/2019/11/blogger.html/"/>
+    <id>https://xu.ci/2019/11/blogger.html/</id>
     <published>2019-11-18T13:21:15.000Z</published>
     <updated>2020-05-16T05:52:26.959Z</updated>
     
@@ -466,14 +466,14 @@
     
     
     
-      <category term="Gossip" scheme="http://yoursite.com/tags/Gossip/"/>
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
   </entry>
   
   <entry>
     <title>国内节点多的主机测速脚本</title>
-    <link href="http://yoursite.com/2019/11/blog-post.html/"/>
-    <id>http://yoursite.com/2019/11/blog-post.html/</id>
+    <link href="https://xu.ci/2019/11/blog-post.html/"/>
+    <id>https://xu.ci/2019/11/blog-post.html/</id>
     <published>2019-11-12T14:29:22.000Z</published>
     <updated>2020-05-16T05:52:09.305Z</updated>
     
@@ -485,7 +485,7 @@
     
     
     
-      <category term="Tool" scheme="http://yoursite.com/tags/Tool/"/>
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   

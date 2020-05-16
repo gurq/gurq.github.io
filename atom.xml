@@ -18,8 +18,8 @@
   
   <entry>
     <title>Markdown-Tutorial</title>
-    <link href="http://yoursite.com/2020/05/12/Markdown-Tutorial/"/>
-    <id>http://yoursite.com/2020/05/12/Markdown-Tutorial/</id>
+    <link href="http://yoursite.com/2020/05/Markdown-Tutorial/"/>
+    <id>http://yoursite.com/2020/05/Markdown-Tutorial/</id>
     <published>2020-05-12T06:42:36.000Z</published>
     <updated>2020-05-16T04:17:44.075Z</updated>
     
@@ -50,8 +50,8 @@
   
   <entry>
     <title>常用Markdown语法</title>
-    <link href="http://yoursite.com/2020/05/12/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/05/12/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</id>
+    <link href="http://yoursite.com/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</id>
     <published>2020-05-12T06:42:36.000Z</published>
     <updated>2020-05-16T04:17:22.091Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/05/11/hello-world/"/>
-    <id>http://yoursite.com/2020/05/11/hello-world/</id>
+    <link href="http://yoursite.com/2020/05/hello-world/"/>
+    <id>http://yoursite.com/2020/05/hello-world/</id>
     <published>2020-05-10T16:44:06.000Z</published>
     <updated>2020-05-12T15:12:59.945Z</updated>
     
@@ -102,8 +102,8 @@
   
   <entry>
     <title>windows.html</title>
-    <link href="http://yoursite.com/2020/04/19/windows-html/"/>
-    <id>http://yoursite.com/2020/04/19/windows-html/</id>
+    <link href="http://yoursite.com/2020/04/windows-html/"/>
+    <id>http://yoursite.com/2020/04/windows-html/</id>
     <published>2020-04-19T12:57:45.000Z</published>
     <updated>2020-05-15T13:04:37.656Z</updated>
     
@@ -121,8 +121,8 @@
   
   <entry>
     <title>win10.html</title>
-    <link href="http://yoursite.com/2020/02/08/win10-html/"/>
-    <id>http://yoursite.com/2020/02/08/win10-html/</id>
+    <link href="http://yoursite.com/2020/02/win10-html/"/>
+    <id>http://yoursite.com/2020/02/win10-html/</id>
     <published>2020-02-08T12:55:39.000Z</published>
     <updated>2020-05-15T13:04:27.444Z</updated>
     
@@ -140,8 +140,8 @@
   
   <entry>
     <title>chrome.html</title>
-    <link href="http://yoursite.com/2020/02/07/chrome-html/"/>
-    <id>http://yoursite.com/2020/02/07/chrome-html/</id>
+    <link href="http://yoursite.com/2020/02/chrome-html/"/>
+    <id>http://yoursite.com/2020/02/chrome-html/</id>
     <published>2020-02-07T12:54:03.000Z</published>
     <updated>2020-05-15T13:04:18.792Z</updated>
     
@@ -159,8 +159,8 @@
   
   <entry>
     <title>google-voice.html</title>
-    <link href="http://yoursite.com/2020/02/02/google-voice-html/"/>
-    <id>http://yoursite.com/2020/02/02/google-voice-html/</id>
+    <link href="http://yoursite.com/2020/02/google-voice-html/"/>
+    <id>http://yoursite.com/2020/02/google-voice-html/</id>
     <published>2020-02-02T12:38:45.000Z</published>
     <updated>2020-05-15T13:04:11.889Z</updated>
     
@@ -178,8 +178,8 @@
   
   <entry>
     <title>wsl.html</title>
-    <link href="http://yoursite.com/2020/01/07/wsl-html/"/>
-    <id>http://yoursite.com/2020/01/07/wsl-html/</id>
+    <link href="http://yoursite.com/2020/01/wsl-html/"/>
+    <id>http://yoursite.com/2020/01/wsl-html/</id>
     <published>2020-01-07T12:00:11.000Z</published>
     <updated>2020-05-15T13:03:45.946Z</updated>
     
@@ -199,8 +199,8 @@
   
   <entry>
     <title>wsl2frpzerotier.html</title>
-    <link href="http://yoursite.com/2020/01/01/wsl2frpzerotier-html/"/>
-    <id>http://yoursite.com/2020/01/01/wsl2frpzerotier-html/</id>
+    <link href="http://yoursite.com/2020/01/wsl2frpzerotier-html/"/>
+    <id>http://yoursite.com/2020/01/wsl2frpzerotier-html/</id>
     <published>2020-01-01T12:25:57.000Z</published>
     <updated>2020-05-15T13:04:03.583Z</updated>
     
@@ -220,8 +220,8 @@
   
   <entry>
     <title>windowswsl2ubuntu.html</title>
-    <link href="http://yoursite.com/2019/12/25/windowswsl2ubuntu-html/"/>
-    <id>http://yoursite.com/2019/12/25/windowswsl2ubuntu-html/</id>
+    <link href="http://yoursite.com/2019/12/windowswsl2ubuntu-html/"/>
+    <id>http://yoursite.com/2019/12/windowswsl2ubuntu-html/</id>
     <published>2019-12-25T11:55:24.000Z</published>
     <updated>2020-05-15T13:03:33.104Z</updated>
     
@@ -241,8 +241,8 @@
   
   <entry>
     <title>wsl2ubuntudocker.html</title>
-    <link href="http://yoursite.com/2019/12/25/wsl2ubuntudocker-html/"/>
-    <id>http://yoursite.com/2019/12/25/wsl2ubuntudocker-html/</id>
+    <link href="http://yoursite.com/2019/12/wsl2ubuntudocker-html/"/>
+    <id>http://yoursite.com/2019/12/wsl2ubuntudocker-html/</id>
     <published>2019-12-25T11:47:12.000Z</published>
     <updated>2020-05-15T13:03:12.924Z</updated>
     
@@ -262,8 +262,8 @@
   
   <entry>
     <title>wsl2ubuntupostgres.html</title>
-    <link href="http://yoursite.com/2019/12/19/wsl2ubuntupostgres-html/"/>
-    <id>http://yoursite.com/2019/12/19/wsl2ubuntupostgres-html/</id>
+    <link href="http://yoursite.com/2019/12/wsl2ubuntupostgres-html/"/>
+    <id>http://yoursite.com/2019/12/wsl2ubuntupostgres-html/</id>
     <published>2019-12-19T05:24:24.000Z</published>
     <updated>2020-05-15T13:02:54.407Z</updated>
     
@@ -283,8 +283,8 @@
   
   <entry>
     <title>vps.html</title>
-    <link href="http://yoursite.com/2019/12/09/vps-html/"/>
-    <id>http://yoursite.com/2019/12/09/vps-html/</id>
+    <link href="http://yoursite.com/2019/12/vps-html/"/>
+    <id>http://yoursite.com/2019/12/vps-html/</id>
     <published>2019-12-09T05:19:20.000Z</published>
     <updated>2020-05-15T13:02:32.590Z</updated>
     
@@ -302,8 +302,8 @@
   
   <entry>
     <title>cf.html</title>
-    <link href="http://yoursite.com/2019/12/04/cf-html/"/>
-    <id>http://yoursite.com/2019/12/04/cf-html/</id>
+    <link href="http://yoursite.com/2019/12/cf-html/"/>
+    <id>http://yoursite.com/2019/12/cf-html/</id>
     <published>2019-12-04T14:31:01.000Z</published>
     <updated>2020-05-15T13:02:22.106Z</updated>
     
@@ -321,8 +321,8 @@
   
   <entry>
     <title>yandex.html</title>
-    <link href="http://yoursite.com/2019/12/04/yandex-html/"/>
-    <id>http://yoursite.com/2019/12/04/yandex-html/</id>
+    <link href="http://yoursite.com/2019/12/yandex-html/"/>
+    <id>http://yoursite.com/2019/12/yandex-html/</id>
     <published>2019-12-04T14:24:43.000Z</published>
     <updated>2020-05-15T13:02:09.471Z</updated>
     
@@ -345,8 +345,8 @@
   
   <entry>
     <title>evil-code.html</title>
-    <link href="http://yoursite.com/2019/12/04/evil-code-html/"/>
-    <id>http://yoursite.com/2019/12/04/evil-code-html/</id>
+    <link href="http://yoursite.com/2019/12/evil-code-html/"/>
+    <id>http://yoursite.com/2019/12/evil-code-html/</id>
     <published>2019-12-04T14:18:51.000Z</published>
     <updated>2020-05-15T13:01:59.574Z</updated>
     
@@ -364,8 +364,8 @@
   
   <entry>
     <title>java.html</title>
-    <link href="http://yoursite.com/2019/12/01/java-html/"/>
-    <id>http://yoursite.com/2019/12/01/java-html/</id>
+    <link href="http://yoursite.com/2019/12/java-html/"/>
+    <id>http://yoursite.com/2019/12/java-html/</id>
     <published>2019-12-01T13:38:31.000Z</published>
     <updated>2020-05-15T13:01:50.948Z</updated>
     
@@ -385,8 +385,8 @@
   
   <entry>
     <title>ssh-keygcp.html</title>
-    <link href="http://yoursite.com/2019/11/26/ssh-keygcp-html/"/>
-    <id>http://yoursite.com/2019/11/26/ssh-keygcp-html/</id>
+    <link href="http://yoursite.com/2019/11/ssh-keygcp-html/"/>
+    <id>http://yoursite.com/2019/11/ssh-keygcp-html/</id>
     <published>2019-11-26T13:33:20.000Z</published>
     <updated>2020-05-15T13:01:37.959Z</updated>
     
@@ -406,8 +406,8 @@
   
   <entry>
     <title>blogger.html</title>
-    <link href="http://yoursite.com/2019/11/18/blogger-html/"/>
-    <id>http://yoursite.com/2019/11/18/blogger-html/</id>
+    <link href="http://yoursite.com/2019/11/blogger-html/"/>
+    <id>http://yoursite.com/2019/11/blogger-html/</id>
     <published>2019-11-18T13:21:15.000Z</published>
     <updated>2020-05-15T13:00:52.167Z</updated>
     
@@ -428,8 +428,8 @@
   
   <entry>
     <title>blog-post.html</title>
-    <link href="http://yoursite.com/2019/11/12/blog-post-html/"/>
-    <id>http://yoursite.com/2019/11/12/blog-post-html/</id>
+    <link href="http://yoursite.com/2019/11/blog-post-html/"/>
+    <id>http://yoursite.com/2019/11/blog-post-html/</id>
     <published>2019-11-12T14:29:22.000Z</published>
     <updated>2020-05-15T13:01:07.385Z</updated>
     

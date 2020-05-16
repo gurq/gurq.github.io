@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2019/12/yandex.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/wsl.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/wsl2ubuntupostgres.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/wsl2ubuntudocker.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/wsl2frpzerotier.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/windowswsl2ubuntu.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/04/windows.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/win10.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/vps.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/11/ssh-keygcp.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/java.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/google-voice.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/11/blogger.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/11/blog-post.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/cf.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/chrome.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/12/evil-code.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/11/blog-post-17.html/</loc>
+    <lastmod>2020-05-16</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2020-05-16</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/05/Markdown-Tutorial/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/yandex-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/wsl-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/wsl2ubuntupostgres-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/wsl2ubuntudocker-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/wsl2frpzerotier-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/windowswsl2ubuntu-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/04/windows-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/win10-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/vps-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/11/ssh-keygcp-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/java-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/google-voice-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/evil-code-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/chrome-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/12/cf-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/11/blog-post-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/11/blogger-html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/11/blog-post-17-html/</loc>
     <lastmod>2020-05-16</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/05/hello-world/</loc>

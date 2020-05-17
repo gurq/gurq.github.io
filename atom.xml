@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>叙此 | I kiss you, see I</title>
+  <title>叙此 | I KISS YOU, SEE I</title>
   
-  
+  <subtitle>Shadow Saint</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-05-16T05:08:20.026Z</updated>
+  <updated>2020-05-17T15:27:08.334Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>世纪互联登录UWP版OneNote的方法</title>
+    <link href="https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+    <published>2020-05-17T15:12:17.000Z</published>
+    <updated>2020-05-17T15:27:08.334Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文就是为了解决世纪互联登录UWP版OneNote的方法。&lt;/p&gt;
+&lt;p&gt;由于国情的原因，很多人用国际版Office并不能获得良好的体验，云端功能几乎无法使用，虽然本人的OneNote同步功能快切正常，OneDrive不借助任何工具下载速度也能有1-2m/s，但还是有我同事那样，大多数时候只有几k甚至为0的速度，这种时候用微软国内代理商世纪互联版的Office就显得很有必要了。&lt;/p&gt;
+&lt;p&gt;但是同样是因为国情的原因，微软没办法将国内的账号体系和国际版的打通，所以就有了两套账号系统，这体现在使用上就是微软的一些服务并没有做统一登录入口，只调用了国际版Office的登录接口，没有办法用国内的世纪互联的账号登陆，比如UWP版的OneNote，以及Chorme的OneNote插件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown-Tutorial</title>
     <link href="https://xu.ci/2020/05/Markdown-Tutorial/"/>
     <id>https://xu.ci/2020/05/Markdown-Tutorial/</id>
     <published>2020-05-12T06:42:36.000Z</published>
-    <updated>2020-05-16T05:08:20.026Z</updated>
+    <updated>2020-05-16T05:08:20.000Z</updated>
     
     <summary type="html">
     
@@ -57,7 +78,7 @@
     <link href="https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/"/>
     <id>https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</id>
     <published>2020-05-12T06:42:36.000Z</published>
-    <updated>2020-05-16T05:08:30.715Z</updated>
+    <updated>2020-05-16T05:08:30.000Z</updated>
     
     <summary type="html">
     
@@ -92,8 +113,8 @@
     <title>Hello World</title>
     <link href="https://xu.ci/2020/05/hello-world/"/>
     <id>https://xu.ci/2020/05/hello-world/</id>
-    <published>2020-05-10T16:44:06.091Z</published>
-    <updated>2020-05-12T15:12:59.000Z</updated>
+    <published>2020-05-10T16:44:06.000Z</published>
+    <updated>2020-05-12T15:12:59.945Z</updated>
     
     <summary type="html">
     
@@ -113,7 +134,7 @@
     <link href="https://xu.ci/2020/04/windows.html/"/>
     <id>https://xu.ci/2020/04/windows.html/</id>
     <published>2020-04-19T12:57:45.000Z</published>
-    <updated>2020-05-16T05:55:04.028Z</updated>
+    <updated>2020-05-16T05:55:04.000Z</updated>
     
     <summary type="html">
     
@@ -132,7 +153,7 @@
     <link href="https://xu.ci/2020/02/win10.html/"/>
     <id>https://xu.ci/2020/02/win10.html/</id>
     <published>2020-02-08T12:55:39.000Z</published>
-    <updated>2020-05-16T05:54:41.740Z</updated>
+    <updated>2020-05-16T05:54:41.000Z</updated>
     
     <summary type="html">
     
@@ -157,7 +178,7 @@
     <link href="https://xu.ci/2020/02/chrome.html/"/>
     <id>https://xu.ci/2020/02/chrome.html/</id>
     <published>2020-02-07T12:54:03.000Z</published>
-    <updated>2020-05-16T05:51:00.135Z</updated>
+    <updated>2020-05-16T05:51:00.000Z</updated>
     
     <summary type="html">
     
@@ -176,7 +197,7 @@
     <link href="https://xu.ci/2020/02/google-voice.html/"/>
     <id>https://xu.ci/2020/02/google-voice.html/</id>
     <published>2020-02-02T12:38:45.000Z</published>
-    <updated>2020-05-16T05:52:56.605Z</updated>
+    <updated>2020-05-16T05:52:56.000Z</updated>
     
     <summary type="html">
     
@@ -195,7 +216,7 @@
     <link href="https://xu.ci/2020/01/wsl.html/"/>
     <id>https://xu.ci/2020/01/wsl.html/</id>
     <published>2020-01-07T12:00:11.000Z</published>
-    <updated>2020-05-16T05:57:33.612Z</updated>
+    <updated>2020-05-16T05:57:33.000Z</updated>
     
     <summary type="html">
     
@@ -220,7 +241,7 @@
     <link href="https://xu.ci/2020/01/wsl2frpzerotier.html/"/>
     <id>https://xu.ci/2020/01/wsl2frpzerotier.html/</id>
     <published>2020-01-01T12:25:57.000Z</published>
-    <updated>2020-05-16T05:55:52.820Z</updated>
+    <updated>2020-05-16T05:55:52.000Z</updated>
     
     <summary type="html">
     
@@ -247,7 +268,7 @@
     <link href="https://xu.ci/2019/12/windowswsl2ubuntu.html/"/>
     <id>https://xu.ci/2019/12/windowswsl2ubuntu.html/</id>
     <published>2019-12-25T11:55:24.000Z</published>
-    <updated>2020-05-16T05:55:23.625Z</updated>
+    <updated>2020-05-16T05:55:23.000Z</updated>
     
     <summary type="html">
     
@@ -272,7 +293,7 @@
     <link href="https://xu.ci/2019/12/wsl2ubuntudocker.html/"/>
     <id>https://xu.ci/2019/12/wsl2ubuntudocker.html/</id>
     <published>2019-12-25T11:47:12.000Z</published>
-    <updated>2020-05-16T05:56:17.326Z</updated>
+    <updated>2020-05-16T05:56:17.000Z</updated>
     
     <summary type="html">
     
@@ -295,7 +316,7 @@
     <link href="https://xu.ci/2019/12/wsl2ubuntupostgres.html/"/>
     <id>https://xu.ci/2019/12/wsl2ubuntupostgres.html/</id>
     <published>2019-12-19T05:24:24.000Z</published>
-    <updated>2020-05-16T05:56:57.440Z</updated>
+    <updated>2020-05-16T05:56:57.000Z</updated>
     
     <summary type="html">
     
@@ -316,7 +337,7 @@
     <link href="https://xu.ci/2019/12/vps.html/"/>
     <id>https://xu.ci/2019/12/vps.html/</id>
     <published>2019-12-09T05:19:20.000Z</published>
-    <updated>2020-05-16T05:54:20.320Z</updated>
+    <updated>2020-05-16T05:54:20.000Z</updated>
     
     <summary type="html">
     
@@ -337,7 +358,7 @@
     <link href="https://xu.ci/2019/12/cf.html/"/>
     <id>https://xu.ci/2019/12/cf.html/</id>
     <published>2019-12-04T14:31:01.000Z</published>
-    <updated>2020-05-16T05:51:31.442Z</updated>
+    <updated>2020-05-16T05:51:31.000Z</updated>
     
     <summary type="html">
     
@@ -362,7 +383,7 @@
     <link href="https://xu.ci/2019/12/yandex.html/"/>
     <id>https://xu.ci/2019/12/yandex.html/</id>
     <published>2019-12-04T14:24:43.000Z</published>
-    <updated>2020-05-16T05:57:54.113Z</updated>
+    <updated>2020-05-16T05:57:54.000Z</updated>
     
     <summary type="html">
     
@@ -386,7 +407,7 @@
     <link href="https://xu.ci/2019/12/evil-code.html/"/>
     <id>https://xu.ci/2019/12/evil-code.html/</id>
     <published>2019-12-04T14:18:51.000Z</published>
-    <updated>2020-05-16T05:50:36.679Z</updated>
+    <updated>2020-05-16T05:50:36.000Z</updated>
     
     <summary type="html">
     
@@ -411,7 +432,7 @@
     <link href="https://xu.ci/2019/12/java.html/"/>
     <id>https://xu.ci/2019/12/java.html/</id>
     <published>2019-12-01T13:38:31.000Z</published>
-    <updated>2020-05-16T05:53:21.617Z</updated>
+    <updated>2020-05-16T05:53:21.000Z</updated>
     
     <summary type="html">
     
@@ -432,7 +453,7 @@
     <link href="https://xu.ci/2019/11/ssh-keygcp.html/"/>
     <id>https://xu.ci/2019/11/ssh-keygcp.html/</id>
     <published>2019-11-26T13:33:20.000Z</published>
-    <updated>2020-05-16T05:53:40.544Z</updated>
+    <updated>2020-05-16T05:53:40.000Z</updated>
     
     <summary type="html">
     
@@ -453,7 +474,7 @@
     <link href="https://xu.ci/2019/11/blogger.html/"/>
     <id>https://xu.ci/2019/11/blogger.html/</id>
     <published>2019-11-18T13:21:15.000Z</published>
-    <updated>2020-05-16T05:52:26.959Z</updated>
+    <updated>2020-05-16T05:52:26.000Z</updated>
     
     <summary type="html">
     
@@ -467,25 +488,6 @@
     
     
       <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>国内节点多的主机测速脚本</title>
-    <link href="https://xu.ci/2019/11/blog-post.html/"/>
-    <id>https://xu.ci/2019/11/blog-post.html/</id>
-    <published>2019-11-12T14:29:22.000Z</published>
-    <updated>2020-05-16T05:52:09.305Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;The-speed-test-script-for-hosts-with-many-Chinese-nodes&quot;&gt;&lt;a href=&quot;#The-speed-test-script-for-hosts-with-many-Chinese-nodes&quot; class=&quot;headerlink&quot; title=&quot;The speed test script for hosts with many Chinese nodes&quot;&gt;&lt;/a&gt;The speed test script for hosts with many Chinese nodes&lt;/h1&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-05-17T15:27:08.334Z</updated>
+  <updated>2020-05-17T16:15:58.222Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS上Firefox登陆国际版账号</title>
+    <link href="https://xu.ci/2020/05/iOS%E4%B8%8AFirefox%E7%99%BB%E9%99%86%E5%9B%BD%E9%99%85%E7%89%88%E8%B4%A6%E5%8F%B7/"/>
+    <id>https://xu.ci/2020/05/iOS%E4%B8%8AFirefox%E7%99%BB%E9%99%86%E5%9B%BD%E9%99%85%E7%89%88%E8%B4%A6%E5%8F%B7/</id>
+    <published>2020-05-17T15:58:07.000Z</published>
+    <updated>2020-05-17T16:15:58.222Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iOS上Firefox登陆国际版账号&quot;&gt;&lt;a href=&quot;#iOS上Firefox登陆国际版账号&quot; class=&quot;headerlink&quot; title=&quot;iOS上Firefox登陆国际版账号&quot;&gt;&lt;/a&gt;iOS上Firefox登陆国际版账号&lt;/h1&gt;&lt;p&gt;想要在iOS上Firefox登陆国际版账号，是因为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手机不像随时开着某些工具，那么手机上Chrome浏览器就不能用，没法同步&lt;/li&gt;
+&lt;li&gt;办公室统一配备的Windows电脑，家里主力是Windows的台式机，MacBook使用场景很少，只有抢不过对象的时候才能默默的抱着MacBook去一边学学习（打游戏的时候还得用另一个Windows的笔记本），所以Safari也不能用&lt;/li&gt;
+&lt;li&gt;新版的edge其实也是一个好的选择，只是新版的edge也是基于谷歌浏览器的内核，我想支持一下Firefox，毕竟谷歌也是有作恶的历史的，垄断终究是不好的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以手机上想用Firefox作为浏览器（其实电脑端也在逐步的迁移到Firefox了，只是目前还有一个痛点就是Chrome的页面翻译太好用了。。。）&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
+    
+  </entry>
   
   <entry>
     <title>世纪互联登录UWP版OneNote的方法</title>
@@ -460,28 +485,6 @@
       &lt;ol&gt;
 &lt;li&gt;首先准备公钥，私钥，用&lt;code&gt;mobaxterm&lt;/code&gt;或者&lt;code&gt;bitivise ssh&lt;/code&gt;或者&lt;code&gt;putty&lt;/code&gt;生成一对秘钥，SSH工具推荐度从前到后&lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谷歌blogger被墙解决办法</title>
-    <link href="https://xu.ci/2019/11/blogger.html/"/>
-    <id>https://xu.ci/2019/11/blogger.html/</id>
-    <published>2019-11-18T13:21:15.000Z</published>
-    <updated>2020-05-16T05:52:26.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;近想把博客从博客园搬家，因为一是感觉博客园有点丑了，二是自己特别喜欢的域名想利用起来，搞个自己的站点。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最近换到hexo+github.io啦，谷歌blogger的样式太丑了我不喜欢。。。&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     

@@ -62,7 +62,7 @@
     <link href="https://xu.ci/2020/05/Notion%E8%A2%AB%E5%A2%99%E7%9A%84%E8%AF%9D%EF%BC%8C%E6%9B%BF%E4%BB%A3%E5%93%81%E8%BF%98%E6%9C%89%E4%BB%80%E4%B9%88/"/>
     <id>https://xu.ci/2020/05/Notion%E8%A2%AB%E5%A2%99%E7%9A%84%E8%AF%9D%EF%BC%8C%E6%9B%BF%E4%BB%A3%E5%93%81%E8%BF%98%E6%9C%89%E4%BB%80%E4%B9%88/</id>
     <published>2020-05-26T15:18:35.000Z</published>
-    <updated>2020-05-26T16:28:31.000Z</updated>
+    <updated>2020-06-29T08:25:34.806Z</updated>
     
     <summary type="html">
     
@@ -85,7 +85,7 @@
     <link href="https://xu.ci/2020/05/iOS%E4%B8%8AFirefox%E7%99%BB%E9%99%86%E5%9B%BD%E9%99%85%E7%89%88%E8%B4%A6%E5%8F%B7/"/>
     <id>https://xu.ci/2020/05/iOS%E4%B8%8AFirefox%E7%99%BB%E9%99%86%E5%9B%BD%E9%99%85%E7%89%88%E8%B4%A6%E5%8F%B7/</id>
     <published>2020-05-17T15:58:07.000Z</published>
-    <updated>2020-05-17T16:20:57.000Z</updated>
+    <updated>2020-06-29T08:25:42.014Z</updated>
     
     <summary type="html">
     
@@ -110,7 +110,7 @@
     <link href="https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/"/>
     <id>https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/</id>
     <published>2020-05-17T15:12:17.000Z</published>
-    <updated>2020-05-17T15:27:08.000Z</updated>
+    <updated>2020-06-29T08:25:51.545Z</updated>
     
     <summary type="html">
     
@@ -330,17 +330,19 @@
     <link href="https://xu.ci/2020/01/wsl2frpzerotier.html/"/>
     <id>https://xu.ci/2020/01/wsl2frpzerotier.html/</id>
     <published>2020-01-01T12:25:57.000Z</published>
-    <updated>2020-05-16T05:55:52.820Z</updated>
+    <updated>2020-06-29T08:14:35.826Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;h2 id=&quot;1-FRP：直接对外暴露IP和端口&quot;&gt;&lt;a href=&quot;#1-FRP：直接对外暴露IP和端口&quot; class=&quot;headerlink&quot; title=&quot;1. FRP：直接对外暴露IP和端口&quot;&gt;&lt;/a&gt;1. FRP：直接对外暴露IP和端口&lt;/h2&gt;&lt;p&gt;FRP的原理基本就是端口转发，将外部的流量经过中间服务器转发至本地机器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;开启frp后，相当于有了公网IP，任意设备均可任意访问&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缺点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于寻址多中转了两次中间服务器，就增加了丢包的可能性，并且也增大了单次访问的延迟&lt;/p&gt;
     
     </summary>
     
@@ -447,17 +449,11 @@
     <link href="https://xu.ci/2019/12/cf.html/"/>
     <id>https://xu.ci/2019/12/cf.html/</id>
     <published>2019-12-04T14:31:01.000Z</published>
-    <updated>2020-05-16T05:51:31.442Z</updated>
+    <updated>2020-06-29T08:14:56.067Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;p&gt;103.22.200.0/22#对电信最友好&lt;br&gt;162.159.36.6#对联通最友好&lt;br&gt;104.16.0.0/12#对移动最友好&lt;br&gt;我已解析好的cname地址：ip.s.s1-cdn.me&lt;/p&gt;
     
     </summary>
     

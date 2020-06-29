@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://xu.ci/2020/05/Markdown-Tutorial/</loc>
+    <lastmod>2020-06-29</lastmod>
+  </url>  <url>
+    <loc>https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2020-06-29</lastmod>
+  </url>  <url>
     <loc>https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2020-06-29</lastmod>
   </url>  <url>
@@ -68,12 +74,6 @@
     <lastmod>2020-05-16</lastmod>
   </url>  <url>
     <loc>https://xu.ci/2019/11/blog-post-17.html/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2020-05-16</lastmod>
-  </url>  <url>
-    <loc>https://xu.ci/2020/05/Markdown-Tutorial/</loc>
     <lastmod>2020-05-16</lastmod>
   </url>  <url>
     <loc>https://xu.ci/2020/05/hello-world/</loc>

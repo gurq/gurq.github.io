@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-06-29T07:12:54.830Z</updated>
+  <updated>2020-06-29T08:09:35.787Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用可视化Docker管理工具Portainer</title>
+    <link href="https://xu.ci/2020/06/%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%A7%86%E5%8C%96Docker%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Portainer/"/>
+    <id>https://xu.ci/2020/06/%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%A7%86%E5%8C%96Docker%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Portainer/</id>
+    <published>2020-06-29T08:03:15.000Z</published>
+    <updated>2020-06-29T08:09:35.787Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Mac环境下，可以用docker自己的dashboard查看各个container运行情况，但是在Windows下或者部署到Linux服务器上之后，想要可视化的对各container/image进行管理，就会麻烦一些&lt;/p&gt;
+&lt;p&gt;更何况如果在多台服务器上部署了docker集群，那多台服务器都用纯命令行来操作，我觉得不太现实，于是Portainer就可以来解决这个问题&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Mac安装homebrew</title>
@@ -468,31 +486,6 @@
     
     
       <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
-    
-      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Evil Code</title>
-    <link href="https://xu.ci/2019/12/evil-code.html/"/>
-    <id>https://xu.ci/2019/12/evil-code.html/</id>
-    <published>2019-12-04T14:18:51.000Z</published>
-    <updated>2020-05-16T05:50:36.679Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
     
       <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     

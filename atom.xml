@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-06-29T08:12:22.251Z</updated>
+  <updated>2020-07-01T08:33:35.876Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用docker-maven-plugin推送至dockerhub</title>
+    <link href="https://xu.ci/2020/07/%E7%94%A8docker-maven-plugin%E6%8E%A8%E9%80%81%E8%87%B3dockerhub/"/>
+    <id>https://xu.ci/2020/07/%E7%94%A8docker-maven-plugin%E6%8E%A8%E9%80%81%E8%87%B3dockerhub/</id>
+    <published>2020-07-01T08:19:42.000Z</published>
+    <updated>2020-07-01T08:33:35.876Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;为了个人更方便地开发和部署，我使用了docker-maven-plugin推送至dockerhub，这样在自己的服务器上重新拉一下就实现了部署，非常方便&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>使用可视化Docker管理工具Portainer</title>
@@ -460,30 +477,6 @@
     
     
       <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Yandex的域名邮箱</title>
-    <link href="https://xu.ci/2019/12/yandex.html/"/>
-    <id>https://xu.ci/2019/12/yandex.html/</id>
-    <published>2019-12-04T14:24:43.000Z</published>
-    <updated>2020-05-16T05:57:54.113Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;注册验证码变态&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;根据ZKK博客的教程详细记录走一遍会碰到第一个难点。好处是不用手机就能注册，问题在于验证码极其的变态。我大概输入了几十次。才成功注册下来了一个域名邮箱&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
-    
-      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
   </entry>
   

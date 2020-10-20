@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-07-01T08:33:35.876Z</updated>
+  <updated>2020-10-20T15:04:19.514Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>裸辞三个月有感</title>
+    <link href="https://xu.ci/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/"/>
+    <id>https://xu.ci/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/</id>
+    <published>2020-10-20T14:30:37.000Z</published>
+    <updated>2020-10-20T15:04:19.514Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一句话总结：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;舒服是真的舒服，后悔是真的后悔&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面是完整版：&lt;/p&gt;
+&lt;p&gt;从七月底提出辞职，到8月1号开始休假，到现在也算是休了三个月了，开始准备着手准备面试了。&lt;/p&gt;
+&lt;p&gt;说实话人生中能像现在这样很惬意的，什么事情都不用考虑，真正的做想做的事的时间其实并不多。&lt;/p&gt;
+&lt;p&gt;上学的时候寒暑假要和父母勾心斗角找玩电脑的机会，还要补作业。&lt;/p&gt;
+&lt;p&gt;工作以后每个假期都是这么的短暂——我为什么没子承父业继续去当老师呢？&lt;/p&gt;
+&lt;p&gt;以后结婚生子了恐怕就更没多少这样的机会去休息了。&lt;/p&gt;
+&lt;p&gt;这三个月是真真正正没有作业、没有金钱、没有父母/对象催促的烦恼，真正想干什么就干什么的三个月——当然，现在父母和对象开始催我找工作了，于是美好的时光结束了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
+    
+  </entry>
   
   <entry>
     <title>用docker-maven-plugin推送至dockerhub</title>
@@ -452,25 +479,6 @@
       &lt;ol&gt;
 &lt;li&gt;在根目录下面建一个文件夹 &lt;code&gt;download&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CF全球节点</title>
-    <link href="https://xu.ci/2019/12/cf.html/"/>
-    <id>https://xu.ci/2019/12/cf.html/</id>
-    <published>2019-12-04T14:31:01.000Z</published>
-    <updated>2020-06-29T08:14:56.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;103.22.200.0/22#对电信最友好&lt;br&gt;162.159.36.6#对联通最友好&lt;br&gt;104.16.0.0/12#对移动最友好&lt;br&gt;我已解析好的cname地址：ip.s.s1-cdn.me&lt;/p&gt;
     
     </summary>
     

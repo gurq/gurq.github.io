@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-10-20T15:04:19.514Z</updated>
+  <updated>2020-10-20T16:16:55.696Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -17,16 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>突击面试：Mysql</title>
+    <link href="https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9AMysql/"/>
+    <id>https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9AMysql/</id>
+    <published>2020-10-20T15:22:15.000Z</published>
+    <updated>2020-10-20T16:16:55.696Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。&lt;/p&gt;
+&lt;p&gt;真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
+    
+  </entry>
+  
+  <entry>
     <title>裸辞三个月有感</title>
     <link href="https://xu.ci/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/"/>
     <id>https://xu.ci/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/</id>
     <published>2020-10-20T14:30:37.000Z</published>
-    <updated>2020-10-20T15:04:19.514Z</updated>
+    <updated>2020-10-20T16:22:38.439Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;一句话总结：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;舒服是真的舒服，后悔是真的后悔&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不是后悔歇三个月，而是这三个月玩没玩好，学更是没学，确实是浪费了，下次努力歇的更好💪&lt;/p&gt;
 &lt;p&gt;下面是完整版：&lt;/p&gt;
 &lt;p&gt;从七月底提出辞职，到8月1号开始休假，到现在也算是休了三个月了，开始准备着手准备面试了。&lt;/p&gt;
 &lt;p&gt;说实话人生中能像现在这样很惬意的，什么事情都不用考虑，真正的做想做的事的时间其实并不多。&lt;/p&gt;
@@ -464,27 +487,6 @@
       <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
       <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简易VPS测速文件生成下载</title>
-    <link href="https://xu.ci/2019/12/vps.html/"/>
-    <id>https://xu.ci/2019/12/vps.html/</id>
-    <published>2019-12-09T05:19:20.000Z</published>
-    <updated>2020-05-16T05:54:20.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;在根目录下面建一个文件夹 &lt;code&gt;download&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   

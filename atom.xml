@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-10-21T18:18:12.963Z</updated>
+  <updated>2020-10-22T17:44:55.324Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>突击面试：计算机网络</title>
+    <link href="https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <id>https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
+    <published>2020-10-22T07:33:51.000Z</published>
+    <updated>2020-10-22T17:44:55.324Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。&lt;/p&gt;
+&lt;p&gt;真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>突击面试：Mysql</title>
@@ -466,27 +484,6 @@
       <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
       <category term="Docker" scheme="https://xu.ci/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSL2（Ubuntu）安装Postgres</title>
-    <link href="https://xu.ci/2019/12/wsl2ubuntupostgres.html/"/>
-    <id>https://xu.ci/2019/12/wsl2ubuntupostgres.html/</id>
-    <published>2019-12-19T05:24:24.000Z</published>
-    <updated>2020-05-16T05:56:57.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;自从微软更新了WSL2以后，似乎Windows有望成为linux第一桌面版，这次来试一下在WSL里面装Postgres&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
-    
-      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-10-24T08:53:25.664Z</updated>
+  <updated>2020-10-26T14:43:55.019Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试突击：spring</title>
+    <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"/>
+    <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/</id>
+    <published>2020-10-25T05:47:53.000Z</published>
+    <updated>2020-10-26T14:43:55.019Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。&lt;/p&gt;
+&lt;p&gt;真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>面试突击：kafka</title>
@@ -441,35 +459,6 @@
     
     
       <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
-    
-      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSL2增强，内网穿透方案：FRP与ZeroTier</title>
-    <link href="https://xu.ci/2020/01/wsl2frpzerotier.html/"/>
-    <id>https://xu.ci/2020/01/wsl2frpzerotier.html/</id>
-    <published>2020-01-01T12:25:57.000Z</published>
-    <updated>2020-06-29T08:14:35.826Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-FRP：直接对外暴露IP和端口&quot;&gt;&lt;a href=&quot;#1-FRP：直接对外暴露IP和端口&quot; class=&quot;headerlink&quot; title=&quot;1. FRP：直接对外暴露IP和端口&quot;&gt;&lt;/a&gt;1. FRP：直接对外暴露IP和端口&lt;/h2&gt;&lt;p&gt;FRP的原理基本就是端口转发，将外部的流量经过中间服务器转发至本地机器&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;优点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;开启frp后，相当于有了公网IP，任意设备均可任意访问&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;缺点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;由于寻址多中转了两次中间服务器，就增加了丢包的可能性，并且也增大了单次访问的延迟&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
       <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     

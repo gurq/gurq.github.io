@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>面试突击：spring</title>
+      <link href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"/>
+      <url>/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/</url>
+      
+        <content type="html"><![CDATA[<p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p><p>真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。</p><a id="more"></a><article class="message is-link">  <div class="message-header">    <p>⚠️ 注意</p>  </div>  <div class="message-body">    <i class="fas fa-globe-asia"></i> 本文仅为个人复习面试时的总结，并不全面，一些本人认为不重要或者已经牢牢掌握的内容并没有覆盖到，诸多口语化描述仅为便于自己理解并牢记，如需严谨权威的内容请去阅读：《Spring实战》  </div></article><h3 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h3><p>IOC全称是Inverse of Control，控制反转，也叫依赖注入</p><p>这是一种设计思想，就是<strong>原本是你手动创建类，现在让spring框架来创建和管理</strong>，spring在一个map里管理这些类，key是对象的id或者name，value是对象(BeanDefinition)</p><p>先看一下简化后的结构图：</p><p><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png" alt=""></p><p>然后简单的对着图说一下架构：</p><blockquote><ol><li>BeanFactory是整个IOC的核心，现在先不说，后面会引出</li><li>我们现在springboot最常用的一般是注解式，那么我们就从注解式的注入bean说起</li><li>注解式注入bean的环境，就是图中的AnnotationConfigApplicationContext，看名字就知道</li><li>它继承了父类：GenericApplicationContext</li><li>而GenericApplicationContext的父类，是AbstractApplicationContext</li><li>这个类有两个比较重要的子类，一个是刚刚说的Generic的子类，实现注解方式注入。另一个是XML的子类，是通过XML方式来注入。</li><li>AbstractApplicationContext实现了ConfigurableApplicationContext接口</li><li>而ConfigurableApplicationContext又实现了ApplicationContext接口，这个类就太熟悉了吧</li><li>而我们再看ApplicationContext，又会发现它继承了ListableBeanFactory，顾名思义，可以通过这个BeanFactory获取多个Bean</li><li>而ListableBeanFactory，继承的就是BeanFactory</li></ol></blockquote><p>现在再说一下一个加了@Bean注解的类是如何被注入的</p><blockquote><ol><li>会先进在AnnotationConfigApplicationContext的构造函数</li><li>在这个函数里有两个主要过程，register注册和refresh初始化</li><li>在register里，把beanClass封装成了BeanDefinition</li><li>然后GenericApplicationContext的构造函数里，初始化了一个DefaultListableBeanFactory</li><li>就把刚刚封装好beanDefinition放进了初始化好的ConcurrentHashMap里，key是name(也可以是id)，value就是BeanDefinition</li><li>到这一步就注册好了，注意这里还没有创建Bean对象</li><li>这里的工作比较多，简单的说就是先做了一些准备工作（比如准备了上下文环境context，准备了beanFactory，ConfigurableListableBeanFactory，准备BeanPostProcessor，准备监听器之类的）</li><li>然后在finishBeanFactoryInitialization根据之前注册好的beanDefinition，利用反射创建bean的实例，并初始化</li><li>然后因为这些context或者beanFactory最终都是实现了BeanFactory的接口，所以就可以通过BeanFactory里面的接口来getBean了</li><li>也因为AutowireCapableBeanFactory实现了BeanFactory，也可以@Autowire这样用了</li><li>都是从之前说的那个concurrentHashMap里面取的</li></ol></blockquote><h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>一般在日志啊，事务啊，或者封装返回值的时候用到AOP，减少系统重复代码</p><p>就在希望配置的类上加注解@Aspect，在方法前执行的加@Before，方法后执行的加@AfterReturning，用@Pointcut指定影响的路径</p><p>AOP是基于动态代理，如果要代理的对象实现了接口，就走的JDK Proxy，没有实现接口的，走的Cglib</p><p>实现原理就是：</p><blockquote><ol><li>之前IOC提到了，在BeanFactory创建的时候，走Refresh方法，方法里面有一些准备工作，其中就有初始化了一些PostProcessor，如果开启了AOP，这里面就包括了AnnotationAwareAspectJAutoProxyCreator（这么长我肯定记不住，我就记ProxyCreator）</li><li>然后会在最后创建Bean对象时，会有一个拦截，看是否匹配了pointcut</li><li>如果匹配了，会生成一个代理对象，将代理对象返回给容器。这样以后getBean取的实际上就只是代理对象了。</li><li>向ProxyCreator返回真正的Bean实例，注册各种拦截器</li></ol></blockquote><h3 id="事务隔离级别"><a href="#事务隔离级别" class="headerlink" title="事务隔离级别"></a>事务隔离级别</h3><p>和之前说的Mysql是一样的，比Mysql多一种，就是和数据库事务隔离级别保持一致</p><h3 id="事务传播"><a href="#事务传播" class="headerlink" title="事务传播"></a>事务传播</h3><p>支持当前事务：</p><blockquote><ol><li>当前存在，则加入；当前不存在，创建个新事务</li><li>当前存在，则加入；当前不存在，不以事务运行</li><li>当前存在，则加入；当前不存在，抛异常</li></ol></blockquote><p>不支持当前事务：</p><blockquote><ol><li>创建新事务，如果当前存在事务，给当前事务挂起</li><li>以非事务运行，如果当前存在事务，给当前事务挂起</li><li>以非事务运行，如果当前存在事务，抛异常</li></ol></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面试突击：kafka</title>
       <link href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/"/>
       <url>/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/</url>

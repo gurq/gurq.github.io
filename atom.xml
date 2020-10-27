@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-10-26T14:57:55.354Z</updated>
+  <updated>2020-10-27T09:35:34.437Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试突击：springcloud五大组件</title>
+    <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/"/>
+    <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/</id>
+    <published>2020-10-26T23:50:14.000Z</published>
+    <updated>2020-10-27T09:35:34.437Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。&lt;/p&gt;
+&lt;p&gt;真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>面试突击：spring</title>
@@ -436,31 +454,6 @@
     
     
       <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSL从一无所知到略知一二</title>
-    <link href="https://xu.ci/2020/01/wsl.html/"/>
-    <id>https://xu.ci/2020/01/wsl.html/</id>
-    <published>2020-01-07T12:00:11.000Z</published>
-    <updated>2020-05-16T05:57:33.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一、简介&quot;&gt;&lt;a href=&quot;#一、简介&quot; class=&quot;headerlink&quot; title=&quot;一、简介&quot;&gt;&lt;/a&gt;一、简介&lt;/h2&gt;&lt;h3 id=&quot;微软“爱”-Linux&quot;&gt;&lt;a href=&quot;#微软“爱”-Linux&quot; class=&quot;headerlink&quot; title=&quot;微软“爱” Linux&quot;&gt;&lt;/a&gt;微软“爱” Linux&lt;/h3&gt;&lt;p&gt;2014 年 10 月 20 日，出任微软公司首席执行官不久的萨提亚 ∙ 纳德拉第一次公开宣示了微软对 Linux 和开源世界的新感情。事实证明，微软的确是付出了真爱。过去两年，从微软智能云 Azure 到 Windows 10，从开发工具到数据库平台，“把 Linux 放在重中之重”，已经成为微软内部人人皆知的准则。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Tutorial" scheme="https://xu.ci/categories/Tutorial/"/>
-    
-      <category term="WSL" scheme="https://xu.ci/categories/Tutorial/WSL/"/>
-    
-    
-      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
-    
-      <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
     
   </entry>
   

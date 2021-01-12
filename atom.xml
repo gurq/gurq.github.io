@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2020-10-20T16:22:38.439Z</updated>
+  <updated>2021-01-12T09:51:17.395Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020年度总结，2021新年展望</title>
+    <link href="https://xu.ci/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/"/>
+    <id>https://xu.ci/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/</id>
+    <published>2020-12-31T11:58:19.000Z</published>
+    <updated>2021-01-12T09:51:17.395Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2020年要结束了，2021年要开始了。&lt;/p&gt;
+&lt;p&gt;刚工作的时候，写下了  &lt;code&gt;《3年经验程序员应该掌握什么技能》&lt;/code&gt; 的OneNote笔记。当有两年工作经验的时候，看当时的标准，觉得还有那么大的差距，基本不可能完成了。结果现在四年工作经验的时候，所幸，勉强算是完成并超越了当时的目标了吧。&lt;/p&gt;
+&lt;p&gt;虽然定下目标推迟完成了，但总比没有完成强。以前看了很多大神的博客，他们都有年度总结的习惯，即然现在我也开始正式写博客了，那我也要跟一波风。&lt;/p&gt;
+&lt;p&gt;先放个最大的收获！！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20210110185755.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>裸辞三个月有感</title>
@@ -465,27 +486,6 @@
       <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
       <category term="WSL" scheme="https://xu.ci/tags/WSL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简易VPS测速文件生成下载</title>
-    <link href="https://xu.ci/2019/12/vps.html/"/>
-    <id>https://xu.ci/2019/12/vps.html/</id>
-    <published>2019-12-09T05:19:20.000Z</published>
-    <updated>2020-05-16T05:54:20.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;在根目录下面建一个文件夹 &lt;code&gt;download&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   

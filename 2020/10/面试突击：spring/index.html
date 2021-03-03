@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>面试突击：spring - 叙此 | I KISS YOU, SEE I</title><meta description="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。"><meta property="og:type" content="blog"><meta property="og:title" content="面试突击：spring"><meta property="og:url" content="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"><meta property="og:site_name" content="叙此 | I KISS YOU, SEE I"><meta property="og:description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png"><meta property="article:published_time" content="2020-10-25T05:47:53.000Z"><meta property="article:modified_time" content="2020-11-26T17:25:32.974Z"><meta property="article:author" content="Shadow Saint"><meta property="article:tag" content="博客"><meta property="article:tag" content="blog"><meta property="article:tag" content="Blog"><meta property="article:tag" content="叙此"><meta property="article:tag" content="xu.ci"><meta property="article:tag" content="xu ci"><meta property="article:tag" content=".ci"><meta property="article:tag" content="Java"><meta property="article:tag" content="java"><meta property="article:tag" content="wsl"><meta property="article:tag" content="WSL"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"},"headline":"叙此 | I KISS YOU, SEE I","image":["https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png"],"datePublished":"2020-10-25T05:47:53.000Z","dateModified":"2020-11-26T17:25:32.974Z","author":{"@type":"Person","name":"Shadow Saint"},"description":"平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。"}</script><link rel="canonical" href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"><link rel="alternative" href="/atom.xml" title="叙此 | I KISS YOU, SEE I" type="application/atom+xml"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-highlight.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?baa52047ec2a7f424cc64a62d1baf949";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-166756342-1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-166756342-1');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><script data-ad-client="ca-pub-8872763189439326" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="叙此 | I KISS YOU, SEE I" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/gurq"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-10-25T05:47:53.000Z" title="2020-10-25T05:47:53.000Z">2020-10-25</time><span class="level-item">14 minutes read (About 2072 words)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span> visits</span></div></div><h1 class="title is-3 is-size-4-mobile">面试突击：spring</h1><div class="content"><p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p>
+<p>真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。</p>
+<a id="more"></a>
+
+<article class="message is-link">
+  <div class="message-header">
+    <p>⚠️ 注意</p>
+  </div>
+  <div class="message-body">
+    <i class="fas fa-globe-asia"></i> 本文仅为个人复习面试时的总结，并不全面，一些本人认为不重要或者已经牢牢掌握的内容并没有覆盖到，诸多口语化描述仅为便于自己理解并牢记，如需严谨权威的内容请去阅读：《Spring实战》
+  </div>
+</article>
+
+<h3 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h3><p>IOC全称是Inverse of Control，控制反转，也叫依赖注入</p>
+<p>这是一种设计思想，就是<strong>原本是你手动创建类，现在让spring框架来创建和管理</strong>，spring在一个map里管理这些类，key是对象的id或者name，value是对象(BeanDefinition)</p>
+<p>先看一下简化后的结构图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png" alt=""></p>
+<p>然后简单的对着图说一下架构：</p>
+<blockquote>
+<ol>
+<li>BeanFactory是整个IOC的核心，现在先不说，后面会引出</li>
+<li>我们现在springboot最常用的一般是注解式，那么我们就从注解式的注入bean说起</li>
+<li>注解式注入bean的环境，就是图中的AnnotationConfigApplicationContext，看名字就知道</li>
+<li>它继承了父类：GenericApplicationContext</li>
+<li>而GenericApplicationContext的父类，是AbstractApplicationContext</li>
+<li>这个类有两个比较重要的子类，一个是刚刚说的Generic的子类，实现注解方式注入。另一个是XML的子类，是通过XML方式来注入。</li>
+<li>AbstractApplicationContext实现了ConfigurableApplicationContext接口</li>
+<li>而ConfigurableApplicationContext又实现了ApplicationContext接口，这个类就太熟悉了吧</li>
+<li>而我们再看ApplicationContext，又会发现它继承了ListableBeanFactory，顾名思义，可以通过这个BeanFactory获取多个Bean</li>
+<li>而ListableBeanFactory，继承的就是BeanFactory</li>
+</ol>
+</blockquote>
+<p>现在再说一下一个加了@Bean注解的方法是如何注入类的</p>
+<blockquote>
+<ol>
+<li>会先进在AnnotationConfigApplicationContext的构造函数</li>
+<li>在这个函数里有两个主要过程，register注册和refresh初始化</li>
+<li>在register里，把beanClass封装成了BeanDefinition</li>
+<li>然后GenericApplicationContext的构造函数里，初始化了一个DefaultListableBeanFactory</li>
+<li>就把刚刚封装好beanDefinition放进了初始化好的ConcurrentHashMap里，key是name(也可以是id)，value就是BeanDefinition</li>
+<li>到这一步就注册好了，注意这里还没有创建Bean对象</li>
+<li>refresh这里的工作比较多，简单的说就是先做了一些准备工作（比如准备了上下文环境context，准备了beanFactory，ConfigurableListableBeanFactory，准备BeanPostProcessor，准备监听器之类的）</li>
+<li>然后在finishBeanFactoryInitialization根据之前注册好的beanDefinition，利用反射创建bean的实例，并初始化</li>
+<li>然后因为这些context或者beanFactory最终都是实现了BeanFactory的接口，所以就可以通过BeanFactory里面的接口来getBean了</li>
+<li>也因为AutowireCapableBeanFactory实现了BeanFactory，也可以@Autowire这样用了</li>
+<li>都是从之前说的那个concurrentHashMap里面取的</li>
+</ol>
+</blockquote>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>一般在日志啊，事务啊，或者封装返回值的时候用到AOP，减少系统重复代码</p>
+<p>就在希望配置的类上加注解@Aspect，在方法前执行的加@Before，方法后执行的加@AfterReturning，用@Pointcut指定影响的路径</p>
+<p>AOP是基于动态代理，如果要代理的对象实现了接口，就走的JDK Proxy，没有实现接口的，走的Cglib</p>
+<blockquote>
+<p>走JDK Proxy的话有的时候会有问题，所以springboot2.0以后默认都用Cglib了，用的AspectJ</p>
+</blockquote>
+<p>因为JDK Proxy是基于接口的，代理生成的对象只能赋值给接口，如果是个实现类，比如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">UserServiceImpl userService;</span><br></pre></td></tr></table></figure>
+
+<p>那么就会报错</p>
+<p>实现原理就是：</p>
+<blockquote>
+<ol>
+<li>之前IOC提到了，在BeanFactory创建的时候，走Refresh方法，方法里面有一些准备工作，其中就有初始化了一些PostProcessor，如果开启了AOP，这里面就包括了AnnotationAwareAspectJAutoProxyCreator（这么长我肯定记不住，我就记ProxyCreator）</li>
+<li>然后会在最后创建Bean对象时，会有一个拦截，看是否匹配了pointcut</li>
+<li>如果匹配了，会生成一个代理对象，将代理对象返回给容器。这样以后getBean取的实际上就只是代理对象了。</li>
+<li>向ProxyCreator返回真正的Bean实例，注册各种拦截器</li>
+</ol>
+</blockquote>
+<h3 id="循环依赖"><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3><p>循环依赖主要有两种，一种是构造器的循环依赖，一种是属性（或者@autowired）的循环依赖</p>
+<p>通过构造器的循环依赖是没办法的，只能通过代码的方式去避免</p>
+<p>通过属性注入导致的循环依赖，spring是通过三级缓存来避免的</p>
+<h4 id="三级缓存"><a href="#三级缓存" class="headerlink" title="三级缓存"></a>三级缓存</h4><p>在refrsh里面的<strong>finishBeanFactoryInitialization</strong>方法里，有个准备准备单例实例的方法<strong>preInstantiateSingletons</strong>，就是在这里实例化和初始化</p>
+<p>这里面在getSingleton三级缓存，也就是三个map，一个对象的创建要分别经过这三个map，到二级的时候就把三级的缓存删掉，到一级到时候就把二级的缓存删掉，最后交还给容器的时候再把一级缓存删掉</p>
+<blockquote>
+<ol>
+<li>三级：SingletonFactories 里面只有ObjectFactory，如果是构造器级的循环依赖，这个ObjectFactory都构建不起来，所以没法解决</li>
+<li>二级：earlySingletonObjects 实例化了，但未初始化注入属性，但已经可以被拿去用了，解决了循环依赖的问题</li>
+<li>一级：SingletonObjects 实例化且注入属性了</li>
+</ol>
+</blockquote>
+<p>所以如果两个Bean，A、B属性级的循环依赖，在初始化的过程是这样的：</p>
+<blockquote>
+<ol>
+<li>A实例化后开始注入属性，也就是从二级缓存过了在准备写到一级缓存的时候，依赖了B</li>
+<li>B开始准备BeanFactory，进入了三级缓存</li>
+<li>B根据三级缓存的BeanFactory实例化了，进入了二级缓存，因为B没有开始注入属性，所以不涉及依赖</li>
+<li>A从二级缓存中取到了B，完成了注入属性，结束了A的Bean的实例化和初始化</li>
+<li>该B初始化的时候，直接从二级缓存中取到已经实例化并初始化的earlySingletonObject</li>
+<li>给B注入属性，因为A已经完成了，所以可以顺利完成了</li>
+</ol>
+</blockquote>
+<h3 id="事务隔离级别"><a href="#事务隔离级别" class="headerlink" title="事务隔离级别"></a>事务隔离级别</h3><p>和之前说的Mysql是一样的，比Mysql多一种，就是和数据库事务隔离级别保持一致</p>
+<h3 id="事务传播"><a href="#事务传播" class="headerlink" title="事务传播"></a>事务传播</h3><p>支持当前事务：</p>
+<blockquote>
+<ol>
+<li>当前存在，则加入；当前不存在，创建个新事务</li>
+<li>当前存在，则加入；当前不存在，不以事务运行</li>
+<li>当前存在，则加入；当前不存在，抛异常</li>
+</ol>
+</blockquote>
+<p>不支持当前事务：</p>
+<blockquote>
+<ol>
+<li>创建新事务，如果当前存在事务，给当前事务挂起</li>
+<li>以非事务运行，如果当前存在事务，给当前事务挂起</li>
+<li>以非事务运行，如果当前存在事务，抛异常</li>
+</ol>
+</blockquote>
+<p>其他情况：</p>
+<blockquote>
+<ol>
+<li>如果当前有事务，作为其嵌套事务；如果没有，创建新事务</li>
+</ol>
+</blockquote>
+<h3 id="自定义starter"><a href="#自定义starter" class="headerlink" title="自定义starter"></a>自定义starter</h3><blockquote>
+<ol>
+<li>创建名字为 <code>xxx-spring-boot-starter</code> 的启动器项目。</li>
+<li>创建名字为 <code>xxx-spring-boot-autoconfigure</code> 的项目。<ul>
+<li>编写属性绑定类 <code>xxxProperties</code>.</li>
+<li>编写服务类，引入 <code>xxxProperties</code>.</li>
+<li>编写自动配置类<code>XXXAutoConfiguration</code>注入配置。</li>
+<li>创建 <code>spring.factories</code> 文件，用于指定要自动配置的类。</li>
+</ul>
+</li>
+<li>启动器项目为空项目，用来引入 <code>xxx-spring-boot-autoconfigure</code>等其他依赖。</li>
+<li>项目引入 <code>starter</code>，配置需要配置的信息。</li>
+</ol>
+</blockquote>
+<p>代码样例：</p>
+<p><a href="https://www.cnblogs.com/niumoo/p/11775009.html">https://www.cnblogs.com/niumoo/p/11775009.html</a></p>
+</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="https://www.buymeacoffee.com/grq" style="background-color:rgba(255,128,62,.87);border-color:transparent;color:white;" target="_blank" rel="noopener"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button is-success donate"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20200515213606.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">面试突击：springcloud五大组件</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/"><span class="level-item">面试突击：kafka</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: 'e63f94bcc0301293faf8765fcff32d3b',
+            repo: 'gurq.github.io',
+            owner: 'gurq',
+            clientID: 'f050a31cd7687a91dd76',
+            clientSecret: 'd70eb7ed04e3e021ee97bf16de5ecaba49cc4174',
+            admin: "gurq",
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20200512154300.png" alt="ShadowSaint"></figure><p class="title is-size-4 is-block line-height-inherit">ShadowSaint</p><p class="is-size-6 is-block">叙此 | I kiss you, see I</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>CD, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/gurq" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/gurq"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Tool/"><span class="level-start"><span class="level-item">Tool</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Tutorial/"><span class="level-start"><span class="level-item">Tutorial</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Tutorial/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Tutorial/WSL/"><span class="level-start"><span class="level-item">WSL</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/interview/"><span class="level-start"><span class="level-item">interview</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Gossip/"><span class="tag">Gossip</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tool/"><span class="tag">Tool</span><span class="tag is-grey-lightest">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WSL/"><span class="tag">WSL</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/interview/"><span class="tag">interview</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-12-31T11:58:19.000Z">2020-12-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/">2020年度总结，2021新年展望</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-10-28T09:41:57.000Z">2020-10-28</time></p><p class="title is-6"><a class="link-muted" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/">面试突击：Java基础</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-10-26T23:50:14.000Z">2020-10-27</time></p><p class="title is-6"><a class="link-muted" href="/2020/10/%E5%BF%AB%E6%8E%92%E5%BD%92%E5%B9%B6/">快排归并</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-10-26T23:50:14.000Z">2020-10-27</time></p><p class="title is-6"><a class="link-muted" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/">面试突击：springcloud五大组件</a></p><p class="is-uppercase"></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-10-25T05:47:53.000Z">2020-10-25</time></p><p class="title is-6"><a class="link-muted" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/">面试突击：spring</a></p><p class="is-uppercase"></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/10/"><span class="level-start"><span class="level-item">October 2020</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/02/"><span class="level-start"><span class="level-item">February 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/01/"><span class="level-start"><span class="level-item">January 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/12/"><span class="level-start"><span class="level-item">December 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/11/"><span class="level-start"><span class="level-item">November 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe to Updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=0mv80iklqh532kvmk8kmqetjg4&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="0mv80iklqh532kvmk8kmqetjg4" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="Subscribe"></div></div><p class="help">Where Shadow Saint speak</p></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="叙此 | I KISS YOU, SEE I" height="28"></a><p class="size-small"><span>&copy; 2021 Shadow Saint</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/gurq"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://xu.ci',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://s9.cnzz.com/z_stat.php?id=1278907966&amp;web_id=1278907966" async></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

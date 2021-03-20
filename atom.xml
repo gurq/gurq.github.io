@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2021-01-12T09:51:17.395Z</updated>
+  <updated>2021-03-20T15:14:13.816Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于微软office相关问题的汇总</title>
+    <link href="https://xu.ci/2021/03/%E5%85%B3%E4%BA%8E%E5%BE%AE%E8%BD%AFoffice%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E7%9A%84%E6%B1%87%E6%80%BB/"/>
+    <id>https://xu.ci/2021/03/%E5%85%B3%E4%BA%8E%E5%BE%AE%E8%BD%AFoffice%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E7%9A%84%E6%B1%87%E6%80%BB/</id>
+    <published>2021-03-20T15:00:53.000Z</published>
+    <updated>2021-03-20T15:14:13.816Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;并非office使用教程&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2020年度总结，2021新年展望</title>
@@ -60,17 +77,11 @@
     <link href="https://xu.ci/2020/10/%E5%BF%AB%E6%8E%92%E5%BD%92%E5%B9%B6/"/>
     <id>https://xu.ci/2020/10/%E5%BF%AB%E6%8E%92%E5%BD%92%E5%B9%B6/</id>
     <published>2020-10-26T23:50:14.000Z</published>
-    <updated>2021-03-03T01:07:12.529Z</updated>
+    <updated>2021-03-20T14:50:18.060Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;p&gt;比较重要的两个算法代码实现&lt;/p&gt;
     
     </summary>
     
@@ -434,25 +445,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Windows创建文件连接，同步任意文件夹</title>
-    <link href="https://xu.ci/2020/04/windows.html/"/>
-    <id>https://xu.ci/2020/04/windows.html/</id>
-    <published>2020-04-19T12:57:45.000Z</published>
-    <updated>2020-05-16T05:55:04.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有的同步网盘，只能同步指定的文件夹，但是我有一些文件是分布在电脑的各个目录下的，那就可以通过创建连接的方式&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   

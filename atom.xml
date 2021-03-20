@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2021-03-20T15:14:13.816Z</updated>
+  <updated>2021-03-20T15:37:09.951Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>成为业务专家的方法论</title>
+    <link href="https://xu.ci/2021/03/%E6%88%90%E4%B8%BA%E4%B8%9A%E5%8A%A1%E4%B8%93%E5%AE%B6%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    <id>https://xu.ci/2021/03/%E6%88%90%E4%B8%BA%E4%B8%9A%E5%8A%A1%E4%B8%93%E5%AE%B6%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%BA/</id>
+    <published>2021-03-20T15:26:40.000Z</published>
+    <updated>2021-03-20T15:37:09.951Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可能我们都想成为技术上的大牛，写出优秀的开源框架/工具造福大家。&lt;/p&gt;
+&lt;p&gt;然而实际上可能我们都深陷业务的泥潭，似乎怎么也处理不干净纷繁复杂的业务。&lt;/p&gt;
+&lt;p&gt;身为打工仔就是这样，没办法，那既然只能依赖写业务去养家糊口，那要做就得尽量做到最好。&lt;/p&gt;
+&lt;p&gt;那面对复杂的业务，应该从哪里入手呢？哪些是最重要的环节呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Gossip" scheme="https://xu.ci/categories/Gossip/"/>
+    
+    
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于微软office相关问题的汇总</title>
     <link href="https://xu.ci/2021/03/%E5%85%B3%E4%BA%8E%E5%BE%AE%E8%BD%AFoffice%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E7%9A%84%E6%B1%87%E6%80%BB/"/>
     <id>https://xu.ci/2021/03/%E5%85%B3%E4%BA%8E%E5%BE%AE%E8%BD%AFoffice%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E7%9A%84%E6%B1%87%E6%80%BB/</id>
     <published>2021-03-20T15:00:53.000Z</published>
-    <updated>2021-03-20T15:14:13.816Z</updated>
+    <updated>2021-03-20T15:25:00.760Z</updated>
     
     <summary type="html">
     
@@ -30,6 +54,10 @@
     </summary>
     
     
+      <category term="Tool" scheme="https://xu.ci/categories/Tool/"/>
+    
+    
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
@@ -38,7 +66,7 @@
     <link href="https://xu.ci/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/"/>
     <id>https://xu.ci/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/</id>
     <published>2020-12-31T11:58:19.000Z</published>
-    <updated>2021-01-12T09:51:17.395Z</updated>
+    <updated>2021-03-20T15:24:50.581Z</updated>
     
     <summary type="html">
     
@@ -51,6 +79,10 @@
     </summary>
     
     
+      <category term="Gossip" scheme="https://xu.ci/categories/Gossip/"/>
+    
+    
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
   </entry>
   
@@ -59,7 +91,7 @@
     <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/"/>
     <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/</id>
     <published>2020-10-28T09:41:57.000Z</published>
-    <updated>2020-12-03T14:05:45.374Z</updated>
+    <updated>2021-03-20T15:24:25.123Z</updated>
     
     <summary type="html">
     
@@ -69,6 +101,10 @@
     </summary>
     
     
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
     
   </entry>
   
@@ -94,7 +130,7 @@
     <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/"/>
     <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/</id>
     <published>2020-10-26T23:50:14.000Z</published>
-    <updated>2020-12-03T05:26:13.511Z</updated>
+    <updated>2021-03-20T15:24:11.406Z</updated>
     
     <summary type="html">
     
@@ -104,6 +140,10 @@
     </summary>
     
     
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
     
   </entry>
   
@@ -112,7 +152,7 @@
     <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"/>
     <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/</id>
     <published>2020-10-25T05:47:53.000Z</published>
-    <updated>2020-11-26T17:25:32.974Z</updated>
+    <updated>2021-03-20T15:24:00.914Z</updated>
     
     <summary type="html">
     
@@ -122,6 +162,10 @@
     </summary>
     
     
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
     
   </entry>
   
@@ -130,7 +174,7 @@
     <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/"/>
     <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/</id>
     <published>2020-10-24T07:05:26.000Z</published>
-    <updated>2020-12-03T05:15:27.390Z</updated>
+    <updated>2021-03-20T15:23:50.057Z</updated>
     
     <summary type="html">
     
@@ -140,6 +184,10 @@
     </summary>
     
     
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
     
   </entry>
   
@@ -148,7 +196,7 @@
     <link href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9ARedis/"/>
     <id>https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9ARedis/</id>
     <published>2020-10-23T05:53:47.000Z</published>
-    <updated>2020-12-03T05:26:40.492Z</updated>
+    <updated>2021-03-20T15:23:37.726Z</updated>
     
     <summary type="html">
     
@@ -158,6 +206,10 @@
     </summary>
     
     
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
     
   </entry>
   
@@ -166,7 +218,7 @@
     <link href="https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     <id>https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
     <published>2020-10-22T07:33:51.000Z</published>
-    <updated>2020-10-23T05:46:18.222Z</updated>
+    <updated>2021-03-20T15:23:16.128Z</updated>
     
     <summary type="html">
     
@@ -176,6 +228,10 @@
     </summary>
     
     
+      <category term="interview" scheme="https://xu.ci/categories/interview/"/>
+    
+    
+      <category term="interview" scheme="https://xu.ci/tags/interview/"/>
     
   </entry>
   
@@ -206,7 +262,7 @@
     <link href="https://xu.ci/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/"/>
     <id>https://xu.ci/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/</id>
     <published>2020-10-20T14:30:37.000Z</published>
-    <updated>2020-10-20T16:22:38.439Z</updated>
+    <updated>2021-03-20T15:22:48.178Z</updated>
     
     <summary type="html">
     
@@ -224,6 +280,8 @@
     </summary>
     
     
+      <category term="Gossip" scheme="https://xu.ci/categories/Gossip/"/>
+    
     
       <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
     
@@ -234,7 +292,7 @@
     <link href="https://xu.ci/2020/07/%E7%94%A8docker-maven-plugin%E6%8E%A8%E9%80%81%E8%87%B3dockerhub/"/>
     <id>https://xu.ci/2020/07/%E7%94%A8docker-maven-plugin%E6%8E%A8%E9%80%81%E8%87%B3dockerhub/</id>
     <published>2020-07-01T08:19:42.000Z</published>
-    <updated>2020-07-01T08:33:35.876Z</updated>
+    <updated>2021-03-20T15:22:27.066Z</updated>
     
     <summary type="html">
     
@@ -244,6 +302,8 @@
     
     
     
+      <category term="Docker" scheme="https://xu.ci/tags/Docker/"/>
+    
   </entry>
   
   <entry>
@@ -251,7 +311,7 @@
     <link href="https://xu.ci/2020/06/%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%A7%86%E5%8C%96Docker%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Portainer/"/>
     <id>https://xu.ci/2020/06/%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%A7%86%E5%8C%96Docker%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Portainer/</id>
     <published>2020-06-29T08:03:15.000Z</published>
-    <updated>2020-06-29T08:12:22.251Z</updated>
+    <updated>2021-03-20T15:21:59.458Z</updated>
     
     <summary type="html">
     
@@ -262,6 +322,8 @@
     
     
     
+      <category term="Docker" scheme="https://xu.ci/tags/Docker/"/>
+    
   </entry>
   
   <entry>
@@ -269,7 +331,7 @@
     <link href="https://xu.ci/2020/06/Mac%E5%AE%89%E8%A3%85homebrew/"/>
     <id>https://xu.ci/2020/06/Mac%E5%AE%89%E8%A3%85homebrew/</id>
     <published>2020-06-28T14:44:17.000Z</published>
-    <updated>2020-06-29T07:12:54.830Z</updated>
+    <updated>2021-03-20T15:21:18.262Z</updated>
     
     <summary type="html">
     
@@ -284,6 +346,8 @@
     </summary>
     
     
+    
+      <category term="Tool" scheme="https://xu.ci/tags/Tool/"/>
     
   </entry>
   
@@ -340,12 +404,12 @@
     <link href="https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/"/>
     <id>https://xu.ci/2020/05/%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%99%BB%E5%BD%95UWP%E7%89%88OneNote%E7%9A%84%E6%96%B9%E6%B3%95/</id>
     <published>2020-05-17T15:12:17.000Z</published>
-    <updated>2020-06-29T08:25:51.545Z</updated>
+    <updated>2021-03-20T15:18:36.182Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;本文就是为了解决世纪互联登录UWP版OneNote的方法。&lt;/p&gt;
-&lt;p&gt;由于国情的原因，很多人用国际版Office并不能获得良好的体验，云端功能几乎无法使用，虽然本人的OneNote同步功能快切正常，OneDrive不借助任何工具下载速度也能有1-2m/s，但还是有我同事那样，大多数时候只有几k甚至为0的速度，这种时候用微软国内代理商世纪互联版的Office就显得很有必要了。&lt;/p&gt;
+&lt;p&gt;由于国情的原因，很多人用国际版Office并不能获得良好的体验，云端功能几乎无法使用，虽然本人的OneNote同步功能快且正常，OneDrive不借助任何工具下载速度也能有1-2m/s，但还是有我同事那样，大多数时候只有几k甚至为0的速度，这种时候用微软国内代理商世纪互联版的Office就显得很有必要了。&lt;/p&gt;
 &lt;p&gt;但是同样是因为国情的原因，微软没办法将国内的账号体系和国际版的打通，所以就有了两套账号系统，这体现在使用上就是微软的一些服务并没有做统一登录入口，只调用了国际版Office的登录接口，没有办法用国内的世纪互联的账号登陆，比如UWP版的OneNote，以及Chorme的OneNote插件。&lt;/p&gt;
     
     </summary>
@@ -425,26 +489,6 @@
       <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
     
       <category term="Blog" scheme="https://xu.ci/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://xu.ci/2020/05/hello-world/"/>
-    <id>https://xu.ci/2020/05/hello-world/</id>
-    <published>2020-05-10T16:44:06.000Z</published>
-    <updated>2020-05-12T15:12:59.945Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   

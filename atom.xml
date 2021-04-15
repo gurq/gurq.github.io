@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xu.ci/"/>
-  <updated>2021-03-20T15:37:09.951Z</updated>
+  <updated>2021-04-15T17:25:36.872Z</updated>
   <id>https://xu.ci/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Paradigm教程-时序图、泳道图等</title>
+    <link href="https://xu.ci/2021/04/Visual-Paradigm%E6%95%99%E7%A8%8B-%E6%97%B6%E5%BA%8F%E5%9B%BE%E3%80%81%E6%B3%B3%E9%81%93%E5%9B%BE%E7%AD%89/"/>
+    <id>https://xu.ci/2021/04/Visual-Paradigm%E6%95%99%E7%A8%8B-%E6%97%B6%E5%BA%8F%E5%9B%BE%E3%80%81%E6%B3%B3%E9%81%93%E5%9B%BE%E7%AD%89/</id>
+    <published>2021-04-15T15:40:20.000Z</published>
+    <updated>2021-04-15T17:25:36.872Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;进大厂以后给我最大的收获之一，就是让我意识到写代码之前的设计有多么的重要——在编码之前要先进行系统设计分析，简称系分。&lt;/p&gt;
+&lt;p&gt;在系分阶段，用泳道图把要写的代码流程展示清楚，在设计阶段把疑惑都解决了，写代码的时候效率又高，BUG又少。如果在写代码写了一半才把疑问解决，往迭代分支合代码的时候过CodeReview，让其他人看糟糕的设计和愚蠢的返工，多丢脸。所以系分阶段是重中之重。&lt;/p&gt;
+&lt;p&gt;那么如何做好系分呢？肯定要画各种图啦。画图工具有很多，除了本文要说的Visual Paradigm（本文后续称之为VP）以外，还有draw.io、processon.com等网站。出于安全性的因素，不太方便把图放在上面，并且功能我觉得也不如VP强大，所以这里就来介绍一下如何使用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Gossip" scheme="https://xu.ci/categories/Gossip/"/>
+    
+    
+      <category term="Gossip" scheme="https://xu.ci/tags/Gossip/"/>
+    
+  </entry>
   
   <entry>
     <title>成为业务专家的方法论</title>
@@ -439,42 +462,6 @@
   &lt;div class=&quot;message-body&quot;&gt;
     &lt;i class=&quot;fas fa-globe-asia cn-1&quot;&gt;&lt;/i&gt; 本文同时提供以下语言的翻译： 
     &lt;strong&gt;&lt;a href=&quot;/2020/05/常用Markdown语法&quot;&gt;简体中文&lt;/a&gt;&lt;/strong&gt;.
-  &lt;/div&gt;
-&lt;/article&gt;
-    
-    </summary>
-    
-    
-      <category term="Tutorial" scheme="https://xu.ci/categories/Tutorial/"/>
-    
-      <category term="Blog" scheme="https://xu.ci/categories/Tutorial/Blog/"/>
-    
-    
-      <category term="Tutorial" scheme="https://xu.ci/tags/Tutorial/"/>
-    
-      <category term="Blog" scheme="https://xu.ci/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用Markdown语法</title>
-    <link href="https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>https://xu.ci/2020/05/%E5%B8%B8%E7%94%A8Markdown%E8%AF%AD%E6%B3%95/</id>
-    <published>2020-05-12T06:42:36.000Z</published>
-    <updated>2020-06-29T08:27:20.505Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;常用Markdown语法&quot;&gt;&lt;a href=&quot;#常用Markdown语法&quot; class=&quot;headerlink&quot; title=&quot;常用Markdown语法&quot;&gt;&lt;/a&gt;常用Markdown语法&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;💡 在使用Markdown之前，你可能需要先了解一下关于Markdown的简单语法。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;article class=&quot;message is-link&quot;&gt;
-  &lt;div class=&quot;message-header&quot;&gt;
-    &lt;p&gt;Attention Please&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;message-body&quot;&gt;
-    &lt;i class=&quot;fas fa-globe-asia&quot;&gt;&lt;/i&gt; This article is also available in 
-    &lt;strong&gt;&lt;a href=&quot;/2020/05/Markdown-Tutorial&quot;&gt;English&lt;/a&gt;&lt;/strong&gt;.
   &lt;/div&gt;
 &lt;/article&gt;
     

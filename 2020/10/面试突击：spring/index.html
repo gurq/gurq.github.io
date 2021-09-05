@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试突击：spring">
+<meta property="og:url" content="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/index.html">
+<meta property="og:site_name" content="叙此 | I KISS YOU, SEE I">
+<meta property="og:description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png">
+<meta property="article:published_time" content="2020-10-25T05:47:53.000Z">
+<meta property="article:modified_time" content="2021-03-20T15:24:00.914Z">
+<meta property="article:author" content="Shadow Saint">
+<meta property="article:tag" content="interview">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png"><title>面试突击：spring | 叙此 | I KISS YOU, SEE I</title><link ref="canonical" href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">叙此 | I KISS YOU, SEE I</div><div class="header-banner-info__subtitle">Shadow Saint</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">面试突击：spring</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-10-25</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-03-20</span></span></div></header><div class="post-body"><p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p>
+<p>真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。</p>
+<span id="more"></span>
+
+<article class="message is-link">
+  <div class="message-header">
+    <p>⚠️ 注意</p>
+  </div>
+  <div class="message-body">
+    <i class="fas fa-globe-asia"></i> 本文仅为个人复习面试时的总结，并不全面，一些本人认为不重要或者已经牢牢掌握的内容并没有覆盖到，诸多口语化描述仅为便于自己理解并牢记，如需严谨权威的内容请去阅读：《Spring实战》
+  </div>
+</article>
+
+
+        <h3 id="IOC"   >
+          <a href="#IOC" class="heading-link"><i class="fas fa-link"></i></a><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h3>
+      <p>IOC全称是Inverse of Control，控制反转，也叫依赖注入</p>
+<p>这是一种设计思想，就是<strong>原本是你手动创建类，现在让spring框架来创建和管理</strong>，spring在一个map里管理这些类，key是对象的id或者name，value是对象(BeanDefinition)</p>
+<p>先看一下简化后的结构图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201026180352.png"></p>
+<p>然后简单的对着图说一下架构：</p>
+<blockquote>
+<ol>
+<li>BeanFactory是整个IOC的核心，现在先不说，后面会引出</li>
+<li>我们现在springboot最常用的一般是注解式，那么我们就从注解式的注入bean说起</li>
+<li>注解式注入bean的环境，就是图中的AnnotationConfigApplicationContext，看名字就知道</li>
+<li>它继承了父类：GenericApplicationContext</li>
+<li>而GenericApplicationContext的父类，是AbstractApplicationContext</li>
+<li>这个类有两个比较重要的子类，一个是刚刚说的Generic的子类，实现注解方式注入。另一个是XML的子类，是通过XML方式来注入。</li>
+<li>AbstractApplicationContext实现了ConfigurableApplicationContext接口</li>
+<li>而ConfigurableApplicationContext又实现了ApplicationContext接口，这个类就太熟悉了吧</li>
+<li>而我们再看ApplicationContext，又会发现它继承了ListableBeanFactory，顾名思义，可以通过这个BeanFactory获取多个Bean</li>
+<li>而ListableBeanFactory，继承的就是BeanFactory</li>
+</ol>
+</blockquote>
+<p>现在再说一下一个加了@Bean注解的方法是如何注入类的</p>
+<blockquote>
+<ol>
+<li>会先进在AnnotationConfigApplicationContext的构造函数</li>
+<li>在这个函数里有两个主要过程，register注册和refresh初始化</li>
+<li>在register里，把beanClass封装成了BeanDefinition</li>
+<li>然后GenericApplicationContext的构造函数里，初始化了一个DefaultListableBeanFactory</li>
+<li>就把刚刚封装好beanDefinition放进了初始化好的ConcurrentHashMap里，key是name(也可以是id)，value就是BeanDefinition</li>
+<li>到这一步就注册好了，注意这里还没有创建Bean对象</li>
+<li>refresh这里的工作比较多，简单的说就是先做了一些准备工作（比如准备了上下文环境context，准备了beanFactory，ConfigurableListableBeanFactory，准备BeanPostProcessor，准备监听器之类的）</li>
+<li>然后在finishBeanFactoryInitialization根据之前注册好的beanDefinition，利用反射创建bean的实例，并初始化</li>
+<li>然后因为这些context或者beanFactory最终都是实现了BeanFactory的接口，所以就可以通过BeanFactory里面的接口来getBean了</li>
+<li>也因为AutowireCapableBeanFactory实现了BeanFactory，也可以@Autowire这样用了</li>
+<li>都是从之前说的那个concurrentHashMap里面取的</li>
+</ol>
+</blockquote>
+
+        <h3 id="AOP"   >
+          <a href="#AOP" class="heading-link"><i class="fas fa-link"></i></a><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3>
+      <p>一般在日志啊，事务啊，或者封装返回值的时候用到AOP，减少系统重复代码</p>
+<p>就在希望配置的类上加注解@Aspect，在方法前执行的加@Before，方法后执行的加@AfterReturning，用@Pointcut指定影响的路径</p>
+<p>AOP是基于动态代理，如果要代理的对象实现了接口，就走的JDK Proxy，没有实现接口的，走的Cglib</p>
+<blockquote>
+<p>走JDK Proxy的话有的时候会有问题，所以springboot2.0以后默认都用Cglib了，用的AspectJ</p>
+</blockquote>
+<p>因为JDK Proxy是基于接口的，代理生成的对象只能赋值给接口，如果是个实现类，比如：</p>
+<figure class="highlight java"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">UserServiceImpl userService;</span><br></pre></td></tr></table></div></figure>
+
+<p>那么就会报错</p>
+<p>实现原理就是：</p>
+<blockquote>
+<ol>
+<li>之前IOC提到了，在BeanFactory创建的时候，走Refresh方法，方法里面有一些准备工作，其中就有初始化了一些PostProcessor，如果开启了AOP，这里面就包括了AnnotationAwareAspectJAutoProxyCreator（这么长我肯定记不住，我就记ProxyCreator）</li>
+<li>然后会在最后创建Bean对象时，会有一个拦截，看是否匹配了pointcut</li>
+<li>如果匹配了，会生成一个代理对象，将代理对象返回给容器。这样以后getBean取的实际上就只是代理对象了。</li>
+<li>向ProxyCreator返回真正的Bean实例，注册各种拦截器</li>
+</ol>
+</blockquote>
+
+        <h3 id="循环依赖"   >
+          <a href="#循环依赖" class="heading-link"><i class="fas fa-link"></i></a><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3>
+      <p>循环依赖主要有两种，一种是构造器的循环依赖，一种是属性（或者@autowired）的循环依赖</p>
+<p>通过构造器的循环依赖是没办法的，只能通过代码的方式去避免</p>
+<p>通过属性注入导致的循环依赖，spring是通过三级缓存来避免的</p>
+
+        <h4 id="三级缓存"   >
+          <a href="#三级缓存" class="heading-link"><i class="fas fa-link"></i></a><a href="#三级缓存" class="headerlink" title="三级缓存"></a>三级缓存</h4>
+      <p>在refrsh里面的<strong>finishBeanFactoryInitialization</strong>方法里，有个准备准备单例实例的方法<strong>preInstantiateSingletons</strong>，就是在这里实例化和初始化</p>
+<p>这里面在getSingleton三级缓存，也就是三个map，一个对象的创建要分别经过这三个map，到二级的时候就把三级的缓存删掉，到一级到时候就把二级的缓存删掉，最后交还给容器的时候再把一级缓存删掉</p>
+<blockquote>
+<ol>
+<li>三级：SingletonFactories 里面只有ObjectFactory，如果是构造器级的循环依赖，这个ObjectFactory都构建不起来，所以没法解决</li>
+<li>二级：earlySingletonObjects 实例化了，但未初始化注入属性，但已经可以被拿去用了，解决了循环依赖的问题</li>
+<li>一级：SingletonObjects 实例化且注入属性了</li>
+</ol>
+</blockquote>
+<p>所以如果两个Bean，A、B属性级的循环依赖，在初始化的过程是这样的：</p>
+<blockquote>
+<ol>
+<li>A实例化后开始注入属性，也就是从二级缓存过了在准备写到一级缓存的时候，依赖了B</li>
+<li>B开始准备BeanFactory，进入了三级缓存</li>
+<li>B根据三级缓存的BeanFactory实例化了，进入了二级缓存，因为B没有开始注入属性，所以不涉及依赖</li>
+<li>A从二级缓存中取到了B，完成了注入属性，结束了A的Bean的实例化和初始化</li>
+<li>该B初始化的时候，直接从二级缓存中取到已经实例化并初始化的earlySingletonObject</li>
+<li>给B注入属性，因为A已经完成了，所以可以顺利完成了</li>
+</ol>
+</blockquote>
+
+        <h3 id="事务隔离级别"   >
+          <a href="#事务隔离级别" class="heading-link"><i class="fas fa-link"></i></a><a href="#事务隔离级别" class="headerlink" title="事务隔离级别"></a>事务隔离级别</h3>
+      <p>和之前说的Mysql是一样的，比Mysql多一种，就是和数据库事务隔离级别保持一致</p>
+
+        <h3 id="事务传播"   >
+          <a href="#事务传播" class="heading-link"><i class="fas fa-link"></i></a><a href="#事务传播" class="headerlink" title="事务传播"></a>事务传播</h3>
+      <p>支持当前事务：</p>
+<blockquote>
+<ol>
+<li>当前存在，则加入；当前不存在，创建个新事务</li>
+<li>当前存在，则加入；当前不存在，不以事务运行</li>
+<li>当前存在，则加入；当前不存在，抛异常</li>
+</ol>
+</blockquote>
+<p>不支持当前事务：</p>
+<blockquote>
+<ol>
+<li>创建新事务，如果当前存在事务，给当前事务挂起</li>
+<li>以非事务运行，如果当前存在事务，给当前事务挂起</li>
+<li>以非事务运行，如果当前存在事务，抛异常</li>
+</ol>
+</blockquote>
+<p>其他情况：</p>
+<blockquote>
+<ol>
+<li>如果当前有事务，作为其嵌套事务；如果没有，创建新事务</li>
+</ol>
+</blockquote>
+
+        <h3 id="自定义starter"   >
+          <a href="#自定义starter" class="heading-link"><i class="fas fa-link"></i></a><a href="#自定义starter" class="headerlink" title="自定义starter"></a>自定义starter</h3>
+      <blockquote>
+<ol>
+<li>创建名字为 <code>xxx-spring-boot-starter</code> 的启动器项目。</li>
+<li>创建名字为 <code>xxx-spring-boot-autoconfigure</code> 的项目。<ul>
+<li>编写属性绑定类 <code>xxxProperties</code>.</li>
+<li>编写服务类，引入 <code>xxxProperties</code>.</li>
+<li>编写自动配置类<code>XXXAutoConfiguration</code>注入配置。</li>
+<li>创建 <code>spring.factories</code> 文件，用于指定要自动配置的类。</li>
+</ul>
+</li>
+<li>启动器项目为空项目，用来引入 <code>xxx-spring-boot-autoconfigure</code>等其他依赖。</li>
+<li>项目引入 <code>starter</code>，配置需要配置的信息。</li>
+</ol>
+</blockquote>
+<p>代码样例：</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/niumoo/p/11775009.html" >https://www.cnblogs.com/niumoo/p/11775009.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://xu.ci">Shadow Saint</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/">https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspring/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/interview/">interview</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/10/%E5%BF%AB%E6%8E%92%E5%BD%92%E5%B9%B6/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ Untitled ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/"><span class="paginator-prev__text">面试突击：kafka</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#IOC"><span class="toc-number">1.</span> <span class="toc-text">
+          IOC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AOP"><span class="toc-number">2.</span> <span class="toc-text">
+          AOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96"><span class="toc-number">3.</span> <span class="toc-text">
+          循环依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-number">3.1.</span> <span class="toc-text">
+          三级缓存</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">4.</span> <span class="toc-text">
+          事务隔离级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD"><span class="toc-number">5.</span> <span class="toc-text">
+          事务传播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89starter"><span class="toc-number">6.</span> <span class="toc-text">
+          自定义starter</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Shadow Saint</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

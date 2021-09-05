@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="一、简介                           微软“爱” Linux       2014 年 10 月 20 日，出任微软公司首席执行官不久的萨提亚 ∙ 纳德拉第一次公开宣示了微软对 Linux 和开源世界的新感情。事实证明，微软的确是付出了真爱。过去两年，从微软智能云 Azure 到 Windows 10，从开发工具到数据库平台，“把 Linux 放在重中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WSL从一无所知到略知一二">
+<meta property="og:url" content="https://xu.ci/2020/01/wsl.html/index.html">
+<meta property="og:site_name" content="叙此 | I KISS YOU, SEE I">
+<meta property="og:description" content="一、简介                           微软“爱” Linux       2014 年 10 月 20 日，出任微软公司首席执行官不久的萨提亚 ∙ 纳德拉第一次公开宣示了微软对 Linux 和开源世界的新感情。事实证明，微软的确是付出了真爱。过去两年，从微软智能云 Azure 到 Windows 10，从开发工具到数据库平台，“把 Linux 放在重中">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-07T12:00:11.000Z">
+<meta property="article:modified_time" content="2020-05-16T05:57:33.000Z">
+<meta property="article:author" content="Shadow Saint">
+<meta property="article:tag" content="Tutorial">
+<meta property="article:tag" content="WSL">
+<meta name="twitter:card" content="summary"><title>WSL从一无所知到略知一二 | 叙此 | I KISS YOU, SEE I</title><link ref="canonical" href="https://xu.ci/2020/01/wsl.html/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">叙此 | I KISS YOU, SEE I</div><div class="header-banner-info__subtitle">Shadow Saint</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">WSL从一无所知到略知一二</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-01-07</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-05-16</span></span></div></header><div class="post-body">
+        <h2 id="一、简介"   >
+          <a href="#一、简介" class="heading-link"><i class="fas fa-link"></i></a><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2>
+      
+        <h3 id="微软“爱”-Linux"   >
+          <a href="#微软“爱”-Linux" class="heading-link"><i class="fas fa-link"></i></a><a href="#微软“爱”-Linux" class="headerlink" title="微软“爱” Linux"></a>微软“爱” Linux</h3>
+      <p>2014 年 10 月 20 日，出任微软公司首席执行官不久的萨提亚 ∙ 纳德拉第一次公开宣示了微软对 Linux 和开源世界的新感情。事实证明，微软的确是付出了真爱。过去两年，从微软智能云 Azure 到 Windows 10，从开发工具到数据库平台，“把 Linux 放在重中之重”，已经成为微软内部人人皆知的准则。</p>
+<span id="more"></span>
+
+<p>2019 年微软 Build 开发者大会在雷德蒙德召开。继将 Bash shell、原生 OpenSSH、WSL 引入 Windows，以及在微软商店提供 Ubuntu、SUSE Linux 和 Fedora 等发行版，微软又宣布了一个重大的决定 —— 将完整的 Linux 内核引入 Windows 10。</p>
+
+        <h4 id="说句题外话"   >
+          <a href="#说句题外话" class="heading-link"><i class="fas fa-link"></i></a><a href="#说句题外话" class="headerlink" title="说句题外话"></a>说句题外话</h4>
+      <p>微软越来越拥抱开源了，.net开源，收购github，并且是github上拥有最多开源项目的企业、组织或团体，我个人相比谷歌更喜欢微软，希望微软越办越好</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">github 上开源项目数</span><br><span class="line">    微软：2.9K</span><br><span class="line">    谷歌：1.6K</span><br><span class="line">    阿里巴巴：291</span><br><span class="line">    腾讯：94</span><br><span class="line">    百度：83</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="WSL"   >
+          <a href="#WSL" class="heading-link"><i class="fas fa-link"></i></a><a href="#WSL" class="headerlink" title="WSL"></a>WSL</h3>
+      <p>WSL 全称为Windows Subsystem for Linux，最早与2016年微软就推出了BUG众多的WSL1，经过两年的缝缝补补，于2019年6月推出了BUG众多的WSL2。</p>
+<p>WSL1是一个为在 Windows 10 上能够原生运行 Linux 二进制可执行文件（ELF格式）的兼容层，而WSL2是基于 HYPER-V 虚拟化技术。</p>
+<p>WSL2目前基于Linux4.19内核修改，并在github上开源</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/microsoft/WSL2-Linux-Kernel" >https://github.com/microsoft/WSL2-Linux-Kernel</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>可惜的是截止目前（2020年1月2日），WSL仍不是真正完整独立的Linux系统。</p>
+<p>WSL1没有Linux内核（故无法使用docker），WSL2没有systemd包（故无法使用systemctl等命令）。</p>
+<p>但是假以时日，<em><strong>也许</strong></em>WSL能成为最流行、最方便、最好用的Linux桌面发行版。</p>
+
+        <h3 id="为什么要用WSL"   >
+          <a href="#为什么要用WSL" class="heading-link"><i class="fas fa-link"></i></a><a href="#为什么要用WSL" class="headerlink" title="为什么要用WSL"></a>为什么要用WSL</h3>
+      <ul>
+<li>性能更好</li>
+</ul>
+<p>与虚拟机（Virtual Box/VMware）相比，WSL更接近底层，占用也小，WSL是Windows本身自带的一个功能，完全使用计算机自身硬件能力，挂起时仅占用1M内存。</p>
+<ul>
+<li>功能强大</li>
+</ul>
+<p>在Windows下可直接访问WSL内的路径，调用WSL内的service，sh脚本；在WSL里也可以直接访问Windows内的路径，运行exe程序。</p>
+<ul>
+<li>更方便</li>
+</ul>
+<p>无需多个设备，无需双系统，无需启动虚拟机，就可以体验和使用Linux，在WSL里面跑一些自己写的脚本日常使用根本感知不到，不会有黑框框命令行窗口不能关，不会占用任务栏、通知栏</p>
+<blockquote>
+<p>并且，作为程序猿，其实一直觉得应该学好Linux，拿Linux作为主力使用的操作系统，但是Windows下有太多Linux没法安装的方便工具又不可能舍弃，之前一直用Windows+虚拟机的方案解决总感觉差那么点意思，现在用WSL就很舒服，完全可以将Windows当做一个Linux的桌面发行版用了。</p>
+</blockquote>
+
+        <h2 id="二、安装"   >
+          <a href="#二、安装" class="heading-link"><i class="fas fa-link"></i></a><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2>
+      <p>如果只需WSL1，则用最新版本的Windows都有，可直接从 3 开始看</p>
+
+        <h3 id="1-确定系统版本"   >
+          <a href="#1-确定系统版本" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-确定系统版本" class="headerlink" title="1. 确定系统版本"></a>1. 确定系统版本</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设置--&gt;更新和安全--&gt;Windows更新--&gt;OS内部版本信息--&gt;Windows规格--&gt;操作系统版本</span><br></pre></td></tr></table></div></figure>
+
+<p>请确保版本号大于等于<code>18917</code>，18917后才有WSL2。</p>
+<p>但是该版本下，Windows并不能直接通过localhost:端口号访问WSL内的服务，只能在WSL内通过ifconfig获取本次开机分配的内部ip，Windows再通过这个ip:端口号访问。</p>
+<p>所幸这么蠢的错误没有持续太久，18945的版本就更改回去了，WSL1和18945以后的版本都可以通过localhost:端口号访问WSL内的服务，但是保险起见还是<em><strong>建议更新至最新的<code>19536</code>及以后的版本</strong></em>。</p>
+
+        <h4 id="注意"   >
+          <a href="#注意" class="heading-link"><i class="fas fa-link"></i></a><a href="#注意" class="headerlink" title="注意"></a>注意</h4>
+      <blockquote>
+<p>不论是WSL的哪个版本（WSL1/18945前、后的WSL2），访问WSL的服务都只能通过localhost，不能通过127.0.0.1，通过127.0.0.1只能访问到Windows对应的服务</p>
+</blockquote>
+<p>如果版本号大于等于19536，可直接从 3 开始看</p>
+
+        <h3 id="2-更新系统版本至最新预览版"   >
+          <a href="#2-更新系统版本至最新预览版" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-更新系统版本至最新预览版" class="headerlink" title="2. 更新系统版本至最新预览版"></a>2. 更新系统版本至最新预览版</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">更新：大概在2020年3月或者4月，正式版已经支持WSL2了！！！</span><br></pre></td></tr></table></div></figure>
+
+<p>不出所料的话，大家的电脑系统版本最新不过正式版1909，版本号是18363，只有WSL1，没有WSL2，需要将系统更换至预览版</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">设置--&gt;更新和安全--&gt;Windows预览体验计划--&gt;选择将账号变更为预览版--&gt;选择更新策略为 FAST</span><br><span class="line"></span><br><span class="line">设置--&gt;更新和安全--&gt;Windows更新--&gt;重新检查更新--&gt;安装最新的预览版</span><br></pre></td></tr></table></div></figure>
+
+
+        <h4 id="注意-1"   >
+          <a href="#注意-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#注意-1" class="headerlink" title="注意"></a>注意</h4>
+      <blockquote>
+<p>这里有可能会更新失败，如果遇到更新失败，并且自己动手能力不够，不会备份和重装系统，手头没有对应工具的话，建议放弃使用WSL2，仍然使用WSL1，用WSL1的话下面的东西大体不变<br>如果具有动手能力的话，更新失败十有八九是因为，当前的WIN10是通过MBR+UEFI/LEGENCY的方式安装的，所以要将硬盘改为GPT格式，进BIOS更换启动引导方式为单UEFI模式，然后用UEFI引导的U盘重装系统，再更新至最新预览版</p>
+</blockquote>
+
+        <h3 id="3-打开关于WSL的系统相关设置"   >
+          <a href="#3-打开关于WSL的系统相关设置" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-打开关于WSL的系统相关设置" class="headerlink" title="3. 打开关于WSL的系统相关设置"></a>3. 打开关于WSL的系统相关设置</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">控制面板--&gt;程序--&gt;启动或关闭Windows功能</span><br></pre></td></tr></table></div></figure>
+
+<p>在<code>Windows虚拟机监控程序平台</code>、<code>适用于Linux的Windows子系统</code>、<code>虚拟机平台</code> 三个功能面前打勾，确定，安装组件后重启电脑</p>
+
+        <h3 id="4-下载Linux系统"   >
+          <a href="#4-下载Linux系统" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-下载Linux系统" class="headerlink" title="4. 下载Linux系统"></a>4. 下载Linux系统</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Store--&gt;搜索Ubuntu（Debian，Kali等自己喜欢的子系统）--&gt;下载--&gt;进入子系统后按提示初始化环境--&gt;设置用户名/密码</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="5-更改默认的WSL1为WSL2"   >
+          <a href="#5-更改默认的WSL1为WSL2" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-更改默认的WSL1为WSL2" class="headerlink" title="5. 更改默认的WSL1为WSL2"></a>5. 更改默认的WSL1为WSL2</h3>
+      <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按WIN+X，点击Windows PowerShell（管理员）【有的版本显示为 命令提示符（管理员）】</span><br></pre></td></tr></table></div></figure>
+
+<p>输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wsl --set-default-version 2</span><br><span class="line"></span><br><span class="line">wsl -l -v</span><br></pre></td></tr></table></div></figure>
+
+<p>打印出来的 VERSION 是 2 就对了</p>
+
+        <h3 id="6-安装docker"   >
+          <a href="#6-安装docker" class="heading-link"><i class="fas fa-link"></i></a><a href="#6-安装docker" class="headerlink" title="6. 安装docker"></a>6. 安装docker</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh</span><br><span class="line">sudo service docker start</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="7-设置docker为开机启动项"   >
+          <a href="#7-设置docker为开机启动项" class="heading-link"><i class="fas fa-link"></i></a><a href="#7-设置docker为开机启动项" class="headerlink" title="7. 设置docker为开机启动项"></a>7. 设置docker为开机启动项</h3>
+      <p>不是WSL的开机启动，是会随着Windows开机启动而启动<br>在WSL里：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/init.wsl</span><br></pre></td></tr></table></div></figure>
+
+<p>输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/sh</span></span><br><span class="line">service docker start</span><br></pre></td></tr></table></div></figure>
+
+<p>保存退出，授权：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /etc/init.wsl</span><br></pre></td></tr></table></div></figure>
+
+<p>在Windows里，创建TXT，输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = WScript.CreateObject(<span class="string">&quot;WScript.Shell&quot;</span>)        </span><br><span class="line">ws.run <span class="string">&quot;wsl -d ubuntu -u root /etc/init.wsl&quot;</span></span><br></pre></td></tr></table></div></figure>
+
+<p>给TXT重命名为 <code>linux-start.vbs</code></p>
+<p>按<code>WIN+R</code>，输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell:startup</span><br></pre></td></tr></table></div></figure>
+
+<p>给vbs文件放到这里</p>
+
+        <h4 id="注意-2"   >
+          <a href="#注意-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#注意-2" class="headerlink" title="注意"></a>注意</h4>
+      <blockquote>
+<p>由于WSL毕竟只是Windows的一个服务，不是一个真正完整独立的Linux系统，所以想要开机启动必须用这种方法调，在rc.local里也好，systemd目录下写service也好，我试过了都不行（也希望大家如果试出来新方法还请告知我），必须写成service，然后在文件里启动，再在Windows启动里面调用WSL内的文件才可以</p>
+</blockquote>
+
+        <h3 id="8-重启wsl"   >
+          <a href="#8-重启wsl" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-重启wsl" class="headerlink" title="8. 重启wsl"></a>8. 重启wsl</h3>
+      <p>由于wsl没有<code>systemd</code>这个包，所以没法<code>reboot</code>、<code>shutdown</code>来重启，但是有时候确实要重启</p>
+<p>因为实际上WSL是Windows的一个服务，所以给服务关了再开就是了<br>新建一个txt，输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net stop LxssManager</span><br><span class="line">net start LxssManager</span><br></pre></td></tr></table></div></figure>
+
+<p>给TXT重命名为 <code>reboot.bat</code> 找个地方放就行，需要重启了双击它</p>
+
+        <h3 id="9-WSL内执行exe程序"   >
+          <a href="#9-WSL内执行exe程序" class="heading-link"><i class="fas fa-link"></i></a><a href="#9-WSL内执行exe程序" class="headerlink" title="9. WSL内执行exe程序"></a>9. WSL内执行exe程序</h3>
+      <p>在WSL内切换至 <code>/mnt/</code> 对应目录，运行<code>XXXX.exe</code>，如直接运行<code>explorer.exe</code></p>
+
+        <h3 id="10-Windows下WSL的路径"   >
+          <a href="#10-Windows下WSL的路径" class="heading-link"><i class="fas fa-link"></i></a><a href="#10-Windows下WSL的路径" class="headerlink" title="10. Windows下WSL的路径"></a>10. Windows下WSL的路径</h3>
+      <p>WSL2是基于 <code>9p</code>（贝尔实验室九号计划的文件协议） 挂载的 Windows 网络驱动器</p>
+<p>打开文件夹，输入： <code>\\wsl$</code> </p>
+<p>WSL1是基于 <code>DrvFs</code> 文件系统，直接访问：<code>C:\Users\用户\AppData\Local\Packages\XXXXXXUbuntuXXXXX\LocalState</code></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://xu.ci">Shadow Saint</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://xu.ci/2020/01/wsl.html/">https://xu.ci/2020/01/wsl.html/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/Tutorial/">Tutorial</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/WSL/">WSL</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/02/google-voice.html/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Google Voice 保号途径</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/01/wsl2frpzerotier.html/"><span class="paginator-prev__text">WSL2增强，内网穿透方案：FRP与ZeroTier</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">
+          一、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E8%BD%AF%E2%80%9C%E7%88%B1%E2%80%9D-Linux"><span class="toc-number">1.1.</span> <span class="toc-text">
+          微软“爱” Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E5%8F%A5%E9%A2%98%E5%A4%96%E8%AF%9D"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          说句题外话</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WSL"><span class="toc-number">1.2.</span> <span class="toc-text">
+          WSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8WSL"><span class="toc-number">1.3.</span> <span class="toc-text">
+          为什么要用WSL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">
+          二、安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A1%AE%E5%AE%9A%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1. 确定系统版本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          注意</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC%E8%87%B3%E6%9C%80%E6%96%B0%E9%A2%84%E8%A7%88%E7%89%88"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2. 更新系统版本至最新预览版</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">
+          注意</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%89%93%E5%BC%80%E5%85%B3%E4%BA%8EWSL%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">
+          3. 打开关于WSL的系统相关设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%8B%E8%BD%BDLinux%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.4.</span> <span class="toc-text">
+          4. 下载Linux系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E7%9A%84WSL1%E4%B8%BAWSL2"><span class="toc-number">2.5.</span> <span class="toc-text">
+          5. 更改默认的WSL1为WSL2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%89%E8%A3%85docker"><span class="toc-number">2.6.</span> <span class="toc-text">
+          6. 安装docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%AE%BE%E7%BD%AEdocker%E4%B8%BA%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9"><span class="toc-number">2.7.</span> <span class="toc-text">
+          7. 设置docker为开机启动项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-2"><span class="toc-number">2.7.1.</span> <span class="toc-text">
+          注意</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E9%87%8D%E5%90%AFwsl"><span class="toc-number">2.8.</span> <span class="toc-text">
+          8. 重启wsl</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-WSL%E5%86%85%E6%89%A7%E8%A1%8Cexe%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.9.</span> <span class="toc-text">
+          9. WSL内执行exe程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-Windows%E4%B8%8BWSL%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-number">2.10.</span> <span class="toc-text">
+          10. Windows下WSL的路径</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Shadow Saint</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

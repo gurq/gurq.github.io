@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="1. FRP：直接对外暴露IP和端口       FRP的原理基本就是端口转发，将外部的流量经过中间服务器转发至本地机器  优点  开启frp后，相当于有了公网IP，任意设备均可任意访问  缺点  由于寻址多中转了两次中间服务器，就增加了丢包的可能性，并且也增大了单次访问的延迟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WSL2增强，内网穿透方案：FRP与ZeroTier">
+<meta property="og:url" content="https://xu.ci/2020/01/wsl2frpzerotier.html/index.html">
+<meta property="og:site_name" content="叙此 | I KISS YOU, SEE I">
+<meta property="og:description" content="1. FRP：直接对外暴露IP和端口       FRP的原理基本就是端口转发，将外部的流量经过中间服务器转发至本地机器  优点  开启frp后，相当于有了公网IP，任意设备均可任意访问  缺点  由于寻址多中转了两次中间服务器，就增加了丢包的可能性，并且也增大了单次访问的延迟">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-01T12:25:57.000Z">
+<meta property="article:modified_time" content="2020-06-29T08:14:35.826Z">
+<meta property="article:author" content="Shadow Saint">
+<meta property="article:tag" content="Tool">
+<meta property="article:tag" content="WSL">
+<meta name="twitter:card" content="summary"><title>WSL2增强，内网穿透方案：FRP与ZeroTier | 叙此 | I KISS YOU, SEE I</title><link ref="canonical" href="https://xu.ci/2020/01/wsl2frpzerotier.html/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">叙此 | I KISS YOU, SEE I</div><div class="header-banner-info__subtitle">Shadow Saint</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">WSL2增强，内网穿透方案：FRP与ZeroTier</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-01-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-29</span></span></div></header><div class="post-body">
+        <h2 id="1-FRP：直接对外暴露IP和端口"   >
+          <a href="#1-FRP：直接对外暴露IP和端口" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-FRP：直接对外暴露IP和端口" class="headerlink" title="1. FRP：直接对外暴露IP和端口"></a>1. FRP：直接对外暴露IP和端口</h2>
+      <p>FRP的原理基本就是端口转发，将外部的流量经过中间服务器转发至本地机器</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>开启frp后，相当于有了公网IP，任意设备均可任意访问</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>由于寻址多中转了两次中间服务器，就增加了丢包的可能性，并且也增大了单次访问的延迟</p>
+<span id="more"></span>
+
+
+        <h3 id="1-1-配置服务端"   >
+          <a href="#1-1-配置服务端" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-1-配置服务端" class="headerlink" title="1.1. 配置服务端"></a>1.1. 配置服务端</h3>
+      <p>在Linux服务器上以root用户输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root</span><br><span class="line"><span class="comment"># 下载</span></span><br><span class="line">wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v0.27.1/frp_0.27.1_linux_amd64.tar.gz</span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -xzvf frp_0.27.1_linux_amd64.tar.gz</span><br><span class="line"><span class="comment"># 文件夹名改成 frp，不然目录太长了不方便</span></span><br><span class="line">mv frp_0.27.1_linux_amd64 frp</span><br><span class="line"><span class="built_in">cd</span> frp</span><br><span class="line"><span class="comment"># 确保 frps 程序具有可执行权限</span></span><br><span class="line">chmod +x frps</span><br></pre></td></tr></table></div></figure>
+
+<p>运行一下</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./frps --<span class="built_in">help</span></span><br></pre></td></tr></table></div></figure>
+
+<p>编辑配置：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim frps.ini</span><br></pre></td></tr></table></div></figure>
+
+<p>输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">token = 12345678</span><br><span class="line">dashboard_port = 7500</span><br><span class="line">dashboard_user = admin</span><br><span class="line">dashboard_pwd = admin</span><br><span class="line">vhost_http_port = 10080</span><br><span class="line">vhost_https_port = 10443</span><br><span class="line">subdomain_host = 【你自己的域名，好像也可以不设置这一条，在客户端直接连IP也行，不过我有域名就直接这么设置了，以后换服务器也方便】</span><br></pre></td></tr></table></div></figure>
+
+<p>编辑配置以开机自启：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/rc.local</span><br></pre></td></tr></table></div></figure>
+
+<p>输入：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup /root/frp/frps -c /root/frp/frps.ini &amp;</span><br></pre></td></tr></table></div></figure>
+
+<p>保险起见给文件加上权限：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +755 /etc/rc.local</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="1-2-配置客户端"   >
+          <a href="#1-2-配置客户端" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-2-配置客户端" class="headerlink" title="1.2. 配置客户端"></a>1.2. 配置客户端</h3>
+      <p>在WSL里新建客户端配置文件</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /frp/frpc.ini</span><br></pre></td></tr></table></div></figure>
+
+<p>编辑配置：</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = 【你服务器的ip或者解析到该ip的子域名，如：frp.domain.com】</span><br><span class="line">server_port = 7000</span><br><span class="line">token = 12345678</span><br><span class="line">http_proxy =</span><br><span class="line"></span><br><span class="line">[postgres]</span><br><span class="line"><span class="built_in">type</span> = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 5432</span><br><span class="line">remote_port = 54321</span><br></pre></td></tr></table></div></figure>
+
+<p>拉取docker镜像</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc</span><br></pre></td></tr></table></div></figure>
+
+
+        <h2 id="2-ZeroTier：架设虚拟局域网"   >
+          <a href="#2-ZeroTier：架设虚拟局域网" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-ZeroTier：架设虚拟局域网" class="headerlink" title="2. ZeroTier：架设虚拟局域网"></a>2. ZeroTier：架设虚拟局域网</h2>
+      <p>ZeroTier架设了一个虚拟的局域网，该网段内的所有设备均可互相访问</p>
+
+        <h3 id="2-1-注册ZeroTier"   >
+          <a href="#2-1-注册ZeroTier" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-1-注册ZeroTier" class="headerlink" title="2.1. 注册ZeroTier"></a>2.1. 注册ZeroTier</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.zerotier.com/" >https://www.zerotier.com/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="2-2-在Networks新建一个网段"   >
+          <a href="#2-2-在Networks新建一个网段" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-2-在Networks新建一个网段" class="headerlink" title="2.2. 在Networks新建一个网段"></a>2.2. 在Networks新建一个网段</h3>
+      <p>记下这个NETWORK-ID</p>
+
+        <h3 id="2-3-在WSL配置zerotier"   >
+          <a href="#2-3-在WSL配置zerotier" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-3-在WSL配置zerotier" class="headerlink" title="2.3. 在WSL配置zerotier"></a>2.3. 在WSL配置zerotier</h3>
+      <p>WSL内运行</p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -d \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  --name zerotier-one \</span><br><span class="line">  --device /dev/net/tun \</span><br><span class="line">  --net host \</span><br><span class="line">  --cap-add NET_ADMIN \</span><br><span class="line">  --cap-add SYS_ADMIN \</span><br><span class="line">  -v /var/lib/zerotier-one:/var/lib/zerotier-one \</span><br><span class="line">  henrist/zerotier-one</span><br></pre></td></tr></table></div></figure>
+
+<p>加入网段，【NETWORK-ID】替换为<code>2.2.记下的NETWORK-ID</code></p>
+<figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> zerotier-one zerotier-cli join 【NETWORK-ID】</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="2-4-在需要连接的地方下载客户端"   >
+          <a href="#2-4-在需要连接的地方下载客户端" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-4-在需要连接的地方下载客户端" class="headerlink" title="2.4. 在需要连接的地方下载客户端"></a>2.4. 在需要连接的地方下载客户端</h3>
+      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.zerotier.com/download/" >https://www.zerotier.com/download/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>也同样加入那个NETWORK-ID</p>
+
+        <h3 id="2-5-配置权限"   >
+          <a href="#2-5-配置权限" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-5-配置权限" class="headerlink" title="2.5. 配置权限"></a>2.5. 配置权限</h3>
+      <p>在ZeroTier的Networks页面，进入刚刚新建的网段，在Members属性里面，给里面的成员的Auth属性打上勾，设置好别名</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>基本可以说是直连，速度非常非常快.</p>
+<p>安全，不暴漏在公网，只有你能连接进来。</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>必须在同一网段才可以互相访问，没有对公IP，外部无法无配置直接访问</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://xu.ci">Shadow Saint</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://xu.ci/2020/01/wsl2frpzerotier.html/">https://xu.ci/2020/01/wsl2frpzerotier.html/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/Tool/">Tool</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/WSL/">WSL</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/01/wsl.html/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">WSL从一无所知到略知一二</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2019/12/windowswsl2ubuntu.html/"><span class="paginator-prev__text">Windows开机启动WSL2（Ubuntu）的启动项</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-FRP%EF%BC%9A%E7%9B%B4%E6%8E%A5%E5%AF%B9%E5%A4%96%E6%9A%B4%E9%9C%B2IP%E5%92%8C%E7%AB%AF%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text">
+          1. FRP：直接对外暴露IP和端口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1.1. 配置服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%85%8D%E7%BD%AE%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">1.2.</span> <span class="toc-text">
+          1.2. 配置客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-ZeroTier%EF%BC%9A%E6%9E%B6%E8%AE%BE%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-number">2.</span> <span class="toc-text">
+          2. ZeroTier：架设虚拟局域网</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%B3%A8%E5%86%8CZeroTier"><span class="toc-number">2.1.</span> <span class="toc-text">
+          2.1. 注册ZeroTier</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%9C%A8Networks%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%AE%B5"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2.2. 在Networks新建一个网段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%9C%A8WSL%E9%85%8D%E7%BD%AEzerotier"><span class="toc-number">2.3.</span> <span class="toc-text">
+          2.3. 在WSL配置zerotier</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%9C%A8%E9%9C%80%E8%A6%81%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%9C%B0%E6%96%B9%E4%B8%8B%E8%BD%BD%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">2.4.</span> <span class="toc-text">
+          2.4. 在需要连接的地方下载客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E9%85%8D%E7%BD%AE%E6%9D%83%E9%99%90"><span class="toc-number">2.5.</span> <span class="toc-text">
+          2.5. 配置权限</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Shadow Saint</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

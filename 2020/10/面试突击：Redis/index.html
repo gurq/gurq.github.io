@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试突击：Redis">
+<meta property="og:url" content="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9ARedis/index.html">
+<meta property="og:site_name" content="叙此 | I KISS YOU, SEE I">
+<meta property="og:description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201023172534.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201023172737.png">
+<meta property="article:published_time" content="2020-10-23T05:53:47.000Z">
+<meta property="article:modified_time" content="2021-03-20T15:23:37.726Z">
+<meta property="article:author" content="Shadow Saint">
+<meta property="article:tag" content="interview">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201023172534.png"><title>面试突击：Redis | 叙此 | I KISS YOU, SEE I</title><link ref="canonical" href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9ARedis/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">叙此 | I KISS YOU, SEE I</div><div class="header-banner-info__subtitle">Shadow Saint</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">面试突击：Redis</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-10-23</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-03-20</span></span></div></header><div class="post-body"><p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p>
+<p>真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。</p>
+<span id="more"></span>
+
+<article class="message is-link">
+  <div class="message-header">
+    <p>⚠️ 注意</p>
+  </div>
+  <div class="message-body">
+    <i class="fas fa-globe-asia"></i> 本文仅为个人复习面试时的总结，并不全面，一些本人认为不重要或者已经牢牢掌握的内容并没有覆盖到，诸多口语化描述仅为便于自己理解并牢记，如需严谨权威的内容请去阅读：《Redis实战》《Redis设计与实现》
+  </div>
+</article>
+
+
+        <h3 id="你对Redis了解多少"   >
+          <a href="#你对Redis了解多少" class="heading-link"><i class="fas fa-link"></i></a><a href="#你对Redis了解多少" class="headerlink" title="你对Redis了解多少"></a>你对Redis了解多少</h3>
+      <p>如果面试要问的话可以按照一下顺序答，并把记得牢/懂得多的部分展开说，尽量连贯着说，说的全面点，让面试官无从下手打断你来问很深很难的问题（滑稽</p>
+
+        <h4 id="1-首先，Redis是非关系型数据库"   >
+          <a href="#1-首先，Redis是非关系型数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-首先，Redis是非关系型数据库" class="headerlink" title="1. 首先，Redis是非关系型数据库"></a>1. 首先，Redis是非关系型数据库</h4>
+      <p>有别于Mysql、Oracle、Postgresql这样传统的关系型数据库，Redis设计之初就是用来存储key-value型数据的。</p>
+<p>key只可以是string，value只可以是string，hash，list，set，zset（有序集合）。</p>
+<p>这边开发的时候对象一般来说建议转成json再存，直接存对象很多时候是能存的（引入的redis的jar包会帮忙转成对应的五大类型），但是一是直接存对象，在Redis里面占的空间会更大，内存可能吃不消，二是复杂的对象有可能转换不回来。</p>
+
+        <h4 id="2-Redis是内存级数据库"   >
+          <a href="#2-Redis是内存级数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-Redis是内存级数据库" class="headerlink" title="2. Redis是内存级数据库"></a>2. Redis是内存级数据库</h4>
+      <p>Redis是存储在内存上的，所以先天就有读写快的优势。</p>
+<p>不过也正因为是存储在内存上，可能因为断电等原因里面的数据就没了，所以除了对数据做容灾（十有八九会问，后面说）处理以外，并不建议将Redis作为持久化存储的数据库</p>
+
+        <h4 id="3-那同样是内存型，我们为什么不用比如guava内置的缓存，甚至直接用map结构存呢？"   >
+          <a href="#3-那同样是内存型，我们为什么不用比如guava内置的缓存，甚至直接用map结构存呢？" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-那同样是内存型，我们为什么不用比如guava内置的缓存，甚至直接用map结构存呢？" class="headerlink" title="3. 那同样是内存型，我们为什么不用比如guava内置的缓存，甚至直接用map结构存呢？"></a>3. 那同样是内存型，我们为什么不用比如guava内置的缓存，甚至直接用map结构存呢？</h4>
+      <p>是因为guava和map实现的是本地缓存，生命周期绑定在了所在服务的实例上，随着现在微服务的流行，一个项目可能会有多个微服务，同一个微服务也会有多个实例，用guava和map没法做到这多个实例，多个微服务，公用一个缓存的目的</p>
+
+        <h4 id="4-Redis良好的性能，除了是因为是内存级数据库以外，还因为有优秀的线程模型"   >
+          <a href="#4-Redis良好的性能，除了是因为是内存级数据库以外，还因为有优秀的线程模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-Redis良好的性能，除了是因为是内存级数据库以外，还因为有优秀的线程模型" class="headerlink" title="4. Redis良好的性能，除了是因为是内存级数据库以外，还因为有优秀的线程模型"></a>4. Redis良好的性能，除了是因为是内存级数据库以外，还因为有优秀的线程模型</h4>
+      <p>Redis在都是内存级数据库里面最终脱颖而出，也是因为Redis在高并发的条件下有着更优异的性能。</p>
+<p>Redis是单线程的，说他是单线程是因为它的核心：file event handler（文件事件处理器）是单线程的，它采用IO多路复用（也就是Java里NIO的设计思想，这里准备的好可以说，关于Java的NIO，想问的话可以一会儿说完Redis以后问，要不然会打断说Redis的思路，没做关于IO，NIO，AIO的准备这里就不要提NIO甚至不要提IO多路复用的事）来从多个socket接收事件，放入内置的队列中，再由文件事件分派器将事件分派给事件处理器</p>
+<blockquote>
+<p>上面字太多，下面是简化版：</p>
+<p>多个socket</p>
+<p>–&gt;IO多路复用</p>
+<p>–&gt;一个队列</p>
+<p>–&gt;事件分派器</p>
+<p>–&gt;事件处理器</p>
+</blockquote>
+<p>因为队列天然就可以将并发削峰，一个一个处理，并且Redis本身一般来说又只是对简单数据的简单增删改查，所以单个事件的处理速度非常快，从队列里出栈的速度也非常快，所以并发就被非常巧妙的化解了</p>
+
+        <h4 id="5-而因为Redis是内存型数据库，所以它的存储空间其实远不比硬盘型数据库"   >
+          <a href="#5-而因为Redis是内存型数据库，所以它的存储空间其实远不比硬盘型数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-而因为Redis是内存型数据库，所以它的存储空间其实远不比硬盘型数据库" class="headerlink" title="5. 而因为Redis是内存型数据库，所以它的存储空间其实远不比硬盘型数据库"></a>5. 而因为Redis是内存型数据库，所以它的存储空间其实远不比硬盘型数据库</h4>
+      <p>那么就带来了一个问题：一直存数据，给空间装满了怎么办</p>
+<p>所以为了解决这个问题：</p>
+
+        <h5 id="5-1-在每次存数据的时候要设置过期时间"   >
+          <a href="#5-1-在每次存数据的时候要设置过期时间" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-1-在每次存数据的时候要设置过期时间" class="headerlink" title="5.1 在每次存数据的时候要设置过期时间"></a>5.1 在每次存数据的时候要设置过期时间</h5>
+      <p>基本上就我接触过的业务而言，没什么数据是需要永不过期，还必须得存在Redis里的，所以每次存数据都要设置过期时间</p>
+
+        <h5 id="5-2-但是Redis的删除策略导致了，就算设置过期时间，仍然有可能不被删掉"   >
+          <a href="#5-2-但是Redis的删除策略导致了，就算设置过期时间，仍然有可能不被删掉" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-2-但是Redis的删除策略导致了，就算设置过期时间，仍然有可能不被删掉" class="headerlink" title="5.2 但是Redis的删除策略导致了，就算设置过期时间，仍然有可能不被删掉"></a>5.2 但是Redis的删除策略导致了，就算设置过期时间，仍然有可能不被删掉</h5>
+      <p>这里就要说一下Redis的删除策略了，Redis同时生效了两个删除策略：</p>
+
+        <h6 id="5-2-1-定期删除"   >
+          <a href="#5-2-1-定期删除" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-2-1-定期删除" class="headerlink" title="5.2.1 定期删除"></a>5.2.1 定期删除</h6>
+      <p>定期删除，顾名思义，Redis每隔一段的时间（默认是100ms），随机抽取<strong>一部分</strong>key，看过期没过期，过期了就删掉</p>
+<blockquote>
+<p>这里这么做是因为，Redis里面可能有几十，上百万的key，要是都遍历一遍，开销得多大，100ms都不一定够用的</p>
+</blockquote>
+
+        <h6 id="5-2-2-惰性删除"   >
+          <a href="#5-2-2-惰性删除" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-2-2-惰性删除" class="headerlink" title="5.2.2 惰性删除"></a>5.2.2 惰性删除</h6>
+      <p>因为定期删除并不能把所有过期的key都删掉，所以当你从Redis里面取数据的时候，它还会判断一次这个数据过期了没，没过期就返给你，过期了就清掉，然后告诉你没了（明明是有的！他不给我），这就相当于主动触发删过期数据了</p>
+
+        <h6 id="5-3-3-内存淘汰机制"   >
+          <a href="#5-3-3-内存淘汰机制" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-3-3-内存淘汰机制" class="headerlink" title="5.3.3 内存淘汰机制"></a>5.3.3 内存淘汰机制</h6>
+      <p>可是惰性删除仍然不能完全解决，如果你的业务上写多，读少，那终究有一刻还是会把一开始Redis占用的内存空间给占满的，所以Redis有内存淘汰机制来确保最终不会影响使用（<strong>仍然不代表所有过期的key都会被删掉</strong>）</p>
+<p>这里最重要，最常用的是这个：</p>
+<p><strong>allkeys-lru</strong>，<strong>当内存空间不足以写入新数据时</strong>，移除【<strong>最近</strong>】【<strong>最少</strong>】使用的key。</p>
+<p>触发次数最少（只在内存空间不足时触发，不是定时触发），需要遍历/删除的东西也少，不会有很大的性能开销</p>
+<p>在Redis4.0后又新增了一个淘汰机制，也是我觉得比较好的：</p>
+<p><strong>allkeys-lfu</strong>，<strong>当内存空间不足以写入新数据时</strong>，移除【<strong>最少</strong>】使用的key。</p>
+<p>比上面的优点是，触发以后删的更干净，那触发次数会更好，缺点是，触发的时候性能开销更大，各有利弊，我觉得都不错</p>
+<p>还有其他的机制，因为感觉不是很重要，看一看能记住几个算几个吧：</p>
+<blockquote>
+<ol>
+<li><p><strong>volatile-lru</strong>：从已设置过期时间的数据集（server.db[i].expires）中挑选最近最少使用的数据淘汰</p>
+</li>
+<li><p><strong>volatile-ttl</strong>：从已设置过期时间的数据集（server.db[i].expires）中挑选将要过期的数据淘汰</p>
+</li>
+<li><p><strong>volatile-random</strong>：从已设置过期时间的数据集（server.db[i].expires）中任意选择数据淘汰</p>
+</li>
+<li><p><strong>allkeys-random</strong>：从数据集（server.db[i].dict）中任意选择数据淘汰</p>
+</li>
+<li><p><strong>no-eviction</strong>：禁止驱逐数据，也就是说当内存不足以容纳新写入数据时，新写入操作会报错。这个应该没人使用吧！</p>
+<p>下面这个是4.0和上面推荐的第二个一起新加的</p>
+</li>
+<li><p><strong>volatile-lfu</strong>：从已设置过期时间的数据集(server.db[i].expires)中挑选最不经常使用的数据淘汰</p>
+</li>
+</ol>
+</blockquote>
+
+        <h4 id="6-刚才说到Redis可是持久化来容灾，那接下来就说一下这个持久化"   >
+          <a href="#6-刚才说到Redis可是持久化来容灾，那接下来就说一下这个持久化" class="heading-link"><i class="fas fa-link"></i></a><a href="#6-刚才说到Redis可是持久化来容灾，那接下来就说一下这个持久化" class="headerlink" title="6. 刚才说到Redis可是持久化来容灾，那接下来就说一下这个持久化"></a>6. 刚才说到Redis可是持久化来容灾，那接下来就说一下这个持久化</h4>
+      <p>Redis主要有两种持久化方案：快照型和日志型</p>
+
+        <h5 id="6-1-快照型（RDB）"   >
+          <a href="#6-1-快照型（RDB）" class="heading-link"><i class="fas fa-link"></i></a><a href="#6-1-快照型（RDB）" class="headerlink" title="6.1 快照型（RDB）"></a>6.1 快照型（RDB）</h5>
+      <p>快照型是Redis默认开启的持久化方案，是需要触发的，触发一次会全量保存一次数据。</p>
+<p>默认有三种触发方式同时生效：</p>
+<blockquote>
+<ol>
+<li>900秒里，有一个key变动，保存快照</li>
+<li>300秒里，有十个key变动，保存快照</li>
+<li>60秒里，有一万个key变动，保存快照</li>
+</ol>
+</blockquote>
+<p>优点：开销小，触发了才有开销。并且理论上相当于冷备份了，可以上传至文件服务器或者其他方案永久保存，用来追溯一些东西也是挺好的。</p>
+<p>缺点：占用空间大，理论上丢数据可能丢的多，如果60秒内改动了9999个数据，结果Redis挂了，这9999个数据就丢失了，不可恢复</p>
+
+        <h5 id="6-2-日志型（AOF）"   >
+          <a href="#6-2-日志型（AOF）" class="heading-link"><i class="fas fa-link"></i></a><a href="#6-2-日志型（AOF）" class="headerlink" title="6.2 日志型（AOF）"></a>6.2 日志型（AOF）</h5>
+      <p>日志型，日志型现在最为主流，需要手动开启。</p>
+<p>就相当于存两份，内存里一份，硬盘上一份，Redis在内存里每变化一条数据，在硬盘上也同时变化一条。</p>
+<p>不过这样如果读写的快，硬盘IO会跟不上的，所以一般AOF用的是每秒一同步的策略，丢了最多丢一秒</p>
+<blockquote>
+<p>实际上在线上环境，在性能/空间允许的情况下，两种可以都开</p>
+<p>在4.0以后，还有混合型，AOF每次写的时候可以写整个压缩后的快照，不过这样优点是加载快，丢的东西少，缺点是性能开销更大</p>
+</blockquote>
+
+        <h4 id="7-Redis作为数据库，也是支持事务的"   >
+          <a href="#7-Redis作为数据库，也是支持事务的" class="heading-link"><i class="fas fa-link"></i></a><a href="#7-Redis作为数据库，也是支持事务的" class="headerlink" title="7. Redis作为数据库，也是支持事务的"></a>7. Redis作为数据库，也是支持事务的</h4>
+      <p>但是由于Redis的内存型数据库，所以作为事务的传统4要素，ACID，其中持久化，实现的比较特殊，之前已经说过了，和传统的关系型数据库实现的持久化不太一样。</p>
+<p><strong>并且</strong>，关于原子性的理解，Redis官方的理解是“**Either all of the commands or none are processed, so a Redis transaction is also atomic.**”，就是说命令要么都执行，要么都不执行。但是都执行了，执行没成功抛出异常了，然而前面执行成功的部分又不会回滚，官方认为还是执行了的，只是后面没成功而已嘛。</p>
+<p>我个人认为这并不太原子性。。。emmm，每个人有每个人的看法嘛</p>
+<blockquote>
+<p>这里有一种情况：如果一个事务里，有多个命令，其中后面一个命令，压根这个命令就是错的命令，并不是执行出错的那种，是压根没法执行的时候，在执行事务的时候前面正确的命令也不会生效，不过这是回滚么？我觉得不是，应该是执行的时候对事务内的命令检查了一下，命令错了就都不执行，压根前面正确的就没执行，怎么能说是回滚呢</p>
+</blockquote>
+
+        <h4 id="8-那说了这么多Redis，我们为什么要用Redis呢"   >
+          <a href="#8-那说了这么多Redis，我们为什么要用Redis呢" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-那说了这么多Redis，我们为什么要用Redis呢" class="headerlink" title="8. 那说了这么多Redis，我们为什么要用Redis呢"></a>8. 那说了这么多Redis，我们为什么要用Redis呢</h4>
+      <p>一般来说，Redis是用在读多写少的业务场景，将常用的读数据缓存起来，用来缓解数据库压力的</p>
+<p>但是不管是Redis也好，还是用别的方案也好，都会面对一个核心问题：缓存命中率上不去怎么办</p>
+<p>这个核心问题衍生了几个常见问题：</p>
+
+        <h5 id="8-1-缓存雪崩"   >
+          <a href="#8-1-缓存雪崩" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-1-缓存雪崩" class="headerlink" title="8.1 缓存雪崩"></a>8.1 缓存雪崩</h5>
+      <p>由于之前说的Redis删除机制其实是并不可控的，尤其是常用的内存淘汰机制是有可能把还没到过期时间，过去一段时间用的不多的数据给删了。但是用的不多不代表就不用，只是没高频的高而已，一下子大面积删了，导致这些零星的请求一下子打到数据库去了，虽然一个缓存的请求量不多，但是删的多了量就上去了，数据库扛不住了，这就是缓存雪崩</p>
+<blockquote>
+<p>要解决缓存雪崩：集群式部署Redis实例，哪个实例宕机了及时恢复</p>
+</blockquote>
+
+        <h5 id="8-2-缓存穿透"   >
+          <a href="#8-2-缓存穿透" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-2-缓存穿透" class="headerlink" title="8.2 缓存穿透"></a>8.2 缓存穿透</h5>
+      <p>比如由于攻击者大量的构建了很多虚拟的key也好，比如像微博热点那样以前完全没料到，然后一下子爆了大量的相关的搜索，之前压根就没缓存相关key也好，比如代码写的时候设计有问题，完全就没缓存到一部分key也好，总之大量的请求压根就没缓存，穿过了Redis直接到了数据库里面，一下给数据库弄崩溃了</p>
+<p>这两个归根结底都是因为缓存没拦住请求，缓存命中率低，导致过多的读请求直接到了数据库，给数据库弄崩了（现代架构最脆弱的最麻烦的就是数据库了，前端也好，后端也好，都可以多部署实例来分流，并且现在技术很成熟了，除了钱以外并不花特别多的成本，但是数据库扛不住了要改造，这可不是只是多花钱多布几台服务器的事了，整个后端逻辑很多部分都要重新改造）</p>
+<blockquote>
+<p>要解决缓存穿透：应对性的缓存空key，或者用布隆过滤器过滤非法请求</p>
+</blockquote>
+
+        <h5 id="8-3-缓存击穿"   >
+          <a href="#8-3-缓存击穿" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-3-缓存击穿" class="headerlink" title="8.3 缓存击穿"></a>8.3 缓存击穿</h5>
+      <p>因为热点key过期了，然后由于惰性删除，一取就直接过期了，导致瞬间高并发一下子到数据库那里了，这就是缓存击穿</p>
+<blockquote>
+<p>要解决缓存击穿：设置热点key永不过期，或者上互斥锁</p>
+</blockquote>
+<p>同时，在设计上也应该做好：</p>
+<blockquote>
+<ol>
+<li>redis集群部署，多部署几台不至于大面积雪崩。</li>
+<li>后端做好熔断限流，最大程度保住数据库。</li>
+<li>做好预警工作，当缓存命中率低于阈值且集群的内存使用率高出阈值要及时发出警报。</li>
+</ol>
+</blockquote>
+
+        <h5 id="9-那既然Redis的主要作用是缓存，那只要是缓存就都有一个小问题"   >
+          <a href="#9-那既然Redis的主要作用是缓存，那只要是缓存就都有一个小问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#9-那既然Redis的主要作用是缓存，那只要是缓存就都有一个小问题" class="headerlink" title="9. 那既然Redis的主要作用是缓存，那只要是缓存就都有一个小问题"></a>9. 那既然Redis的主要作用是缓存，那只要是缓存就都有一个小问题</h5>
+      <p>那就是数据一致性的问题。</p>
+<p>数据库和缓存，一定会有个先后问题，比如先改了数据库，然后再同步到缓存。或者比如并发大的统计操作，先在缓存里加减，隔多少时间定期写回到数据库，这些情况都挺常见的。一般只要用缓存都会有或多或少的数据一致性的问题。</p>
+<p>如果说业务上没那么高的数据一致性的要求，这样是最好的，效率最高。</p>
+<p>如果产品经理就非得要做，那我的理解是就只好把修改的时候，把修改数据库和修改Redis放到spring的一个事务里面去，确保要更新就一起更新，但还是建议产品经理想想有没有别的方案，因为这么一搞，只要写的操作不是那么少，Redis的效率就会低很多</p>
+<hr>
+<p>上面说完关于Redis就已经说了很多了，希望面试官能没有耐心听，跳到下一个知识点去，真要问下面的，就说这些只是略知皮毛，不知道其原理，一般都是架构组决定，运维来实施，确实不知道原因是什么</p>
+<hr>
+
+        <h3 id="Redis为了实现高可用，有哪些部署模式"   >
+          <a href="#Redis为了实现高可用，有哪些部署模式" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis为了实现高可用，有哪些部署模式" class="headerlink" title="Redis为了实现高可用，有哪些部署模式"></a>Redis为了实现高可用，有哪些部署模式</h3>
+      
+        <h4 id="1-主从模式"   >
+          <a href="#1-主从模式" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-主从模式" class="headerlink" title="1. 主从模式"></a>1. 主从模式</h4>
+      <p>从节点复制主节点的信息</p>
+
+        <h4 id="2-哨兵模式"   >
+          <a href="#2-哨兵模式" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-哨兵模式" class="headerlink" title="2. 哨兵模式"></a>2. 哨兵模式</h4>
+      <p>定义了一个或多个哨兵，对Redis的节点进行监控，如果主节点挂了可以从其他子节点自动升级成主节点，哨兵是需要提前配置的，需要把各个节点的信息写在哨兵的配置文件里，所以要是节点多的话好像写起来麻烦，不太好做水平扩展</p>
+
+        <h4 id="3-集群模式"   >
+          <a href="#3-集群模式" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-集群模式" class="headerlink" title="3. 集群模式"></a>3. 集群模式</h4>
+      <p>集群模式的话就是集群的节点互相监控，自己推举主节点，这个好像更好一些，我以前公司用的这种方式</p>
+
+        <h3 id="Redis的zset，底层用的什么数据结构"   >
+          <a href="#Redis的zset，底层用的什么数据结构" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis的zset，底层用的什么数据结构" class="headerlink" title="Redis的zset，底层用的什么数据结构"></a>Redis的zset，底层用的什么数据结构</h3>
+      <p>用的跳表，因为Redis的作者觉得，在单线程下，用跳表实现起来比红黑树简洁</p>
+<blockquote>
+<p> 出处：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://news.ycombinator.com/item?id=1171423" >https://news.ycombinator.com/item?id=1171423</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+<p>这篇文章讲的非常好：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/liang1101/p/12984881.html" >https://www.cnblogs.com/liang1101/p/12984881.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>跳表的原理大概是，一个更优的，用在链表上的二分法，因为二分法适用于有序数组，但是有序链表压根就没有下标，那二分没法定位啊，取第几个就得遍历几次，这效率远不如直接遍历</p>
+<p>所以跳表就通过层数来解决，每次新增一个元素的时候决定它从下往上数增了几层，50%一层，25%两层，12.5%三层，等等，最大32层，这样理论上只有一层的元素数达到2的64次方个数的时候才会有元素随机到32层</p>
+<p>示意图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201023172534.png"></p>
+<p>然后找和插入的时候从上往下找，就类似于二分了，比如想往里插23:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201023172737.png"></p>
+<p>从最上面一次找到最下面一层，就找到了</p>
+<p>让手写源码？写不出来，告辞</p>
+
+        <h3 id="插槽"   >
+          <a href="#插槽" class="heading-link"><i class="fas fa-link"></i></a><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h3>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://xu.ci">Shadow Saint</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9ARedis/">https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9ARedis/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/interview/">interview</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Akafka/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">面试突击：kafka</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="paginator-prev__text">突击面试：计算机网络</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E5%AF%B9Redis%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91"><span class="toc-number">1.</span> <span class="toc-text">
+          你对Redis了解多少</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%A6%96%E5%85%88%EF%BC%8CRedis%E6%98%AF%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">
+          1. 首先，Redis是非关系型数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Redis%E6%98%AF%E5%86%85%E5%AD%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.</span> <span class="toc-text">
+          2. Redis是内存级数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%82%A3%E5%90%8C%E6%A0%B7%E6%98%AF%E5%86%85%E5%AD%98%E5%9E%8B%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%94%A8%E6%AF%94%E5%A6%82guava%E5%86%85%E7%BD%AE%E7%9A%84%E7%BC%93%E5%AD%98%EF%BC%8C%E7%94%9A%E8%87%B3%E7%9B%B4%E6%8E%A5%E7%94%A8map%E7%BB%93%E6%9E%84%E5%AD%98%E5%91%A2%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">
+          3. 那同样是内存型，我们为什么不用比如guava内置的缓存，甚至直接用map结构存呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Redis%E8%89%AF%E5%A5%BD%E7%9A%84%E6%80%A7%E8%83%BD%EF%BC%8C%E9%99%A4%E4%BA%86%E6%98%AF%E5%9B%A0%E4%B8%BA%E6%98%AF%E5%86%85%E5%AD%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BB%A5%E5%A4%96%EF%BC%8C%E8%BF%98%E5%9B%A0%E4%B8%BA%E6%9C%89%E4%BC%98%E7%A7%80%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">
+          4. Redis良好的性能，除了是因为是内存级数据库以外，还因为有优秀的线程模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E8%80%8C%E5%9B%A0%E4%B8%BARedis%E6%98%AF%E5%86%85%E5%AD%98%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E6%89%80%E4%BB%A5%E5%AE%83%E7%9A%84%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%85%B6%E5%AE%9E%E8%BF%9C%E4%B8%8D%E6%AF%94%E7%A1%AC%E7%9B%98%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.5.</span> <span class="toc-text">
+          5. 而因为Redis是内存型数据库，所以它的存储空间其实远不比硬盘型数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-%E5%9C%A8%E6%AF%8F%E6%AC%A1%E5%AD%98%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E5%80%99%E8%A6%81%E8%AE%BE%E7%BD%AE%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4"><span class="toc-number">1.5.1.</span> <span class="toc-text">
+          5.1 在每次存数据的时候要设置过期时间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2-%E4%BD%86%E6%98%AFRedis%E7%9A%84%E5%88%A0%E9%99%A4%E7%AD%96%E7%95%A5%E5%AF%BC%E8%87%B4%E4%BA%86%EF%BC%8C%E5%B0%B1%E7%AE%97%E8%AE%BE%E7%BD%AE%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4%EF%BC%8C%E4%BB%8D%E7%84%B6%E6%9C%89%E5%8F%AF%E8%83%BD%E4%B8%8D%E8%A2%AB%E5%88%A0%E6%8E%89"><span class="toc-number">1.5.2.</span> <span class="toc-text">
+          5.2 但是Redis的删除策略导致了，就算设置过期时间，仍然有可能不被删掉</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-2-1-%E5%AE%9A%E6%9C%9F%E5%88%A0%E9%99%A4"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">
+          5.2.1 定期删除</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-2-2-%E6%83%B0%E6%80%A7%E5%88%A0%E9%99%A4"><span class="toc-number">1.5.2.2.</span> <span class="toc-text">
+          5.2.2 惰性删除</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-3-3-%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E6%9C%BA%E5%88%B6"><span class="toc-number">1.5.2.3.</span> <span class="toc-text">
+          5.3.3 内存淘汰机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%88%9A%E6%89%8D%E8%AF%B4%E5%88%B0Redis%E5%8F%AF%E6%98%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%9D%A5%E5%AE%B9%E7%81%BE%EF%BC%8C%E9%82%A3%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E8%AF%B4%E4%B8%80%E4%B8%8B%E8%BF%99%E4%B8%AA%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-number">1.6.</span> <span class="toc-text">
+          6. 刚才说到Redis可是持久化来容灾，那接下来就说一下这个持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-%E5%BF%AB%E7%85%A7%E5%9E%8B%EF%BC%88RDB%EF%BC%89"><span class="toc-number">1.6.1.</span> <span class="toc-text">
+          6.1 快照型（RDB）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-2-%E6%97%A5%E5%BF%97%E5%9E%8B%EF%BC%88AOF%EF%BC%89"><span class="toc-number">1.6.2.</span> <span class="toc-text">
+          6.2 日志型（AOF）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-Redis%E4%BD%9C%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E4%B9%9F%E6%98%AF%E6%94%AF%E6%8C%81%E4%BA%8B%E5%8A%A1%E7%9A%84"><span class="toc-number">1.7.</span> <span class="toc-text">
+          7. Redis作为数据库，也是支持事务的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E9%82%A3%E8%AF%B4%E4%BA%86%E8%BF%99%E4%B9%88%E5%A4%9ARedis%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8Redis%E5%91%A2"><span class="toc-number">1.8.</span> <span class="toc-text">
+          8. 那说了这么多Redis，我们为什么要用Redis呢</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9"><span class="toc-number">1.8.1.</span> <span class="toc-text">
+          8.1 缓存雪崩</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F"><span class="toc-number">1.8.2.</span> <span class="toc-text">
+          8.2 缓存穿透</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-3-%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF"><span class="toc-number">1.8.3.</span> <span class="toc-text">
+          8.3 缓存击穿</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E9%82%A3%E6%97%A2%E7%84%B6Redis%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%E6%98%AF%E7%BC%93%E5%AD%98%EF%BC%8C%E9%82%A3%E5%8F%AA%E8%A6%81%E6%98%AF%E7%BC%93%E5%AD%98%E5%B0%B1%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98"><span class="toc-number">1.8.4.</span> <span class="toc-text">
+          9. 那既然Redis的主要作用是缓存，那只要是缓存就都有一个小问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E4%B8%BA%E4%BA%86%E5%AE%9E%E7%8E%B0%E9%AB%98%E5%8F%AF%E7%94%A8%EF%BC%8C%E6%9C%89%E5%93%AA%E4%BA%9B%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">
+          Redis为了实现高可用，有哪些部署模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%BB%E4%BB%8E%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1. 主从模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2. 哨兵模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">
+          3. 集群模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E7%9A%84zset%EF%BC%8C%E5%BA%95%E5%B1%82%E7%94%A8%E7%9A%84%E4%BB%80%E4%B9%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">
+          Redis的zset，底层用的什么数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E6%A7%BD"><span class="toc-number">4.</span> <span class="toc-text">
+          插槽</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Shadow Saint</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

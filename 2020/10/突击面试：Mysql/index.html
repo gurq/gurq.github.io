@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="突击面试：Mysql">
+<meta property="og:url" content="https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9AMysql/index.html">
+<meta property="og:site_name" content="叙此 | I KISS YOU, SEE I">
+<meta property="og:description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201021000352.png">
+<meta property="article:published_time" content="2020-10-20T15:22:15.000Z">
+<meta property="article:modified_time" content="2020-12-07T03:43:11.933Z">
+<meta property="article:author" content="Shadow Saint">
+<meta property="article:tag" content="interview">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201021000352.png"><title>突击面试：Mysql | 叙此 | I KISS YOU, SEE I</title><link ref="canonical" href="https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9AMysql/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">叙此 | I KISS YOU, SEE I</div><div class="header-banner-info__subtitle">Shadow Saint</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">突击面试：Mysql</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-10-20</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-12-07</span></span></div></header><div class="post-body"><p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p>
+<p>真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。</p>
+<span id="more"></span>
+
+<article class="message is-link">
+  <div class="message-header">
+    <p>⚠️ 注意</p>
+  </div>
+  <div class="message-body">
+    <i class="fas fa-globe-asia"></i> 本文仅为个人复习面试时的总结，并不全面，一些本人认为不重要或者已经牢牢掌握的内容并没有覆盖到，诸多口语化描述仅为便于自己理解并牢记，如需严谨权威的内容请去阅读：《SQL基础教程》《高性能MySQL》
+  </div>
+</article>
+
+
+        <h3 id="事务隔离级别"   >
+          <a href="#事务隔离级别" class="heading-link"><i class="fas fa-link"></i></a><a href="#事务隔离级别" class="headerlink" title="事务隔离级别"></a>事务隔离级别</h3>
+      <p>说事务隔离级别之前需要先弄明白三个概念：脏读、不可重复读、幻读</p>
+
+        <h4 id="脏读"   >
+          <a href="#脏读" class="heading-link"><i class="fas fa-link"></i></a><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h4>
+      <p>现在并发了俩事务，第一个事务<strong>先</strong>修改了一条数据，<strong>然后</strong>第二个事务进来读了这条数据，结果<strong>刚读完</strong>，第一个事务<strong>回滚</strong>了，数据库里还是数据之前的状态了，<strong>那你第二个数据读到的内容对不对？</strong>肯定不对啊，这就是读了脏数据</p>
+<blockquote>
+<p>要解决脏读，需要让事务不能读取到其他未提交的事务所影响的数据就可以了，也就是事务隔离级别的：Read Committed</p>
+</blockquote>
+
+        <h4 id="不可重复读"   >
+          <a href="#不可重复读" class="heading-link"><i class="fas fa-link"></i></a><a href="#不可重复读" class="headerlink" title="不可重复读"></a>不可重复读</h4>
+      <p>还是并发了俩事务，第一个事务<strong>先</strong>读了一行，<strong>然后</strong>第二个事务进来给这行<strong>修改了/删除了</strong>，然后第二个事务<strong>结束</strong>了，提交了，执行完了。<strong>然而</strong>第一个事务<strong>还没完</strong>，第一个事务因为业务需要<strong>又读了一次</strong>，结果这<strong>同一个事务中，重复读同一行数据两次，结果却不一样</strong>，这就是<strong>不可重复读</strong>。不可重复读这一现象是否正确，要<strong>取决于业务场景</strong></p>
+<blockquote>
+<p>要做到可重复读，需要在这个事务执行的时候锁住这一行，其他的事务没法操作不就没事了么，也就是事务隔离级别的：Repeatable Read</p>
+</blockquote>
+
+        <h4 id="幻读"   >
+          <a href="#幻读" class="heading-link"><i class="fas fa-link"></i></a><a href="#幻读" class="headerlink" title="幻读"></a>幻读</h4>
+      <p>依然是并发了俩事务，第一个事务比如说，删表跑路了，直接delete table 没加 where ，<strong>然后</strong>第二个事务往表里<strong>插入</strong>了一条数据，这俩事务执行完以后第一个事务一看：不对啊，我明明<strong>都</strong>删了啊，<strong>这多的那条哪来的？我出现了幻觉？</strong>影响了删表跑路的进程，这仿佛幻觉一样的一条，就是幻读。幻读这一现象是否正确，要<strong>取决于业务场景</strong></p>
+<blockquote>
+<p>所以要做到不幻读，那读的时候行锁就没用了，得把整个表给锁住，也就是事务隔离级别的：Serializable</p>
+</blockquote>
+<blockquote>
+<p>💡所以不可重复读和幻读最大的区别，同样也就是Repeatable Read和Serializable的区别，就是<strong>锁行</strong>和<strong>锁表</strong>的区别，解决不可重复读是锁行，所以不可重复读是修改/删除导致的，解决幻读要锁表，所以幻读是新增导致的</p>
+</blockquote>
+<p>理解了这仨东西，那事务隔离级别理解起来就更简单了，就是为了避免出现这仨东西出来的，看下面这图就知道<br><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20201021000352.png"></p>
+
+        <h4 id="1-Read-Uncommitted-读未提交"   >
+          <a href="#1-Read-Uncommitted-读未提交" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-Read-Uncommitted-读未提交" class="headerlink" title="1. Read Uncommitted(读未提交)"></a>1. Read Uncommitted(读未提交)</h4>
+      <p>可以读取其他事务<strong>没提</strong>交的内容</p>
+
+        <h4 id="2-Read-Committed-读提交"   >
+          <a href="#2-Read-Committed-读提交" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-Read-Committed-读提交" class="headerlink" title="2. Read Committed(读提交)"></a>2. Read Committed(读提交)</h4>
+      <p><strong>Oracle的默认隔离级别</strong>。只能读别的事务<strong>已经</strong>提交的内容</p>
+
+        <h4 id="3-Repeatable-Read-重复读"   >
+          <a href="#3-Repeatable-Read-重复读" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-Repeatable-Read-重复读" class="headerlink" title="3. Repeatable Read(重复读)"></a>3. Repeatable Read(重复读)</h4>
+      <p><strong>Mysql的默认隔离级别</strong>。同一个事务中，对同一行多次读的内容是相同的</p>
+
+        <h4 id="4-Serializable-序列化"   >
+          <a href="#4-Serializable-序列化" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-Serializable-序列化" class="headerlink" title="4. Serializable(序列化)"></a>4. Serializable(序列化)</h4>
+      <p>最高隔离级别。所有事务操作依次顺序执行。注意这会导致并发度下降，性能最差。通常会用其他并发级别加上相应的并发锁机制来取代它。</p>
+<blockquote>
+<p>💡 因为3有行锁，4有表锁，所以一般来说隔离级别越高，性能越差</p>
+</blockquote>
+
+        <h3 id="索引"   >
+          <a href="#索引" class="heading-link"><i class="fas fa-link"></i></a><a href="#索引" class="headerlink" title="索引"></a>索引</h3>
+      <p>一种优化查询的数据结构，就像字典的目录一样，提前帮数据建好目录，查找的时候就快很多，简单的说就是空间换时间</p>
+<blockquote>
+<p>建索引本身需要开销的，时间开销和空间开销。</p>
+<p>时间开销体现在：插入会变慢一点点，并且如果有大量的数据的表的话，这时候新建索引会锁表（长事务执行，阻塞建索引语句获取metadata独占锁，继而所有同表的语句都被阻塞了），那如何解决锁表问题呢，嗨，业务要求没那么高，可以停机维护的，就停机维护的时候再加索引，业务要求高了，就得先备份，再加索引，再替换回来。</p>
+<p>空间开销嘛，就不谈了，加索引肯定要占空间</p>
+</blockquote>
+
+        <h4 id="索引的种类"   >
+          <a href="#索引的种类" class="heading-link"><i class="fas fa-link"></i></a><a href="#索引的种类" class="headerlink" title="索引的种类"></a>索引的种类</h4>
+      <p><strong>hash索引</strong>，<strong>B+树</strong>，最常见，还有完全平衡二叉树，B树，用的不多，甚至很多工具比如Navicat上都没法选，不打算了解</p>
+
+        <h5 id="hash索引"   >
+          <a href="#hash索引" class="heading-link"><i class="fas fa-link"></i></a><a href="#hash索引" class="headerlink" title="hash索引"></a>hash索引</h5>
+      <p>是对那一列对值做了hash，所以是精准匹配，不适用于需要like这样搜索的查询，并且对在硬盘上是否连续存放没啥关系，所以如果是用在查比如UUID上，会很合适</p>
+
+        <h5 id="完全平衡二叉树"   >
+          <a href="#完全平衡二叉树" class="heading-link"><i class="fas fa-link"></i></a><a href="#完全平衡二叉树" class="headerlink" title="完全平衡二叉树"></a>完全平衡二叉树</h5>
+      <p>就是有序的二叉树，支持范围查找，基本上远不如B+树，不考虑用</p>
+
+        <h5 id="B-树和B树"   >
+          <a href="#B-树和B树" class="heading-link"><i class="fas fa-link"></i></a><a href="#B-树和B树" class="headerlink" title="B+树和B树"></a>B+树和B树</h5>
+      <p>这俩的共同点是：都可以在树的节点存储多个元素，和完全平衡二叉树一样都是天然有序，所以范围查询不需要全表扫描</p>
+<p>这俩的区别是：B+树的子节点存储了所有的父节点，并且子节点之间用指针连接。B树在父节点上也存了数据，B+树只在子节点上存了数据。</p>
+<p>所以一看就明白，B树和B+树因为存储了多个元素，所以更适合做范围查询，并且B+树更像是图了，不仅仅是树的结构，所以检索次数更少，磁盘IO也就更少了，效率更高</p>
+
+        <h4 id="聚簇索引和非聚簇索引（辅助索引）"   >
+          <a href="#聚簇索引和非聚簇索引（辅助索引）" class="heading-link"><i class="fas fa-link"></i></a><a href="#聚簇索引和非聚簇索引（辅助索引）" class="headerlink" title="聚簇索引和非聚簇索引（辅助索引）"></a>聚簇索引和非聚簇索引（辅助索引）</h4>
+      <p>建表的时候，一般会建个ID作为主键，这个主键就是聚簇索引</p>
+<p>聚簇索引最主要的特点是，这个索引整行的数据都存放在子点节点上，一张表只能有一个聚簇索引</p>
+<p>而辅助索引是除了索引列以外，还包含了聚簇索引键（也就是主键），然后再根据聚簇索引键再回表查那一行的数据</p>
+<p>也就是说<strong>一般来说</strong>，非聚簇索引会比聚簇索引多查一次，效率会低一些</p>
+<blockquote>
+<p>但是有特殊情况，比如说如果要查的列恰好就只是辅助索引的内容，那就直接返回就行了，不用再回表查别的数据了，这个又叫覆盖索引</p>
+</blockquote>
+
+        <h4 id="联合索引"   >
+          <a href="#联合索引" class="heading-link"><i class="fas fa-link"></i></a><a href="#联合索引" class="headerlink" title="联合索引"></a>联合索引</h4>
+      <p>因为<strong>最左前缀匹配</strong>的原则，要把where中最经常用的放在左边</p>
+<blockquote>
+<p>因为如果建了一个联合索引（1，2，3），实际上数据库里会多三个索引：（1），（1，2），（1，2，3），但是没有（2，3）的索引，所以如果where里面没有1的话，就不走索引了</p>
+</blockquote>
+
+        <h4 id="查看sql执行情况"   >
+          <a href="#查看sql执行情况" class="heading-link"><i class="fas fa-link"></i></a><a href="#查看sql执行情况" class="headerlink" title="查看sql执行情况"></a>查看sql执行情况</h4>
+      <p>用explain查看执行计划</p>
+
+        <h4 id="为什么有时候明明建了索引，但是执行的时候却没有通过索引呢"   >
+          <a href="#为什么有时候明明建了索引，但是执行的时候却没有通过索引呢" class="heading-link"><i class="fas fa-link"></i></a><a href="#为什么有时候明明建了索引，但是执行的时候却没有通过索引呢" class="headerlink" title="为什么有时候明明建了索引，但是执行的时候却没有通过索引呢"></a>为什么有时候明明建了索引，但是执行的时候却没有通过索引呢</h4>
+      <p>如果不是因为索引没有覆盖到的话，那可能是因为<strong>查询优化器</strong>认为不走索引效率更高</p>
+<blockquote>
+<p>查询优化器的工作大致流程：</p>
+<ol>
+<li>根据搜索条件，找出所有可能使用的索引 </li>
+<li>计算全表扫描的代价 </li>
+<li>计算使用不同索引执行查询的代价 </li>
+<li>对比各种执行方案的代价，找出成本最低的那一个</li>
+</ol>
+</blockquote>
+<p>被索引字段如果是函数，则不会走索引</p>
+<p>如果select的字段有1234，而123有索引，且有一个是like ‘%param%’有左百分号时，由于要回表+最左匹配的原则会导致全表扫，不走索引</p>
+<p>但是如果select字段123，索引也是123，不管是不是模糊查询都不会回表，会走索引</p>
+
+        <h4 id="乐观锁和悲观锁"   >
+          <a href="#乐观锁和悲观锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#乐观锁和悲观锁" class="headerlink" title="乐观锁和悲观锁"></a>乐观锁和悲观锁</h4>
+      
+        <h5 id="乐观锁"   >
+          <a href="#乐观锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#乐观锁" class="headerlink" title="乐观锁"></a>乐观锁</h5>
+      <p>乐观锁嘛，顾名思义，就比较乐观，觉得一般来说读不会有问题，只在增删改的时候加锁，适用于读多写少的情况</p>
+
+        <h4 id="悲观锁"   >
+          <a href="#悲观锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#悲观锁" class="headerlink" title="悲观锁"></a>悲观锁</h4>
+      <p>就挺悲观的，咋着都会出问题，在读的时候就会加锁，适用于读少写多的情况，确保不会发生冲突</p>
+
+        <h4 id="乐观锁的实现方式"   >
+          <a href="#乐观锁的实现方式" class="heading-link"><i class="fas fa-link"></i></a><a href="#乐观锁的实现方式" class="headerlink" title="乐观锁的实现方式"></a>乐观锁的实现方式</h4>
+      
+        <h5 id="1-CAS"   >
+          <a href="#1-CAS" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-CAS" class="headerlink" title="1. CAS"></a>1. CAS</h5>
+      <p>无锁算法，会有ABA问题，想解决ABA问题的话就要加版本号</p>
+
+        <h5 id="2-版本号"   >
+          <a href="#2-版本号" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-版本号" class="headerlink" title="2. 版本号"></a>2. 版本号</h5>
+      <p>每次写入的时候要判断读的version和数据库现有version是否相同，相同的话version要+1，写入。不相同的话就尝试更新</p>
+
+        <h4 id="acid"   >
+          <a href="#acid" class="heading-link"><i class="fas fa-link"></i></a><a href="#acid" class="headerlink" title="acid"></a>acid</h4>
+      <p>acid就是四个特性的英文首字母，数据库必须满足这四个特性才算是支持事务</p>
+
+        <h5 id="原子性（Atomicity）"   >
+          <a href="#原子性（Atomicity）" class="heading-link"><i class="fas fa-link"></i></a><a href="#原子性（Atomicity）" class="headerlink" title="原子性（Atomicity）"></a>原子性（Atomicity）</h5>
+      <p>事务中的操作，要么都执行，要么都不执行</p>
+
+        <h5 id="一致性（Consistency）"   >
+          <a href="#一致性（Consistency）" class="heading-link"><i class="fas fa-link"></i></a><a href="#一致性（Consistency）" class="headerlink" title="一致性（Consistency）"></a>一致性（Consistency）</h5>
+      <p>保证不论这时候并发有多少个，都不能扰乱事务正常执行，确保系统处于一致状态</p>
+<blockquote>
+<p>有点绕，不知道怎么表达，就比如说一个数据库里2条记录，A账户和B账户各100块，总共200块，然后疯狂执行事务，让他们两个账户互相转钱，不管多少个事务，不管并发有多少，在任何一个时间点AB账户的总和都应该是200块，不因为并发执行在某一刻出现问题</p>
+</blockquote>
+
+        <h5 id="隔离性（Isolation）"   >
+          <a href="#隔离性（Isolation）" class="heading-link"><i class="fas fa-link"></i></a><a href="#隔离性（Isolation）" class="headerlink" title="隔离性（Isolation）"></a>隔离性（Isolation）</h5>
+      <p>就是确保相同的功能，在同一时刻只能有一个事务正常执行（不同的功能可以并行）</p>
+
+        <h5 id="持久性（Durability）"   >
+          <a href="#持久性（Durability）" class="heading-link"><i class="fas fa-link"></i></a><a href="#持久性（Durability）" class="headerlink" title="持久性（Durability）"></a>持久性（Durability）</h5>
+      <p>事务执行完以后要持久化的体现在数据库里，不会没了，丢了，回滚了</p>
+
+        <h4 id="MVCC"   >
+          <a href="#MVCC" class="heading-link"><i class="fas fa-link"></i></a><a href="#MVCC" class="headerlink" title="MVCC"></a>MVCC</h4>
+      <p>多版本并发控制（Multi-Version Concurrency Control）</p>
+<p>顾名思义，就是乐观锁的版本号方法，一个事务取数据的时候顺便把version取了，另一个事务也来取这条数据的时候，如果没有MVCC，那就要加排他锁，第二个事务只能等第一个事务执行完了才能读的到。但是有了MVCC，第二个事务也可以来读，读的时候也拿到了version，然后谁先操作完了谁给version+1写回去，后写的人发现持有的version和数据库里现有的对不上了，就更新了再操作。虽然消耗了一些性能和运算量，但是比干等着锁来的快啊！</p>
+<p>比如：数据库读可提交的实现一般都用的MVCC，每次个事务来读都相当于创建一个带版本号的副本</p>
+
+        <h4 id="数据库优化"   >
+          <a href="#数据库优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据库优化" class="headerlink" title="数据库优化"></a>数据库优化</h4>
+      <p>这里因为没有实际操作经验，就只能谈谈理论上能做的</p>
+<ol>
+<li>判断是否由于硬件原因导致，如CPU使用率满了导致偶发性的慢查询</li>
+<li>数据上千万以后，超出了innodb_buffer的容量，导致每次定位索引会做更多的磁盘IO操作，所以设计之初就应该用雪花这样的有序id作为聚簇索引，保证数据在存放时在磁盘上是连续的，减少IO开销</li>
+<li>explain查看是否没能正确设置索引</li>
+<li>业务允许的前提下，先限定查询区间，禁止全表扫</li>
+<li>垂直拆分，将一个业务表拆成俩业务表，比如list表和detail表</li>
+<li>读写分离</li>
+<li>水平拆分，比如用户表，根据用户创建的年份每年一个表，然后用sharding这样的工具去查</li>
+<li>分库，不同的业务拆分至不同的数据库（物理机）</li>
+<li>建议重构，用HBASE，MYSQL里只留id等类似于索引的数据，然后根据id集去HBASE里查</li>
+</ol>
+
+        <h3 id="数据库的架构"   >
+          <a href="#数据库的架构" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据库的架构" class="headerlink" title="数据库的架构"></a>数据库的架构</h3>
+      
+        <h3 id="数据库常用的锁"   >
+          <a href="#数据库常用的锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据库常用的锁" class="headerlink" title="数据库常用的锁"></a>数据库常用的锁</h3>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://xu.ci">Shadow Saint</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9AMysql/">https://xu.ci/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9AMysql/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/interview/">interview</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/10/%E7%AA%81%E5%87%BB%E9%9D%A2%E8%AF%95%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">突击面试：计算机网络</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/10/%E8%A3%B8%E8%BE%9E%E4%B8%89%E4%B8%AA%E6%9C%88%E6%9C%89%E6%84%9F/"><span class="paginator-prev__text">裸辞三个月有感</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text">
+          事务隔离级别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%8F%E8%AF%BB"><span class="toc-number">1.1.</span> <span class="toc-text">
+          脏读</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB"><span class="toc-number">1.2.</span> <span class="toc-text">
+          不可重复读</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%BB%E8%AF%BB"><span class="toc-number">1.3.</span> <span class="toc-text">
+          幻读</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Read-Uncommitted-%E8%AF%BB%E6%9C%AA%E6%8F%90%E4%BA%A4"><span class="toc-number">1.4.</span> <span class="toc-text">
+          1. Read Uncommitted(读未提交)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Read-Committed-%E8%AF%BB%E6%8F%90%E4%BA%A4"><span class="toc-number">1.5.</span> <span class="toc-text">
+          2. Read Committed(读提交)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Repeatable-Read-%E9%87%8D%E5%A4%8D%E8%AF%BB"><span class="toc-number">1.6.</span> <span class="toc-text">
+          3. Repeatable Read(重复读)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Serializable-%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">1.7.</span> <span class="toc-text">
+          4. Serializable(序列化)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-number">2.</span> <span class="toc-text">
+          索引</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">
+          索引的种类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#hash%E7%B4%A2%E5%BC%95"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          hash索引</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">2.1.2.</span> <span class="toc-text">
+          完全平衡二叉树</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#B-%E6%A0%91%E5%92%8CB%E6%A0%91"><span class="toc-number">2.1.3.</span> <span class="toc-text">
+          B+树和B树</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%EF%BC%88%E8%BE%85%E5%8A%A9%E7%B4%A2%E5%BC%95%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">
+          聚簇索引和非聚簇索引（辅助索引）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95"><span class="toc-number">2.3.</span> <span class="toc-text">
+          联合索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bsql%E6%89%A7%E8%A1%8C%E6%83%85%E5%86%B5"><span class="toc-number">2.4.</span> <span class="toc-text">
+          查看sql执行情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E6%97%B6%E5%80%99%E6%98%8E%E6%98%8E%E5%BB%BA%E4%BA%86%E7%B4%A2%E5%BC%95%EF%BC%8C%E4%BD%86%E6%98%AF%E6%89%A7%E8%A1%8C%E7%9A%84%E6%97%B6%E5%80%99%E5%8D%B4%E6%B2%A1%E6%9C%89%E9%80%9A%E8%BF%87%E7%B4%A2%E5%BC%95%E5%91%A2"><span class="toc-number">2.5.</span> <span class="toc-text">
+          为什么有时候明明建了索引，但是执行的时候却没有通过索引呢</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%90%E8%A7%82%E9%94%81%E5%92%8C%E6%82%B2%E8%A7%82%E9%94%81"><span class="toc-number">2.6.</span> <span class="toc-text">
+          乐观锁和悲观锁</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B9%90%E8%A7%82%E9%94%81"><span class="toc-number">2.6.1.</span> <span class="toc-text">
+          乐观锁</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%82%B2%E8%A7%82%E9%94%81"><span class="toc-number">2.7.</span> <span class="toc-text">
+          悲观锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%90%E8%A7%82%E9%94%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-number">2.8.</span> <span class="toc-text">
+          乐观锁的实现方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-CAS"><span class="toc-number">2.8.1.</span> <span class="toc-text">
+          1. CAS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">2.8.2.</span> <span class="toc-text">
+          2. 版本号</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#acid"><span class="toc-number">2.9.</span> <span class="toc-text">
+          acid</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%9F%E5%AD%90%E6%80%A7%EF%BC%88Atomicity%EF%BC%89"><span class="toc-number">2.9.1.</span> <span class="toc-text">
+          原子性（Atomicity）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%88Consistency%EF%BC%89"><span class="toc-number">2.9.2.</span> <span class="toc-text">
+          一致性（Consistency）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%94%E7%A6%BB%E6%80%A7%EF%BC%88Isolation%EF%BC%89"><span class="toc-number">2.9.3.</span> <span class="toc-text">
+          隔离性（Isolation）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%81%E4%B9%85%E6%80%A7%EF%BC%88Durability%EF%BC%89"><span class="toc-number">2.9.4.</span> <span class="toc-text">
+          持久性（Durability）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MVCC"><span class="toc-number">2.10.</span> <span class="toc-text">
+          MVCC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96"><span class="toc-number">2.11.</span> <span class="toc-text">
+          数据库优化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">
+          数据库的架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E7%9A%84%E9%94%81"><span class="toc-number">4.</span> <span class="toc-text">
+          数据库常用的锁</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Shadow Saint</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

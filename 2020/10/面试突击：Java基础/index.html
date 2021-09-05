@@ -1,39 +1,15 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="面试突击：Java基础">
-<meta property="og:url" content="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/index.html">
-<meta property="og:site_name" content="叙此 | I KISS YOU, SEE I">
-<meta property="og:description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-28T09:41:57.000Z">
-<meta property="article:modified_time" content="2021-03-20T15:24:25.123Z">
-<meta property="article:author" content="Shadow Saint">
-<meta property="article:tag" content="interview">
-<meta name="twitter:card" content="summary"><title>面试突击：Java基础 | 叙此 | I KISS YOU, SEE I</title><link ref="canonical" href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
-var CONFIG = {
-  root: '/',
-  algolia: undefined,
-  assistSearch: undefined,
-  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
-  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
-  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
-  postWidget: {"endText":true},
-  nightMode: {"enable":true},
-  back2top: {"enable":true},
-  codeblock: {"style":"default","highlight":"light","wordWrap":false},
-  reward: false,
-  fancybox: false,
-  zoomImage: {"gapAside":"20px"},
-  galleryWaterfall: undefined,
-  lazyload: false,
-  pjax: undefined,
-  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
-  shortcuts: undefined,
-  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
-  sourcePath: {"js":"js","css":"css","images":"images"},
-};
-
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">叙此 | I KISS YOU, SEE I</div><div class="header-banner-info__subtitle">Shadow Saint</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">面试突击：Java基础</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-10-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-03-20</span></span></div></header><div class="post-body"><p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>面试突击：Java基础 - 叙此 | I KISS YOU, SEE I</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="叙此 | I KISS YOU, SEE I"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="叙此 | I KISS YOU, SEE I"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。"><meta property="og:type" content="blog"><meta property="og:title" content="面试突击：Java基础"><meta property="og:url" content="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/"><meta property="og:site_name" content="叙此 | I KISS YOU, SEE I"><meta property="og:description" content="平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://xu.ci/img/og_image.png"><meta property="article:published_time" content="2020-10-28T09:41:57.000Z"><meta property="article:modified_time" content="2021-03-20T15:24:25.123Z"><meta property="article:author" content="Shadow Saint"><meta property="article:tag" content="interview"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/"},"headline":"面试突击：Java基础","image":["https://xu.ci/img/og_image.png"],"datePublished":"2020-10-28T09:41:57.000Z","dateModified":"2021-03-20T15:24:25.123Z","author":{"@type":"Person","name":"Shadow Saint"},"publisher":{"@type":"Organization","name":"叙此 | I KISS YOU, SEE I","logo":{"@type":"ImageObject","url":"https://xu.ci/img/logo.svg"}},"description":"平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。 真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。"}</script><link rel="canonical" href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/"><link rel="alternate" href="/atom.xml" title="叙此 | I KISS YOU, SEE I" type="application/atom+xml"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-highlight.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?baa52047ec2a7f424cc64a62d1baf949";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-166756342-1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-166756342-1');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><script data-ad-client="ca-pub-8872763189439326" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="叙此 | I KISS YOU, SEE I" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/gurq"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-10-28T09:41:57.000Z" title="2020-10-28 17:41:57">2020-10-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-03-20T15:24:25.123Z" title="2021-3-20 23:24:25">2021-03-20</time></span><span class="level-item"><a class="link-muted" href="/categories/interview/">interview</a></span><span class="level-item">28 minutes read (About 4154 words)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;visits</span></div></div><h1 class="title is-3 is-size-4-mobile">面试突击：Java基础</h1><div class="content"><p>平时工作很多概念性的东西用不到，长时间不用吧，容易忘，但面试又确实是要问，只能复习面试的时候整理下来，也是再学习一遍。</p>
 <p>真希望能找到一份，能把学习到的诸多理论知识变成实践的工作，而不是业务复杂，但技术不复杂的工作，嗨，加油吧。</p>
 <span id="more"></span>
 
@@ -46,31 +22,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
   </div>
 </article>
 
-
-        <h3 id="关键命令"   >
-          <a href="#关键命令" class="heading-link"><i class="fas fa-link"></i></a><a href="#关键命令" class="headerlink" title="关键命令"></a>关键命令</h3>
-      
-        <h4 id="jstack"   >
-          <a href="#jstack" class="heading-link"><i class="fas fa-link"></i></a><a href="#jstack" class="headerlink" title="jstack"></a>jstack</h4>
-      <p>查死锁</p>
-
-        <h4 id="jmap"   >
-          <a href="#jmap" class="heading-link"><i class="fas fa-link"></i></a><a href="#jmap" class="headerlink" title="jmap"></a>jmap</h4>
-      <p>查内存</p>
-
-        <h4 id="jstat"   >
-          <a href="#jstat" class="heading-link"><i class="fas fa-link"></i></a><a href="#jstat" class="headerlink" title="jstat"></a>jstat</h4>
-      <p>查性能</p>
-
-        <h3 id="锁"   >
-          <a href="#锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#锁" class="headerlink" title="锁"></a>锁</h3>
-      <p>简单的说Java的锁分为两大种：Lock和synchronized</p>
+<h3 id="关键命令"><a href="#关键命令" class="headerlink" title="关键命令"></a>关键命令</h3><h4 id="jstack"><a href="#jstack" class="headerlink" title="jstack"></a>jstack</h4><p>查死锁</p>
+<h4 id="jmap"><a href="#jmap" class="headerlink" title="jmap"></a>jmap</h4><p>查内存</p>
+<h4 id="jstat"><a href="#jstat" class="headerlink" title="jstat"></a>jstat</h4><p>查性能</p>
+<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><p>简单的说Java的锁分为两大种：Lock和synchronized</p>
 <p>Lock是Java的对象，synchronized是Java自带的关键字，在1.6以前synchronized相较于Lock有着比较大的性能差异，在1.6的时候给synchronized引入了自适应自旋、轻量级锁、偏向锁等优化，使得现在synchronized和Lock并没有什么明显的性能差异了，使用哪个完全看使用场景。</p>
 <p>如果只是想对某一块代码或者说资源加锁，就可以简单的使用synchronized，如果说需要灵活一些，比如在这里传参、设置超时时间、甚至加锁解锁在不同的方法里，那就得用Lock</p>
-
-        <h4 id="死锁"   >
-          <a href="#死锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4>
-      <p>死锁简单的说就是俩线程都需要对方的资源，又抢不过来，就只能互相等待，结果谁都执行不了</p>
+<h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><p>死锁简单的说就是俩线程都需要对方的资源，又抢不过来，就只能互相等待，结果谁都执行不了</p>
 <p>死锁的4要素：</p>
 <blockquote>
 <ol>
@@ -81,25 +39,16 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 </ol>
 </blockquote>
 <p>所以如何避免死锁就是在可能导致死锁的地方，比如同时申请两个锁的时候，总是以相同顺序去申请</p>
-
-        <h4 id="CAS"   >
-          <a href="#CAS" class="heading-link"><i class="fas fa-link"></i></a><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h4>
-      <p>一般加锁都是悲观锁，但是悲观锁一般来说效率比较低，所以CAS就是来解决这些问题的，它是一种乐观锁，在java.util.concurrent包里面基本都是用的CAS，包括atomic包也基本都是用CAS实现的</p>
+<h4 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h4><p>一般加锁都是悲观锁，但是悲观锁一般来说效率比较低，所以CAS就是来解决这些问题的，它是一种乐观锁，在java.util.concurrent包里面基本都是用的CAS，包括atomic包也基本都是用CAS实现的</p>
 <p>CAS，compare and swap（set），顾名思义，<strong>比较</strong>并<strong>替换</strong></p>
 <p>每个线程CAS的时候要带俩参数：要改变的值原本是什么、要把它变成什么</p>
 <p>这样在CAS里面就会进行比较，如果当前内存中的值，和你要改变的值相同，说明你是对的，或者说你是第一个到的，那就把内存的值改成你要变的值。而几乎同时再进来的后面的线程，你带来的原本的值已经不对了，自然执行不成功，就只能把现在的值返给你，这就确保了在多线程下，对同一个资源操作，虽然没加锁，仍能保证不会出问题。</p>
 <p>CAS会带来ABA问题，就是A改了这个值，B又来给改回去了，这时候再来的线程会以为这个值没被A和B改过，还是原来的值，要解决这个问题就需要再加一个版本号作为参数</p>
-
-        <h4 id="分布式锁"   >
-          <a href="#分布式锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h4>
-      <p>synchronized是JVM提供的，所以只能单机，Lock在不尽兴扩展的话也只作用于单机，而我们现在分布式的理念又比较流行，所以如果说有需求要确保一个分布式锁的话，这两个就用不了了，就需要分布式锁。</p>
+<h4 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h4><p>synchronized是JVM提供的，所以只能单机，Lock在不尽兴扩展的话也只作用于单机，而我们现在分布式的理念又比较流行，所以如果说有需求要确保一个分布式锁的话，这两个就用不了了，就需要分布式锁。</p>
 <p>分布式锁一般锁基于数据库、redis或者其他手段来做，这里就说一下数据库或者redis</p>
 <p>基于数据库就是相当于基于数据库的乐观锁，给一个字段是锁名，一个字段是锁的状态，一个字段是版本号，各微服务去取锁的状态和版本号就行了，由于数据库自己有事务隔离，自然就保证了取的值的状态。但是我不是很推荐这个方法，本身现在分布式架构下，压力最大最难做拓展的就是数据库，锁这个频繁操作的事这又给数据库加负担，个人不喜欢。</p>
 <p>基于Redis的话就很简单了，用setnx（锁名，1）的方法就行了，返回0代表占锁失败，返回1代表占锁成功，拿到锁的线程执行完了给锁名删了就行了。要拓展，防死锁的话value就不是1了，需要是当前时间+过期时间，取到以后和当前时间对比，小于当前时间就获取锁，大于当前时间就没获取到锁</p>
-
-        <h4 id="volatile"   >
-          <a href="#volatile" class="heading-link"><i class="fas fa-link"></i></a><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h4>
-      <p>volatile简单的说就是保证了可见性，你加了volatile的值，你看到是1，那么就一定是1，但是他不能保证原子性，多线程同时操作还是可能会有线程问题的。解决线程问题只能加锁。</p>
+<h4 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h4><p>volatile简单的说就是保证了可见性，你加了volatile的值，你看到是1，那么就一定是1，但是他不能保证原子性，多线程同时操作还是可能会有线程问题的。解决线程问题只能加锁。</p>
 <p>它的原理是：</p>
 <blockquote>
 <ol>
@@ -109,51 +58,24 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 </blockquote>
 <p>volatile还可以保证执行的顺序，代码在被jvm编译器优化后其实不一定能保证执行顺序就是你的代码顺序，用volatile就可以保证</p>
 <p>volatile还有个问题是缓存行，如果两个加了volatile的值在同一个缓存行中，那么同时刷新主内存的时候会导致出问题，需要加关键字来做跨行优化</p>
-
-        <h3 id="IO"   >
-          <a href="#IO" class="heading-link"><i class="fas fa-link"></i></a><a href="#IO" class="headerlink" title="IO"></a>IO</h3>
-      <p>IO分为三种：BIO，NIO，AIO</p>
+<h3 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h3><p>IO分为三种：BIO，NIO，AIO</p>
 <p>IO嘛，就是IN和OUT，说白了也就是数据交换吧，比如从磁盘读写文件，服务期间通讯，这些就是IO的主要用途</p>
-
-        <h4 id="BIO"   >
-          <a href="#BIO" class="heading-link"><i class="fas fa-link"></i></a><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4>
-      <p>早期的IO就是BIO，现在用在文件读写上也是很好用的，但是如果用在服务器间通讯的话就会有个很大的问题：因为BIO是同步阻塞的，操作得在一个线程内完成，所以要是用在网络上的话，那么客户端发起一个请求，服务端就得开启一个线程去接，各自处理业务的时候大家都得互相等着，那客户端多的话对一个服务端来说可能就遭不住了。</p>
-
-        <h4 id="NIO"   >
-          <a href="#NIO" class="heading-link"><i class="fas fa-link"></i></a><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4>
-      <p>而NIO为了解决这个问题，采用了轮询模式，用一个线程不停的循环，这个线程也就是selector。它不停的循环，去看注册在自己身上的各个channel有没有连接，有连接的时候，才会去开启新的线程去处理，多路请求进来只有一个selector去处理，这就是多路复用。而每次请求呢，也不是像BIO那样用字节流或者字符流，而是用一个缓冲区，也就是buffer，一次传输这么多数据，那边接受完了，这边再装这么多，装完为止，NIO同样是同步的，只是同步非阻塞，如果并发的太多服务端处理不过来，还是需要排队等待的</p>
-
-        <h4 id="AIO"   >
-          <a href="#AIO" class="heading-link"><i class="fas fa-link"></i></a><a href="#AIO" class="headerlink" title="AIO"></a>AIO</h4>
-      <p>AIO是异步非阻塞的，在NIO的基础上，客户端传完数据以后不需要等待服务端处理了，客户端直接结束连接，等服务端处理完了以后再通知客户端来读取数据。</p>
-
-        <h3 id="垃圾回收"   >
-          <a href="#垃圾回收" class="heading-link"><i class="fas fa-link"></i></a><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3>
-      
-        <h4 id="什么时候会触发垃圾回收"   >
-          <a href="#什么时候会触发垃圾回收" class="heading-link"><i class="fas fa-link"></i></a><a href="#什么时候会触发垃圾回收" class="headerlink" title="什么时候会触发垃圾回收"></a>什么时候会触发垃圾回收</h4>
-      <p>新生代的eden区满了，会触发年轻代gc，minor gc，这个gc非常频繁</p>
+<h4 id="BIO"><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4><p>早期的IO就是BIO，现在用在文件读写上也是很好用的，但是如果用在服务器间通讯的话就会有个很大的问题：因为BIO是同步阻塞的，操作得在一个线程内完成，所以要是用在网络上的话，那么客户端发起一个请求，服务端就得开启一个线程去接，各自处理业务的时候大家都得互相等着，那客户端多的话对一个服务端来说可能就遭不住了。</p>
+<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><p>而NIO为了解决这个问题，采用了轮询模式，用一个线程不停的循环，这个线程也就是selector。它不停的循环，去看注册在自己身上的各个channel有没有连接，有连接的时候，才会去开启新的线程去处理，多路请求进来只有一个selector去处理，这就是多路复用。而每次请求呢，也不是像BIO那样用字节流或者字符流，而是用一个缓冲区，也就是buffer，一次传输这么多数据，那边接受完了，这边再装这么多，装完为止，NIO同样是同步的，只是同步非阻塞，如果并发的太多服务端处理不过来，还是需要排队等待的</p>
+<h4 id="AIO"><a href="#AIO" class="headerlink" title="AIO"></a>AIO</h4><p>AIO是异步非阻塞的，在NIO的基础上，客户端传完数据以后不需要等待服务端处理了，客户端直接结束连接，等服务端处理完了以后再通知客户端来读取数据。</p>
+<h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3><h4 id="什么时候会触发垃圾回收"><a href="#什么时候会触发垃圾回收" class="headerlink" title="什么时候会触发垃圾回收"></a>什么时候会触发垃圾回收</h4><p>新生代的eden区满了，会触发年轻代gc，minor gc，这个gc非常频繁</p>
 <p>新生代没被回收的，熬过了几次minor gc后会进入老年代（没被回收的会进入到年轻代到surviver0，然后survivor1年龄加一岁。够一个阈值了就进入老年代，剩下的并进surviver0，然后0和1交换）</p>
 <p>老年代满了会触发full gc</p>
 <p>可以调大gc和非gc的比来避免超过了GCTimeRatio触发OOM</p>
 <p>调大新生代老年代的比来减慢full gc的次数</p>
 <p>调多新生代回收次数进入老年代的阈值来减少full gc次数</p>
 <p>不过归根结底还是得找到为啥full gc回收不掉，用jmap看一下问题出在哪</p>
-
-        <h4 id="回收的什么"   >
-          <a href="#回收的什么" class="heading-link"><i class="fas fa-link"></i></a><a href="#回收的什么" class="headerlink" title="回收的什么"></a>回收的什么</h4>
-      <p>从gc root开始伸展，经过一次标记后仍然没有复活的对象</p>
-
-        <h4 id="哪些可以是GC-ROOT"   >
-          <a href="#哪些可以是GC-ROOT" class="heading-link"><i class="fas fa-link"></i></a><a href="#哪些可以是GC-ROOT" class="headerlink" title="哪些可以是GC ROOT"></a>哪些可以是GC ROOT</h4>
-      <p>1、系统类加载器加载的类；</p>
+<h4 id="回收的什么"><a href="#回收的什么" class="headerlink" title="回收的什么"></a>回收的什么</h4><p>从gc root开始伸展，经过一次标记后仍然没有复活的对象</p>
+<h4 id="哪些可以是GC-ROOT"><a href="#哪些可以是GC-ROOT" class="headerlink" title="哪些可以是GC ROOT"></a>哪些可以是GC ROOT</h4><p>1、系统类加载器加载的类；</p>
 <p>2、活跃线程持有的对象；调用栈（包括JVM栈、本地方法栈）持有的对象；</p>
 <p>3、常量引用的对象；</p>
 <p>4、静态属性实体引用的对象。</p>
-
-        <h4 id="做了什么事"   >
-          <a href="#做了什么事" class="heading-link"><i class="fas fa-link"></i></a><a href="#做了什么事" class="headerlink" title="做了什么事"></a>做了什么事</h4>
-      <p>G1用的是分代回收的方法</p>
+<h4 id="做了什么事"><a href="#做了什么事" class="headerlink" title="做了什么事"></a>做了什么事</h4><p>G1用的是分代回收的方法</p>
 <blockquote>
 <ol>
 <li>在minor gc的时候，使用多线程复制算法，使用两块内存空间，每次只用一块，触发gc后，将还活着的对象复制到另一块上，避免出现内存碎片，stw一次，触发即stw</li>
@@ -169,10 +91,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <li>整理回收，stw</li>
 </ol>
 </blockquote>
-
-        <h4 id="CMS"   >
-          <a href="#CMS" class="heading-link"><i class="fas fa-link"></i></a><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h4>
-      <ul>
+<h4 id="CMS"><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h4><ul>
 <li>初始标记（initial mark） 有 STW</li>
 <li>并发标记（concurrent mark） 没有 STW</li>
 <li>重新标记（remark） 有 STW</li>
@@ -180,15 +99,9 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 </ul>
 <p>初始标记(STW initial mark)<br>并发标记(Concurrent marking)<br>并发预清理(Concurrent precleaning)<br>重新标记(STW remark)<br>并发清理(Concurrent sweeping)<br>并发重置(Concurrent reset)</p>
 <p>比起cms，优点在于更能充分利用CPU的多核性能更好、分代回收算法思想先进、标记-整理而不是标记-清除使得没有碎片</p>
-
-        <h4 id="浮动垃圾"   >
-          <a href="#浮动垃圾" class="heading-link"><i class="fas fa-link"></i></a><a href="#浮动垃圾" class="headerlink" title="浮动垃圾"></a>浮动垃圾</h4>
-      <p>是指由于在并发标记期间，有些原本不可达的对象变得可达了，所以为了避免回收掉还有用的数据，所以重新标记去掉那些可达对象的标记。但是由于在此期间，程序是并行的，所以肯定会产生新的垃圾，然后并没有对这部分进行标记，所以导致了浮动垃圾。不过其实不要紧，下一次回收就回收掉了。</p>
+<h4 id="浮动垃圾"><a href="#浮动垃圾" class="headerlink" title="浮动垃圾"></a>浮动垃圾</h4><p>是指由于在并发标记期间，有些原本不可达的对象变得可达了，所以为了避免回收掉还有用的数据，所以重新标记去掉那些可达对象的标记。但是由于在此期间，程序是并行的，所以肯定会产生新的垃圾，然后并没有对这部分进行标记，所以导致了浮动垃圾。不过其实不要紧，下一次回收就回收掉了。</p>
 <p>真要解决可以价格配置，在full gc前加一次minor gc</p>
-
-        <h4 id="Java-11-ZGC"   >
-          <a href="#Java-11-ZGC" class="heading-link"><i class="fas fa-link"></i></a><a href="#Java-11-ZGC" class="headerlink" title="Java 11 ZGC"></a>Java 11 ZGC</h4>
-      <blockquote>
+<h4 id="Java-11-ZGC"><a href="#Java-11-ZGC" class="headerlink" title="Java 11 ZGC"></a>Java 11 ZGC</h4><blockquote>
 <ol>
 <li>初始标记，STW</li>
 <li>分区并发标记，STW，非常小</li>
@@ -208,17 +121,8 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <li>**(STW)**Pause Relocate Start，开始转移对象，依然是遍历root引用</li>
 <li>Concurrent Relocate，并发转移，将需要回收的Page里的对象转移到Relocation Set，然后回收Page给系统重新利用</li>
 </ul>
-
-        <h3 id="多线程"   >
-          <a href="#多线程" class="heading-link"><i class="fas fa-link"></i></a><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3>
-      
-        <h4 id="线程的状态"   >
-          <a href="#线程的状态" class="heading-link"><i class="fas fa-link"></i></a><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h4>
-      <p>新建状态、就绪状态、运行状态、阻塞状态、等待状态、死亡状态</p>
-
-        <h4 id="wait、sleep、join、yield的区别"   >
-          <a href="#wait、sleep、join、yield的区别" class="heading-link"><i class="fas fa-link"></i></a><a href="#wait、sleep、join、yield的区别" class="headerlink" title="wait、sleep、join、yield的区别"></a>wait、sleep、join、yield的区别</h4>
-      <blockquote>
+<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><h4 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h4><p>新建状态、就绪状态、运行状态、阻塞状态、等待状态、死亡状态</p>
+<h4 id="wait、sleep、join、yield的区别"><a href="#wait、sleep、join、yield的区别" class="headerlink" title="wait、sleep、join、yield的区别"></a>wait、sleep、join、yield的区别</h4><blockquote>
 <ol>
 <li>wait/notify/notifyAll位于Object中，sleep、join、yield位于Thread中</li>
 <li>wait阻塞当前线程，释放对象锁，其他线程可来争抢对象锁；sleep阻塞当前线程，持有对象锁，其他线程只能等待sleep结束后释放对象锁才可继续</li>
@@ -226,30 +130,12 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <li>join是父线程等待子线程结束后执行，内部使用了wait，但是并没有notify，是jvm在子线程销毁的时候会notify all所有在该子线程join的父线程</li>
 </ol>
 </blockquote>
-
-        <h4 id="如何实现线程"   >
-          <a href="#如何实现线程" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何实现线程" class="headerlink" title="如何实现线程"></a>如何实现线程</h4>
-      <p>继承Thread或者实现Runnable，这俩比Runnable好一些因为不能多继承，多实现用起来更灵活，然而我选择线程池</p>
-
-        <h4 id="start和run的区别"   >
-          <a href="#start和run的区别" class="heading-link"><i class="fas fa-link"></i></a><a href="#start和run的区别" class="headerlink" title="start和run的区别"></a>start和run的区别</h4>
-      <p>start开新线程，run不开；start内部调用了run</p>
-
-        <h4 id="Runnable和Callable的区别"   >
-          <a href="#Runnable和Callable的区别" class="heading-link"><i class="fas fa-link"></i></a><a href="#Runnable和Callable的区别" class="headerlink" title="Runnable和Callable的区别"></a>Runnable和Callable的区别</h4>
-      <p>Runnable没返回值，Callable有返回值</p>
-
-        <h4 id="CyclicBarrier和CountDownLatch"   >
-          <a href="#CyclicBarrier和CountDownLatch" class="heading-link"><i class="fas fa-link"></i></a><a href="#CyclicBarrier和CountDownLatch" class="headerlink" title="CyclicBarrier和CountDownLatch"></a>CyclicBarrier和CountDownLatch</h4>
-      <p>都可以用来等其他线程，CountDownLatch不能重新计数，这里感觉用join更多一点</p>
-
-        <h4 id="ThreadLocal"   >
-          <a href="#ThreadLocal" class="heading-link"><i class="fas fa-link"></i></a><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h4>
-      <p>ThreadLocal实际上就是绑定了线程的一个map，是Thread.ThreadLocalMap的一条引用。就相当于定义了一个只有当前线程能访问的全局变量，可以一定程度上解决线程安全问题来达到安全的使用全局变量的目的，比如一般的mybatis的分页插件就是用了这个ThreadLocal来达到不用把分页参数一层层往下传的目的，紧邻的第一条sql执行完以后就清除掉了</p>
-
-        <h3 id="线程池"   >
-          <a href="#线程池" class="heading-link"><i class="fas fa-link"></i></a><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3>
-      <ul>
+<h4 id="如何实现线程"><a href="#如何实现线程" class="headerlink" title="如何实现线程"></a>如何实现线程</h4><p>继承Thread或者实现Runnable，这俩比Runnable好一些因为不能多继承，多实现用起来更灵活，然而我选择线程池</p>
+<h4 id="start和run的区别"><a href="#start和run的区别" class="headerlink" title="start和run的区别"></a>start和run的区别</h4><p>start开新线程，run不开；start内部调用了run</p>
+<h4 id="Runnable和Callable的区别"><a href="#Runnable和Callable的区别" class="headerlink" title="Runnable和Callable的区别"></a>Runnable和Callable的区别</h4><p>Runnable没返回值，Callable有返回值</p>
+<h4 id="CyclicBarrier和CountDownLatch"><a href="#CyclicBarrier和CountDownLatch" class="headerlink" title="CyclicBarrier和CountDownLatch"></a>CyclicBarrier和CountDownLatch</h4><p>都可以用来等其他线程，CountDownLatch不能重新计数，这里感觉用join更多一点</p>
+<h4 id="ThreadLocal"><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h4><p>ThreadLocal实际上就是绑定了线程的一个map，是Thread.ThreadLocalMap的一条引用。就相当于定义了一个只有当前线程能访问的全局变量，可以一定程度上解决线程安全问题来达到安全的使用全局变量的目的，比如一般的mybatis的分页插件就是用了这个ThreadLocal来达到不用把分页参数一层层往下传的目的，紧邻的第一条sql执行完以后就清除掉了</p>
+<h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3><ul>
 <li><strong>CachedThreadPool</strong>:创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。</li>
 <li><strong>FixedThreadPool</strong> :创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。</li>
 <li><strong>ScheduledThreadPool</strong> :创建一个定长线程池，支持定时及周期性任务执行。</li>
@@ -268,20 +154,14 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 </ul>
 </blockquote>
 <p>现在感觉从设计思路来说，1.7引入的fork/join好一些，每个线程都有自己的队列，谁先干完了从没干完的那可以窃取</p>
-
-        <h4 id="阻塞队列"   >
-          <a href="#阻塞队列" class="heading-link"><i class="fas fa-link"></i></a><a href="#阻塞队列" class="headerlink" title="阻塞队列"></a>阻塞队列</h4>
-      <blockquote>
+<h4 id="阻塞队列"><a href="#阻塞队列" class="headerlink" title="阻塞队列"></a>阻塞队列</h4><blockquote>
 <ol>
 <li>无届队列：顾名思义，没大小限制，并发太大处理不过来可能导致OOM</li>
 <li>有届队列：FIFO的队列或者优先级队列</li>
 <li>同步移交队列：放入这个队列必须有其他的线程等待接收，不推荐使用这个</li>
 </ol>
 </blockquote>
-
-        <h4 id="拒绝策略"   >
-          <a href="#拒绝策略" class="heading-link"><i class="fas fa-link"></i></a><a href="#拒绝策略" class="headerlink" title="拒绝策略"></a>拒绝策略</h4>
-      <blockquote>
+<h4 id="拒绝策略"><a href="#拒绝策略" class="headerlink" title="拒绝策略"></a>拒绝策略</h4><blockquote>
 <ol>
 <li>丢弃任务，抛出异常（默认）</li>
 <li>丢弃任务，不抛出异常</li>
@@ -289,78 +169,53 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <li>由调用线程处理该任务</li>
 </ol>
 </blockquote>
-
-        <h3 id="内存模型"   >
-          <a href="#内存模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h3>
-      
-        <h3 id="线程私有区"   >
-          <a href="#线程私有区" class="heading-link"><i class="fas fa-link"></i></a><a href="#线程私有区" class="headerlink" title="线程私有区"></a>线程私有区</h3>
-      <blockquote>
+<h3 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h3><h3 id="线程私有区"><a href="#线程私有区" class="headerlink" title="线程私有区"></a>线程私有区</h3><blockquote>
 <ol>
 <li>程序计数器</li>
 <li>虚拟机栈</li>
 <li>本地方法栈</li>
 </ol>
 </blockquote>
-
-        <h4 id="线程共享区"   >
-          <a href="#线程共享区" class="heading-link"><i class="fas fa-link"></i></a><a href="#线程共享区" class="headerlink" title="线程共享区"></a>线程共享区</h4>
-      <blockquote>
+<h4 id="线程共享区"><a href="#线程共享区" class="headerlink" title="线程共享区"></a>线程共享区</h4><blockquote>
 <ol>
 <li>堆</li>
 <li>mate区（元空间）</li>
 <li>常量池</li>
 </ol>
 </blockquote>
-
-        <h3 id="LockSupport"   >
-          <a href="#LockSupport" class="heading-link"><i class="fas fa-link"></i></a><a href="#LockSupport" class="headerlink" title="LockSupport"></a>LockSupport</h3>
-      
-        <h3 id="用户态-内核态"   >
-          <a href="#用户态-内核态" class="heading-link"><i class="fas fa-link"></i></a><a href="#用户态-内核态" class="headerlink" title="用户态/内核态"></a>用户态/内核态</h3>
-      
-        <h3 id="总线锁"   >
-          <a href="#总线锁" class="heading-link"><i class="fas fa-link"></i></a><a href="#总线锁" class="headerlink" title="总线锁"></a>总线锁</h3>
-      
-        <h3 id="类加载机制-双亲委派"   >
-          <a href="#类加载机制-双亲委派" class="heading-link"><i class="fas fa-link"></i></a><a href="#类加载机制-双亲委派" class="headerlink" title="类加载机制/双亲委派"></a>类加载机制/双亲委派</h3>
-      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://xu.ci">Shadow Saint</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/">https://xu.ci/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9AJava%E5%9F%BA%E7%A1%80/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xu.ci/tags/interview/">interview</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">2020年度总结，2021新年展望</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/"><span class="paginator-prev__text">面试突击：springcloud五大组件</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">
-          关键命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jstack"><span class="toc-number">1.1.</span> <span class="toc-text">
-          jstack</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jmap"><span class="toc-number">1.2.</span> <span class="toc-text">
-          jmap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jstat"><span class="toc-number">1.3.</span> <span class="toc-text">
-          jstat</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81"><span class="toc-number">2.</span> <span class="toc-text">
-          锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%BB%E9%94%81"><span class="toc-number">2.1.</span> <span class="toc-text">
-          死锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CAS"><span class="toc-number">2.2.</span> <span class="toc-text">
-          CAS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="toc-number">2.3.</span> <span class="toc-text">
-          分布式锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#volatile"><span class="toc-number">2.4.</span> <span class="toc-text">
-          volatile</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IO"><span class="toc-number">3.</span> <span class="toc-text">
-          IO</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#BIO"><span class="toc-number">3.1.</span> <span class="toc-text">
-          BIO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NIO"><span class="toc-number">3.2.</span> <span class="toc-text">
-          NIO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AIO"><span class="toc-number">3.3.</span> <span class="toc-text">
-          AIO</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">4.</span> <span class="toc-text">
-          垃圾回收</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BC%9A%E8%A7%A6%E5%8F%91%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">4.1.</span> <span class="toc-text">
-          什么时候会触发垃圾回收</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9E%E6%94%B6%E7%9A%84%E4%BB%80%E4%B9%88"><span class="toc-number">4.2.</span> <span class="toc-text">
-          回收的什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%AA%E4%BA%9B%E5%8F%AF%E4%BB%A5%E6%98%AFGC-ROOT"><span class="toc-number">4.3.</span> <span class="toc-text">
-          哪些可以是GC ROOT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B"><span class="toc-number">4.4.</span> <span class="toc-text">
-          做了什么事</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CMS"><span class="toc-number">4.5.</span> <span class="toc-text">
-          CMS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E5%8A%A8%E5%9E%83%E5%9C%BE"><span class="toc-number">4.6.</span> <span class="toc-text">
-          浮动垃圾</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-11-ZGC"><span class="toc-number">4.7.</span> <span class="toc-text">
-          Java 11 ZGC</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">
-          多线程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-number">5.1.</span> <span class="toc-text">
-          线程的状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wait%E3%80%81sleep%E3%80%81join%E3%80%81yield%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">5.2.</span> <span class="toc-text">
-          wait、sleep、join、yield的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%BA%BF%E7%A8%8B"><span class="toc-number">5.3.</span> <span class="toc-text">
-          如何实现线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#start%E5%92%8Crun%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">5.4.</span> <span class="toc-text">
-          start和run的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Runnable%E5%92%8CCallable%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">5.5.</span> <span class="toc-text">
-          Runnable和Callable的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CyclicBarrier%E5%92%8CCountDownLatch"><span class="toc-number">5.6.</span> <span class="toc-text">
-          CyclicBarrier和CountDownLatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ThreadLocal"><span class="toc-number">5.7.</span> <span class="toc-text">
-          ThreadLocal</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-number">6.</span> <span class="toc-text">
-          线程池</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97"><span class="toc-number">6.1.</span> <span class="toc-text">
-          阻塞队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%92%E7%BB%9D%E7%AD%96%E7%95%A5"><span class="toc-number">6.2.</span> <span class="toc-text">
-          拒绝策略</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">
-          内存模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%A7%81%E6%9C%89%E5%8C%BA"><span class="toc-number">8.</span> <span class="toc-text">
-          线程私有区</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%85%B1%E4%BA%AB%E5%8C%BA"><span class="toc-number">8.1.</span> <span class="toc-text">
-          线程共享区</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LockSupport"><span class="toc-number">9.</span> <span class="toc-text">
-          LockSupport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%80%81-%E5%86%85%E6%A0%B8%E6%80%81"><span class="toc-number">10.</span> <span class="toc-text">
-          用户态&#x2F;内核态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BA%BF%E9%94%81"><span class="toc-number">11.</span> <span class="toc-text">
-          总线锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6-%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE"><span class="toc-number">12.</span> <span class="toc-text">
-          类加载机制&#x2F;双亲委派</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Shadow Saint</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+<h3 id="LockSupport"><a href="#LockSupport" class="headerlink" title="LockSupport"></a>LockSupport</h3><h3 id="用户态-内核态"><a href="#用户态-内核态" class="headerlink" title="用户态/内核态"></a>用户态/内核态</h3><h3 id="总线锁"><a href="#总线锁" class="headerlink" title="总线锁"></a>总线锁</h3><h3 id="类加载机制-双亲委派"><a href="#类加载机制-双亲委派" class="headerlink" title="类加载机制/双亲委派"></a>类加载机制/双亲委派</h3></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/interview/">interview</a></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="https://www.buymeacoffee.com/grq" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20200515213606.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">2020年度总结，2021新年展望</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/10/%E9%9D%A2%E8%AF%95%E7%AA%81%E5%87%BB%EF%BC%9Aspringcloud%E4%BA%94%E5%A4%A7%E7%BB%84%E4%BB%B6/"><span class="level-item">面试突击：springcloud五大组件</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "6bed609f3281ae03d6cea84adf51eaa1",
+            repo: "gurq.github.io",
+            owner: "gurq",
+            clientID: "f050a31cd7687a91dd76",
+            clientSecret: "d70eb7ed04e3e021ee97bf16de5ecaba49cc4174",
+            admin: "gurq",
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/gurq/Cloud-Storage/blog/img/20200512154300.png" alt="ShadowSaint"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">ShadowSaint</p><p class="is-size-6 is-block">叙此 | I kiss you, see I</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>CD, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">41</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/gurq" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/gurq"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Gossip/"><span class="level-start"><span class="level-item">Gossip</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Tool/"><span class="level-start"><span class="level-item">Tool</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Tutorial/"><span class="level-start"><span class="level-item">Tutorial</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/Tutorial/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Tutorial/WSL/"><span class="level-start"><span class="level-item">WSL</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/interview/"><span class="level-start"><span class="level-item">interview</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Gossip/"><span class="tag">Gossip</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tool/"><span class="tag">Tool</span><span class="tag">16</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorial/"><span class="tag">Tutorial</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WSL/"><span class="tag">WSL</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/interview/"><span class="tag">interview</span><span class="tag">7</span></a></div></div></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-04T03:27:48.000Z">2021-09-04</time></p><p class="title"><a href="/2021/09/Intellij-IDEA%E8%AE%BE%E7%BD%AE%E5%92%8C%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/">Intellij IDEA设置和插件推荐</a></p><p class="categories"><a href="/categories/Tool/">Tool</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/04/Visual-Paradigm%E6%95%99%E7%A8%8B-%E6%97%B6%E5%BA%8F%E5%9B%BE%E3%80%81%E6%B3%B3%E9%81%93%E5%9B%BE%E7%AD%89/"><img src="https://z3.ax1x.com/2021/04/15/cR6CkV.png" alt="Visual Paradigm教程-时序图、泳道图等"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-04-15T15:40:20.000Z">2021-04-15</time></p><p class="title"><a href="/2021/04/Visual-Paradigm%E6%95%99%E7%A8%8B-%E6%97%B6%E5%BA%8F%E5%9B%BE%E3%80%81%E6%B3%B3%E9%81%93%E5%9B%BE%E7%AD%89/">Visual Paradigm教程-时序图、泳道图等</a></p><p class="categories"><a href="/categories/Gossip/">Gossip</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-03-20T15:26:40.000Z">2021-03-20</time></p><p class="title"><a href="/2021/03/%E6%88%90%E4%B8%BA%E4%B8%9A%E5%8A%A1%E4%B8%93%E5%AE%B6%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%BA/">成为业务专家的方法论</a></p><p class="categories"><a href="/categories/Gossip/">Gossip</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-03-20T15:00:53.000Z">2021-03-20</time></p><p class="title"><a href="/2021/03/%E5%85%B3%E4%BA%8E%E5%BE%AE%E8%BD%AFoffice%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E7%9A%84%E6%B1%87%E6%80%BB/">关于微软office相关问题的汇总</a></p><p class="categories"><a href="/categories/Tool/">Tool</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-31T11:58:19.000Z">2020-12-31</time></p><p class="title"><a href="/2020/12/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%EF%BC%8C2021%E6%96%B0%E5%B9%B4%E5%B1%95%E6%9C%9B/">2020年度总结，2021新年展望</a></p><p class="categories"><a href="/categories/Gossip/">Gossip</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">September 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">April 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">March 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">October 2020</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/02/"><span class="level-start"><span class="level-item">February 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">January 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">December 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">November 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=0mv80iklqh532kvmk8kmqetjg4&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="0mv80iklqh532kvmk8kmqetjg4" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div><p class="help">Where Shadow Saint speak</p></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="叙此 | I KISS YOU, SEE I" height="28"></a><p class="is-size-7"><span>&copy; 2021 Shadow Saint</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/gurq"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://s9.cnzz.com/z_stat.php?id=1278907966&amp;web_id=1278907966" async></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
